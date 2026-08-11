@@ -1,0 +1,127 @@
+/* Source art is a bright red network render; the design darkens it heavily so
+   the white heading and outlined tabs carry the section. */
+.section {
+  padding-block: 66px 84px;
+  background:
+    linear-gradient(180deg, rgba(12, 2, 1, 0.72) 0%, rgba(20, 3, 2, 0.62) 50%, rgba(12, 2, 1, 0.78) 100%),
+    #170302 url("/images/die-k-ng-identity-group-verbindet-deine-mark.webp") center / cover no-repeat;
+  color: var(--white);
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 44px;
+  list-style: none;
+  padding: 0;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.tabActive {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 26px;
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-lg);
+  list-style: none;
+  margin: 0;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 1;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.14);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tool:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-4px);
+}
+
+.tool img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .tab {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .tabs {
+    gap: 10px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 44px 56px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

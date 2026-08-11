@@ -1,0 +1,237 @@
+.hero {
+  position: relative;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+/* one artwork per slide */
+.canvas {
+  background-color: var(--white);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.line {
+  display: block;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  min-height: 640px;
+  padding-block: 64px 24px;
+}
+
+.copy {
+  max-width: 780px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.eyebrow::before {
+  content: "";
+  flex: none;
+  width: 4px;
+  height: 22px;
+  background: var(--red);
+}
+
+.title {
+  margin: 0 0 22px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.accent {
+  color: var(--red);
+}
+
+.body {
+  max-width: 640px;
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  list-style: none;
+  padding: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.pill svg {
+  color: var(--ink);
+  flex: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quote,
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.quote {
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.whatsapp {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.quote:hover,
+.whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper dots sit centred below the slide */
+.hero :global(.swiper-pagination) {
+  position: static;
+  margin-bottom: 34px;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1399.98px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .canvas {
+    background-position: 78% center;
+    background-size: 150% auto;
+  }
+
+  .slide {
+    min-height: 560px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .body,
+  .eyebrow {
+    font-size: 18px;
+  }
+
+  .pill,
+  .quote,
+  .whatsapp {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Stacked layout: the artwork lives in the right ~45% of the source image,
+     so it is scaled and offset to sit as a band above the copy. */
+  .canvas {
+    background-position: right top;
+    background-size: auto 380px;
+  }
+
+  .slide {
+    min-height: auto;
+    padding-top: 410px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .canvas {
+    background-size: auto 320px;
+  }
+
+  .slide {
+    padding-top: 350px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .body {
+    font-size: 16px;
+  }
+
+  .pills {
+    gap: 10px;
+  }
+
+  .pill {
+    padding: 10px 16px;
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .quote,
+  .whatsapp {
+    font-size: 15px;
+    padding: 11px 18px;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .canvas {
+    background-size: auto 250px;
+  }
+
+  .slide {
+    padding-top: 280px;
+  }
+
+  .eyebrow {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}

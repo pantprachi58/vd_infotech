@@ -1,0 +1,39 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--red-tint);
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.label::before,
+.label::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+/* on dark sections the tint stays but text needs the brighter red */
+.onDark {
+  background: #fde9e8;
+  color: var(--red);
+}
+
+@media (max-width: 575.98px) {
+  .label {
+    font-size: 11px;
+    padding: 7px 14px;
+    white-space: normal;
+    text-align: center;
+  }
+}

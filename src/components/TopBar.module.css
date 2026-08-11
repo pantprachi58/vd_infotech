@@ -1,0 +1,93 @@
+.bar {
+  background: var(--black);
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 32px;
+  padding-block: 8px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.item svg {
+  flex: none;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social {
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  color: var(--white);
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.social:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.social svg {
+  width: 9px;
+  height: 9px;
+}
+
+.locale {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+
+@media (max-width: 991.98px) {
+  .right {
+    display: none;
+  }
+
+  .inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contacts {
+    gap: 14px;
+    font-size: 11px;
+  }
+}

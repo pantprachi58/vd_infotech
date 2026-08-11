@@ -1,0 +1,168 @@
+.section {
+  padding-block: 76px 90px;
+  background: var(--white);
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 60px;
+}
+
+/* Two rows of steps with a dashed connector snaking between them: across row
+   one, down the right, back along the middle, down the left, across row two. */
+.rows {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  text-align: left;
+}
+
+.rowTwo {
+  margin-top: 78px;
+}
+
+/* ---- connector ----------------------------------------------------------- */
+.seg {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hTop {
+  top: 38px;
+  left: 13%;
+  right: 0;
+  border-top: 2px dashed var(--red);
+}
+
+.vRight {
+  top: 38px;
+  right: 0;
+  bottom: -39px;
+  border-left: 2px dashed var(--red);
+}
+
+.hMid {
+  top: -39px;
+  left: 2%;
+  right: 0;
+  border-top: 2px dashed var(--red);
+}
+
+.vLeft {
+  top: -39px;
+  left: 2%;
+  height: 77px;
+  border-left: 2px dashed var(--red);
+}
+
+.hBottom {
+  top: 38px;
+  left: 2%;
+  width: 70%;
+  border-top: 2px dashed var(--red);
+}
+
+/* ---- steps --------------------------------------------------------------- */
+.step {
+  position: relative;
+  z-index: 1;
+}
+
+/* Only the numeral masks the connector — the line stays visible across the rest
+   of the row, which is how it reads in the design. */
+.no {
+  display: inline-block;
+  padding-right: 14px;
+  background: var(--white);
+  font-size: 76px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--red);
+}
+
+.stepTitle {
+  margin: 6px 0 4px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stepBody {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  white-space: pre-line;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .no {
+    font-size: 58px;
+  }
+
+  .stepTitle {
+    font-size: 20px;
+  }
+
+  .stepBody {
+    font-size: 14px;
+  }
+
+  .hTop,
+  .vRight,
+  .hBottom {
+    top: 29px;
+  }
+
+  .vLeft {
+    height: 68px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 24px;
+  }
+
+  .rowTwo {
+    margin-top: 30px;
+  }
+
+  /* the snaking connector only reads on a 4-across layout */
+  .seg {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 48px 60px;
+  }
+
+  .head {
+    margin-bottom: 36px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .no {
+    font-size: 48px;
+  }
+}

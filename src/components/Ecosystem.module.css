@@ -1,0 +1,380 @@
+.section {
+  position: relative;
+  padding-block: 74px 88px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  left: -220px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: var(--red-tint);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: 1.24;
+  color: var(--ink);
+}
+
+.plus {
+  color: var(--red);
+}
+
+.underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: var(--red);
+}
+
+.underline::before,
+.underline::after {
+  content: "";
+  width: 92px;
+  height: 3px;
+  background: var(--red);
+}
+
+.intro {
+  max-width: 1120px;
+  margin: 0 auto;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---- diagram ------------------------------------------------------------- */
+.diagram {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  margin: 40px auto 0;
+  aspect-ratio: 1220 / 880;
+}
+
+.orbitRing {
+  position: absolute;
+  inset: 8% 6% 6%;
+  border: 1.5px dashed var(--red);
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+/* Red nodes sitting on the dashed ring, positioned off the same 1220x880
+   coordinate space the circles and chips use. */
+.orbitDot {
+  position: absolute;
+  translate: -50% -50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--red);
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  translate: -50% -50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8%;
+  text-align: center;
+}
+
+.creative {
+  left: 35.4%;
+  top: 25.6%;
+  width: 30.6%;
+  background: rgba(218, 10, 3, 0.14);
+  border: 1px solid rgba(218, 10, 3, 0.55);
+}
+
+.marketing {
+  left: 65.6%;
+  top: 25.6%;
+  width: 30.6%;
+  background: rgba(218, 10, 3, 0.05);
+  border: 1px solid rgba(218, 10, 3, 0.35);
+}
+
+.technology {
+  left: 50%;
+  top: 58%;
+  width: 32.8%;
+  background: rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.circleIcon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 30px;
+}
+
+.creative .circleIcon {
+  background: var(--red);
+}
+
+.marketing .circleIcon {
+  background: #8f0605;
+}
+
+.technology .circleIcon {
+  background: var(--black);
+}
+
+.circleTitle {
+  margin: 12px 0 2px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.creative .circleTitle,
+.marketing .circleTitle {
+  color: var(--red);
+}
+
+.circleSub {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.circleList {
+  margin: 14px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  list-style: none;
+  text-align: left;
+  font-size: 13px;
+}
+
+.circleList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.circleList li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  flex: none;
+}
+
+.technology .circleList li::before {
+  background: var(--black);
+}
+
+/* centre node */
+.core {
+  position: absolute;
+  left: 49.2%;
+  top: 33%;
+  translate: -50% -50%;
+  width: 10.8%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 2;
+}
+
+.coreIcon {
+  font-size: 20px;
+  color: #1a73e8;
+}
+
+/* orbit chips */
+.chip {
+  position: absolute;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: pre-line;
+  z-index: 2;
+}
+
+.chipIcon {
+  flex: none;
+  color: var(--red);
+  font-size: 20px;
+}
+
+/* explicit slots rather than nth-of-type — the ring is a sibling span too */
+.chipLeftTop {
+  left: 8.5%;
+  top: 43%;
+}
+
+.chipRightTop {
+  left: 91.5%;
+  top: 43%;
+}
+
+.chipLeftLow {
+  left: 16%;
+  top: 68%;
+}
+
+.chipRightLow {
+  left: 84%;
+  top: 68%;
+}
+
+.chipBottom {
+  left: 49%;
+  top: 85%;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1399.98px) {
+  .title {
+    font-size: 46px;
+  }
+
+  .circleTitle {
+    font-size: 20px;
+  }
+
+  .circleList {
+    font-size: 11px;
+  }
+
+  .circleIcon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 9px 13px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .underline::before,
+  .underline::after {
+    width: 44px;
+  }
+
+  /* the overlapping-circle layout stops being readable — stack it */
+  .diagram {
+    aspect-ratio: auto;
+    display: grid;
+    gap: 18px;
+    max-width: 620px;
+  }
+
+  .orbitRing,
+  .orbitDot {
+    display: none;
+  }
+
+  .circle {
+    position: static;
+    translate: none;
+    width: 100%;
+    aspect-ratio: auto;
+    padding: 26px 22px;
+    border-radius: var(--radius-lg);
+  }
+
+  .core {
+    position: static;
+    translate: none;
+    width: 100%;
+    aspect-ratio: auto;
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    order: -1;
+  }
+
+  .chip {
+    position: static;
+    translate: none;
+    justify-content: center;
+  }
+
+  .chipWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 48px 60px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+}

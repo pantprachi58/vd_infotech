@@ -1,0 +1,244 @@
+.section {
+  padding-block: 60px 78px;
+  background: #7a0d08 url("/images/vd-bg-1.webp") center / cover no-repeat;
+  color: var(--white);
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 42px;
+}
+
+/* The three post cards set the column height (each sized from its thumbnail
+   aspect); the featured card stretches to match rather than the other way
+   round, which is what made it run away. */
+.layout {
+  display: grid;
+  grid-template-columns: 0.64fr 1fr;
+  gap: 34px;
+  align-items: stretch;
+  text-align: left;
+}
+
+.layout > * {
+  min-height: 0;
+}
+
+/* ---- featured ------------------------------------------------------------ */
+.featured {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.2s ease;
+}
+
+.featured:hover {
+  transform: translateY(-4px);
+}
+
+/* Absolutely positioned so the image's intrinsic aspect doesn't set the card
+   height — the post list on the right decides that, and the media fills
+   whatever is left over. */
+.featuredMedia {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 260px;
+}
+
+.featuredMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 28px 22px;
+}
+
+.featuredTitle {
+  margin: 0 0 12px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ---- side list ----------------------------------------------------------- */
+.list {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-content: start;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* grid items default to min-width:auto, which let the thumbnail's aspect box
+   drive the column width instead of the other way round */
+.list > * {
+  min-width: 0;
+}
+
+.post {
+  height: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.postMedia {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 380 / 276;
+}
+
+.postMedia img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postBody {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 16px;
+}
+
+.postTitle {
+  margin: 0 0 10px;
+  font-size: var(--fs-lead);
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.excerpt {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #f0dede;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
+  font-size: 14px;
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f0dede;
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: gap 0.18s ease;
+}
+
+.post:hover .more,
+.featured:hover .more {
+  gap: 16px;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .post {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .featuredTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featured {
+    height: auto;
+  }
+
+  .featuredMedia {
+    flex: none;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Stacked: nothing stretches, so the thumbnail's width comes from the column
+     and its height follows the aspect ratio — no circular sizing. */
+  .list {
+    grid-template-rows: none;
+  }
+
+  .post {
+    height: auto;
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  }
+
+  .postMedia {
+    aspect-ratio: 220 / 176;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 44px 56px;
+  }
+
+  .post {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .postMedia {
+    aspect-ratio: 16 / 9;
+  }
+
+  .featuredBody,
+  .postBody {
+    padding: 18px 18px 14px;
+  }
+
+  .featuredTitle {
+    font-size: 20px;
+  }
+
+  .postTitle {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,218 @@
+.section {
+  background: var(--off-white);
+  padding-block: 74px 90px;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 52px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+/* ---------------------------------------------------------------------------
+   Two states. Default: heavy maroon scrim, outlined icon, white title only.
+   Hover: scrim lifts to reveal the full-colour artwork, and the description
+   plus service chips fade in over a light card.
+   --------------------------------------------------------------------------- */
+.card {
+  position: relative;
+  display: block;
+  aspect-ratio: 358 / 618;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--white);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(58, 40, 40, 0.86) 0%, rgba(48, 33, 33, 0.93) 100%);
+  transition: opacity 0.35s ease;
+}
+
+.cardBody {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 26px 44%;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-size: 24px;
+  transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--white);
+  white-space: pre-line;
+  transition: color 0.35s ease;
+}
+
+/* revealed on hover */
+.detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.3s ease;
+}
+
+.detailInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.body {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: #4b4b4b;
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* ---- hover state --------------------------------------------------------- */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+  }
+
+  .card:hover .scrim {
+    opacity: 0;
+  }
+
+  .card:hover .icon {
+    background: var(--red-tint);
+    border-color: transparent;
+    color: var(--red);
+  }
+
+  .card:hover .cardTitle {
+    color: var(--ink);
+  }
+
+  .card:hover .detail {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+/* Touch devices have no hover, so the design's hover state becomes default. */
+@media (hover: none) {
+  .scrim {
+    opacity: 0;
+  }
+
+  .icon {
+    background: var(--red-tint);
+    border-color: transparent;
+    color: var(--red);
+  }
+
+  .cardTitle {
+    color: var(--ink);
+  }
+
+  .detail {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .card {
+    aspect-ratio: auto;
+  }
+
+  .cardBody {
+    position: static;
+    padding: 46% 22px 24px;
+  }
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .grid {
+    gap: 24px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 48px 60px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cardBody {
+    gap: 12px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}

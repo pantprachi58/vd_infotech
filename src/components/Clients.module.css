@@ -1,0 +1,58 @@
+.section {
+  padding-block: 62px 76px;
+  background: linear-gradient(180deg, var(--white) 0%, var(--grey-100) 55%, var(--white) 100%);
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 46px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: none;
+  width: 200px;
+  height: 155px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* clients without an exported logo fall back to a wordmark */
+.wordmark {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 44px 56px;
+  }
+
+  .logo {
+    height: 118px;
+    padding: 16px;
+  }
+
+  .wordmark {
+    font-size: 16px;
+  }
+}

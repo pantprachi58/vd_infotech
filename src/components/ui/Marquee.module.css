@@ -1,0 +1,49 @@
+/* Continuous auto-scrolling strip. The track holds two identical copies of the
+   children, so translating it by exactly -50% loops seamlessly. */
+.viewport {
+  overflow: hidden;
+  width: 100%;
+  /* fade the strip out at both edges rather than cutting it dead */
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--speed, 40s) linear infinite;
+}
+
+.reverse .track {
+  animation-direction: reverse;
+}
+
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  flex: none;
+  gap: var(--gap, 28px);
+  padding-right: var(--gap, 28px);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+
+  .viewport {
+    overflow-x: auto;
+  }
+}

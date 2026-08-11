@@ -1,0 +1,68 @@
+.bar {
+  padding-block: 44px;
+  background: var(--black) url("/images/red.webp") center / cover no-repeat;
+  color: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  flex: none;
+  font-size: 54px;
+  line-height: 1;
+}
+
+.value {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.label {
+  font-size: var(--fs-lead);
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bar {
+    padding-block: 32px;
+  }
+
+  .item {
+    gap: 14px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+
+  .value {
+    font-size: 30px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+}
