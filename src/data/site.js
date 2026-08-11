@@ -42,7 +42,7 @@ export const heroSlides = [
   {
     id: "ai-powered-strategy",
     image: "/images/hero-slide-2.webp",
-    eyebrow: "A Revenue-Focused Technology & Digital Marketing Company",
+    eyebrow: "Where Digital Marketing Meets Business Growth",
     titleLines: [
       [["Your "], ["Growth", true], [" Isn't Luck"]],
       [["It's AI-Powered Strategy"]],
@@ -58,7 +58,7 @@ export const heroSlides = [
   {
     id: "every-result-tracked",
     image: "/images/hero-slide-3.webp",
-    eyebrow: "A Revenue-Focused Technology & Digital Marketing Company",
+    eyebrow: "A ROI-Focused Performance Marketing Company",
     titleLines: [
       [["Every "], ["Result", true], [" Tracked"]],
       [["Every Rupee "], ["Spent", true]],
@@ -74,7 +74,7 @@ export const heroSlides = [
   {
     id: "built-to-perform",
     image: "/images/hero-slide-4.webp",
-    eyebrow: "A Revenue-Focused Technology & Digital Marketing Company",
+    eyebrow: "A Technology-Driven Web & App Development Company",
     titleLines: [
       [["Built to "], ["Perform", true]],
       [["Designed to Convert"]],
