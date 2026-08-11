@@ -17,11 +17,17 @@ export const metadata = {
   title: "VD Infotech — Where Marketing, Technology & AI Work Together",
   description:
     "A revenue-focused technology and digital marketing company helping businesses grow through marketing, branding, AI and web development solutions.",
-  icons: {
-    icon: "/images/vd-infotech-final-logo-red-and-black-01-1.webp",
-    shortcut: "/images/vd-infotech-final-logo-red-and-black-01-1.webp",
-    apple: "/images/vd-infotech-final-logo-red-and-black-01-1.webp",
-  },
+  icons: [
+    {
+      rel: "icon",
+      type: "image/webp",
+      url: "/images/vd-infotech-final-logo-red-and-black-01-1.webp",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/images/vd-infotech-final-logo-red-and-black-01-1.webp",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
