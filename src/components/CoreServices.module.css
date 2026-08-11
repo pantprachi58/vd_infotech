@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 0 26px 44%;
+  padding:50px 20px;
 }
 
 .icon {
@@ -75,7 +75,7 @@
 
 .cardTitle {
   margin: 0;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
   color: var(--white);
@@ -175,7 +175,7 @@
 
   .cardBody {
     position: static;
-    padding: 46% 22px 24px;
+    padding: 50px 22px ;
   }
 }
 
