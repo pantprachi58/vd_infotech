@@ -15,9 +15,9 @@
 }
 
 .intro {
-  max-width: 1240px;
+  max-width: 80%;
   margin: 0 auto;
-  font-size: var(--fs-lead);
+  font-size: 18px;
   line-height: 1.5;
   color: var(--ink-soft);
 }
@@ -79,10 +79,10 @@
 }
 
 .stat {
-  padding: 11px 16px;
+  padding: 11px 0px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--radius-sm);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
 }
@@ -166,5 +166,11 @@
 
   .nav {
     display: none;
+  }
+}
+@media (max-width: 490.98px) {
+  .intro {
+    font-size: 14px;
+    max-width: 100%;
   }
 }

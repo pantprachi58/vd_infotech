@@ -27,9 +27,9 @@ export default function Home() {
        <main>
         <Hero />
         <CoreServices />
-        {/*<CaseStudies />
+        <CaseStudies />
         <Industries />
-        <Consultation />
+        {/* <Consultation />
         <StatsBar />
         <WhatWeDo />
         <Ecosystem />
