@@ -50,7 +50,7 @@
 }
 
 .body {
-  padding: 62px 60px;
+  padding: 100px 60px;
   color: var(--white);
 }
 
@@ -172,5 +172,16 @@
   .intro {
     font-size: 14px;
     max-width: 100%;
+  }
+  .body {
+    padding: 26px 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
   }
 }
