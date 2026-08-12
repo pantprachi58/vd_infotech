@@ -154,7 +154,7 @@ export const caseStudies = [
   },
   {
     name: "SS Interiors Hub",
-    image: "/images/rectangle-3232.webp",
+    image: "/images/rectangle-3225.webp",
     body: "Transformed the brand's online presence with a modern, responsive website designed and developed to deliver a smooth and engaging user experience across every device.",
     stats: [
       "Responsive Design",
@@ -165,7 +165,7 @@ export const caseStudies = [
   },
   {
     name: "Mera Gaon Mera Desh",
-    image: "/images/rectangle-3225.webp",
+    image: "/images/rectangle-3232.webp",
     body: "From a growing content platform to a destination visited by thousands every month, Mera Gaon Mera Desh continues to expand its reach and connect with a wider audience online.",
     stats: [
       "6.6K+ Monthly Visitors",
