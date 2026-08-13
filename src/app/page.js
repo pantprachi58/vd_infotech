@@ -30,7 +30,7 @@ export default function Home() {
         <CaseStudies />
         <Industries /> 
          <Consultation />
-        {/* <StatsBar />
+        <StatsBar />
         <WhatWeDo />
         <Ecosystem />
         <Tools />
@@ -39,7 +39,7 @@ export default function Home() {
         <Clients />
         <Testimonials />
         <Pricing />
-        <Blog />
+        {/* <Blog />
         <Faq />
         <FinalCta /> */}
       </main> 

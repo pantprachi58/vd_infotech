@@ -15,11 +15,11 @@
 }
 
 .intro {
-  max-width: 1050px;
-  margin: 0;
-  font-size: var(--fs-lead);
-  line-height: 1.5;
-  color: var(--ink-soft);
+      max-width: 67%;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .grid {
@@ -87,23 +87,23 @@
 
 .name {
   margin: 0 0 2px;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .role {
   margin: 0 0 10px;
-  font-size: var(--fs-body);
+  font-size: 15px;
   color: var(--ink-soft);
 }
 
 .years {
   display: inline-block;
-  padding: 5px 12px;
+  padding: 5px 10px;
   border-radius: 5px;
   background: #3f3f3f;
   color: var(--white);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 

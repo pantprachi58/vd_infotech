@@ -34,7 +34,7 @@
 
 .title {
   margin: 0;
-  font-size: var(--fs-display);
+  font-size: 35px;
   font-weight: 600;
   line-height: 1.24;
   color: var(--ink);
@@ -61,9 +61,9 @@
 }
 
 .intro {
-  max-width: 1120px;
+  max-width: 65%;
   margin: 0 auto;
-  font-size: var(--fs-lead);
+  font-size: 16px;
   line-height: 1.5;
   color: var(--ink-soft);
   text-align: center;

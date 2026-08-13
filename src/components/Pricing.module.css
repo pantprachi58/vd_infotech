@@ -13,11 +13,11 @@
 }
 
 .intro {
-  max-width: 1030px;
-  margin: 0;
-  font-size: var(--fs-lead);
-  line-height: 1.5;
-  color: var(--ink-soft);
+max-width: 67%;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .grid {
