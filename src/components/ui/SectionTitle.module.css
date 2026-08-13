@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: 28px;
+  width: 70%;
   margin: 0;
   font-size: 35px;
   font-weight: 600;
@@ -57,10 +58,17 @@
 
 @media (max-width: 575.98px) {
   .title {
-    font-size: 26px;
+    font-size: 20px;
+    width: 100%;
   }
-
+  
   .rule {
     display: none;
+  }
+}
+@media (max-width: 360.98px) {
+  .title {
+    font-size: 20px;
+    width: 100%;
   }
 }

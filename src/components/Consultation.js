@@ -69,7 +69,7 @@ export default function Consultation() {
               <span className={styles.noteIcon} aria-hidden="true">
                 📋
               </span>
-              <p style={{ margin: 0 }}>{note}</p>
+              <p className={styles.notepara}>{note}</p>
             </div>
 
             <div className={styles.actions}>

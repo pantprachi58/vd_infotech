@@ -195,18 +195,18 @@ export const consultation = {
   ],
   note: "Before your session, you'll complete a detailed business questionnaire. Our experts review every answer, research your industry, analyze your competitors, and prepare your personalized strategy before the meeting begins — so every minute is spent solving your business challenges, not gathering basic information.",
   analyze: [
-    { icon: "📈", label: "Business Model" },
-    { icon: "🎯", label: "Target Audience" },
-    { icon: "🏆", label: "Competitor Analysis" },
-    { icon: "🌐", label: "Website & UX" },
-    { icon: "📱", label: "Social Media Presence" },
-    { icon: "📢", label: "Advertising Performance" },
-    { icon: "🔍", label: "SEO Visibility" },
-    { icon: "🧺", label: "AI Opportunities" },
-    { icon: "💼", label: "Branding Positioning" },
-    { icon: "💰", label: "Lead Generation" },
-    { icon: "🛒", label: "Sales Funnel" },
-    { icon: "⚙️", label: "Technology Stack" },
+    { icon: "", label: "Business Model" },
+    { icon: "", label: "Target Audience" },
+    { icon: "", label: "Competitor Analysis" },
+    { icon: "", label: "Website & UX" },
+    { icon: "", label: "Social Media Presence" },
+    { icon: "", label: "Advertising Performance" },
+    { icon: "", label: "SEO Visibility" },
+    { icon: "", label: "AI Opportunities" },
+    { icon: "", label: "Branding Positioning" },
+    { icon: "", label: "Lead Generation" },
+    { icon: "", label: "Sales Funnel" },
+    { icon: "", label: "Technology Stack" },
   ],
   receive: [
     "Complete Marketing Strategy",
@@ -229,11 +229,11 @@ export const consultation = {
     blurb: "Helping founders and business owners build growth systems that actually work",
     tagline: "No Guesswork, No Generic Playbooks.",
     badges: [
-      { icon: "📊", label: "MARKETING SCORE", value: "87/100" },
-      { icon: "📈", label: "GROWTH FORECAST", value: "+34%" },
-      { icon: "🌐", label: "WEBSITE AUDIT", value: "12 Fixes" },
-      { icon: "🔍", label: "SEO HEALTH", value: "Strong" },
-      { icon: "🧺", label: "AI READINESS", value: "62%" },
+      { icon: "", label: "MARKETING SCORE", value: "87/100" },
+      { icon: "", label: "GROWTH FORECAST", value: "+34%" },
+      { icon: "", label: "WEBSITE AUDIT", value: "12 Fixes" },
+      { icon: "", label: "SEO HEALTH", value: "Strong" },
+      { icon: "", label: "AI READINESS", value: "62%" },
     ],
     stats: [
       { value: "500+", label: "BUSINESSES" },
@@ -347,7 +347,7 @@ export const ecosystem = {
 export const toolTabs = [
   {
     label: "Marketing & Analytics",
-    icon: "📊",
+    icon: "",
     tools: [
       { name: "Google Analytics", image: "/images/logo-google-analytics-1.webp" },
       { name: "Google Analytics 4", image: "/images/icons8-power-bi-logo-48-1.webp" },
@@ -360,7 +360,7 @@ export const toolTabs = [
   },
   {
     label: "Advertising",
-    icon: "🖥",
+    icon: "",
     tools: [
       { name: "Google Ads", image: "/images/google-ads-certification-1.webp" },
       { name: "Meta Ads", image: "/images/1723808722meta-logo-png-1.webp" },
@@ -370,7 +370,7 @@ export const toolTabs = [
   },
   {
     label: "Design & Creative",
-    icon: "✒",
+    icon: "",
     tools: [
       { name: "Shopify", image: "/images/shopify-certified-partner-logo-3.webp" },
       { name: "Semrush Academy", image: "/images/semrush-academy-2.webp" },
@@ -378,7 +378,7 @@ export const toolTabs = [
   },
   {
     label: "Development",
-    icon: "⟨⟩",
+    icon: "",
     tools: [
       { name: "AWS", image: "/images/aws-2.webp" },
       { name: "HubSpot", image: "/images/hubspot-1.webp" },
@@ -387,7 +387,7 @@ export const toolTabs = [
   },
   {
     label: "AI & Automation",
-    icon: "🤖",
+    icon: "",
     tools: [
       { name: "HubSpot", image: "/images/hubspot-1.webp" },
       { name: "Looker Studio", image: "/images/looker-1.webp" },

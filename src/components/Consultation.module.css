@@ -6,8 +6,7 @@
 }
 
 /* soft pink blobs that bleed off both edges in the design */
-.section::before,
-.section::after {
+.section::before{
   content: "";
   position: absolute;
   width: 449px;
@@ -17,15 +16,24 @@
   z-index: 0;
   pointer-events: none;
 }
-
+.section::after {
+  content: "";
+  position: absolute;
+ width: 22%;
+    height: 276px;
+  border-radius: 50%;
+  background: #e6e6e6;
+  z-index: 0;
+  pointer-events: none;
+}
 .section::before {
-  top: 340px;
-  right: -170px;
+ top: -26px;
+    right: -330px;
 }
 
 .section::after {
   top: 1240px;
-  left: -230px;
+  left: -250px;
 }
 
 .inner {
@@ -47,16 +55,21 @@
 }
 
 .lead {
-  max-width: 1180px;
+  /* max-width: 1180px;
   margin: 0;
   font-size: var(--fs-lead);
   line-height: 1.5;
-  color: var(--ink-soft);
+  color: var(--ink-soft); */
+  max-width: 67%;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .pitch {
   margin: 22px 0 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   font-style: italic;
   line-height: 1.5;
@@ -77,6 +90,7 @@
   justify-content: space-between;
   gap: 24px;
   padding: 26px 30px;
+  margin-top: 93px;
   border-radius: var(--radius);
   background: var(--black);
   color: var(--white);
@@ -89,12 +103,16 @@
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
+  color: #AEAEAE;
 }
 
 .metaValue {
   display: block;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
+}
+.notepara{
+  font-size: 11px;
 }
 
 /* "45 minutes" keeps the unit inline; the meeting-mode list is long enough that
@@ -120,8 +138,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-top: 26px;
-  padding: 22px 26px;
+  margin-top: 20px;
+  padding: 20px 20px;
   border-left: 4px solid var(--red);
   border-radius: 0 var(--radius) var(--radius) 0;
   background: var(--red-tint);
@@ -154,10 +172,10 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 30px;
+  padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
   border-radius: var(--radius-sm);
-  font-size: 17px;
-  font-weight: 600;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
@@ -199,13 +217,13 @@
 }
 
 .portrait {
-  width: 210px;
+  width: 190px;
   height: 210px;
   margin: 0 auto 16px;
-  border: 4px solid var(--red);
-  border-radius: 50%;
+  /* border: 4px solid var(--red);
+  border-radius: 50%; */
   overflow: hidden;
-  background: var(--white);
+  /* background: var(--white); */
 }
 
 .portrait img {
@@ -216,25 +234,25 @@
 
 .role {
   margin: 0 0 6px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .tags {
   margin: 0 0 10px;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--ink-soft);
 }
 
 .blurb {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--grey-600);
 }
 
 .tagline {
   margin: 4px 0 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -242,14 +260,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 20px;
-  padding-top: 18px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid var(--grey-200);
   list-style: none;
 }
 
 .strategistStats dt {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -282,18 +300,18 @@
 }
 
 .badge:nth-child(1) {
-  top: 92px;
-  left: -60px;
+      top: 88px;
+    left: -80px;
 }
 
 .badge:nth-child(2) {
-  top: 200px;
-  left: -90px;
+      top: 185px;
+    left: -99px;
 }
 
 .badge:nth-child(3) {
-  top: 306px;
-  left: -66px;
+ top: 288px;
+    left: -87px;
 }
 
 .badge:nth-child(4) {
@@ -372,11 +390,11 @@
 .analyzeItem {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 12px 14px;
+  gap: 5px;
+  padding: 10px 10px;
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
-  background: var(--white);
+  background: #e6e6e6;
   font-size: 14px;
   font-weight: 500;
   transition: border-color 0.18s ease, transform 0.18s ease;
@@ -393,14 +411,14 @@
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background: var(--grey-50);
+  background: #fff;
   font-size: 13px;
 }
 
 .receiveGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 11px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -409,8 +427,8 @@
 .receiveItem {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 13px 16px;
+  gap: 10px;
+  padding: 10px 10px;
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
   background: var(--white);
@@ -484,7 +502,7 @@
   }
 
   .receiveGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .listHead {
@@ -522,7 +540,7 @@
   }
 
   .analyzeGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .strategist {
@@ -539,4 +557,28 @@
     flex: 1 1 100%;
     justify-content: center;
   }
+  .lead{
+    max-width: 100%;
+  }
+  .pitch{
+    font-size: 15px;;
+  }
+  .head{
+    margin-bottom: 20px;
+  }
+  .metaBar{
+    grid-template-columns: 1fr 1fr;
+        padding: 10px 25px;
+        margin-top: 0px;
+      
+  }
+  .actions{
+
+  }
+  .badge{
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 360.98px) {
+
 }
