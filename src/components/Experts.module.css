@@ -274,6 +274,7 @@
 
   .intro {
     font-size: 15px;
+    max-width: unset;
   }
 
   .top {
@@ -303,5 +304,10 @@
     width: 100%;
     justify-content: center;
     font-size: 18px;
+  }
+  .head{
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
   }
 }

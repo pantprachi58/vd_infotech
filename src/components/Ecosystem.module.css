@@ -106,22 +106,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8%;
+  padding-top: 5%;
   text-align: center;
 }
 
 .creative {
-  left: 35.4%;
-  top: 25.6%;
-  width: 30.6%;
-  background: rgba(218, 10, 3, 0.14);
-  border: 1px solid rgba(218, 10, 3, 0.55);
+  background: #da0a0324;
+    border: 1px solid #da0a038c;
+    width: 30%;
+    top: 25.6%;
+    left: 37.4%;
 }
 
 .marketing {
   left: 65.6%;
   top: 25.6%;
-  width: 30.6%;
+  width: 30%;
   background: rgba(218, 10, 3, 0.05);
   border: 1px solid rgba(218, 10, 3, 0.35);
 }
@@ -129,7 +129,7 @@
 .technology {
   left: 50%;
   top: 58%;
-  width: 32.8%;
+   width: 30%;
   background: rgba(0, 0, 0, 0.09);
   border: 1px solid rgba(0, 0, 0, 0.35);
 }

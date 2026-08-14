@@ -516,6 +516,11 @@
   .lead {
     font-size: 15px;
   }
+  .badges{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -579,6 +584,34 @@
     padding: 5px 10px;
   }
 }
-@media (max-width: 360.98px) {
-
+@media (max-width: 499.98px) {
+.lead{
+  font-size: 13px;
+}
+.pitch{
+  font-size: 12px;
+  margin-top: 15px;
+}
+.metaLabel{
+  font-size: 13px;
+}
+.metaValue{
+  font-size: 12px;
+}
+.noteIcon{
+      width: 45px;
+    height: 45px;
+    font-size: 20px;
+}
+.note{
+  gap: 15px;
+}
+.actions{
+  gap: 15px;
+  margin-top: 15px;
+}
+.portrait{
+  width: 70%;
+        height: 100%;
+}
 }

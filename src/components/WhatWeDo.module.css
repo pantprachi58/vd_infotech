@@ -223,4 +223,10 @@
   .panelBody {
     font-size: 14px;
   }
+  .tab{
+    font-size: 15px;
+  }
+  .layout{
+    gap:15px;
+  }
 }

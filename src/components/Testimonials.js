@@ -16,10 +16,10 @@ export default function Testimonials() {
         <Reveal className={styles.head}>
           <SectionLabel>Client Success Stories</SectionLabel>
           <div>
-            <SectionTitle id="testimonials">Experiences We&apos;ve Built Together</SectionTitle>
-            <SectionTitle as="p" ruled>
+            <h2 className={styles.title} id="testimonials">Experiences We&apos;ve Built Together</h2>
+            <p as="p" ruled className={styles.title}>
               What <span className={styles.subtitle}>Our Clients Are Saying</span>
-            </SectionTitle>
+            </p>
           </div>
         </Reveal>
 

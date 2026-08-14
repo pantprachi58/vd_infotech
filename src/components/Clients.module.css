@@ -48,8 +48,12 @@
   }
 
   .logo {
-    height: 118px;
-    padding: 16px;
+            height: 100px;
+        padding: 10px;
+  }
+  .head{
+        gap: 20px;
+    margin-bottom: 20px;
   }
 
   .wordmark {
