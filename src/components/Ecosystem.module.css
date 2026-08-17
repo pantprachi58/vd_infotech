@@ -241,7 +241,7 @@
   max-height: 24px;
   min-width: 12px;
   min-height: 12px;
-  color: var(--green);
+  color: blue;
   stroke-width: 2.4;
 }
 
@@ -465,15 +465,22 @@
   .iconCircle{
     max-width: 54px;
     max-height: 54px;
+    margin-bottom: unset;
+  }
+  .circleList{
+    gap: unset;
+    margin: unset;
   }
   .icon{
-    max-width: 25px;
+    max-width: 15px;
   }
   .centerCircle{
-    width: 17%;
+    width: 13%;
+    top: 47.8%;
+    left: 53%;
   }
   .centerCircle span{
-    font-size: 10px;
+    font-size: 7px;
   }
   .btn{
             gap: 12px;
@@ -484,6 +491,40 @@
         margin-left: 102px;
         margin-top: 50px;
   }
+  .circleCreative{
+    top: 31%;
+    left: 34%;
+}
+.circleMarketing{
+  top:30%;
+}
+.iconCircle{
+          max-width: 35px;
+        max-height: 35px;
+}
+.centerIcon{
+      color: #00f;
+    stroke-width: 2.4px;
+    width: 47%;
+    min-width: 8px;
+    max-width: 24px;
+    height: 7cqw;
+    min-height: 2px;
+    max-height: 17px;
+}
+.pillSeo{
+  left: 10%;
+}
+.pill spam{
+  font-size: 7px;
+}
+.pillContent{
+  top: 69.5%;
+    left: 89.5%;
+}
+.pillIcon{
+  max-height: 12px;
+}
 }
 
 /* Extra small devices (< 400px) */
@@ -504,4 +545,5 @@
   .diagramWrapper {
     margin-bottom: 20px;
   }
+  
 }

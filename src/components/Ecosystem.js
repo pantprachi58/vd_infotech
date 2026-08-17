@@ -138,9 +138,9 @@ export default function GrowthEcosystem() {
             </div>
           </div>
         </Reveal>
-        <Reveal delay={0.15}>
+        {/* <Reveal delay={0.15}>
           <button className="btn" href="#contact">Build Your Growth System</button>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );

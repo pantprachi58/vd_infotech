@@ -153,6 +153,7 @@
 @media (max-width: 575.98px) {
   .section {
     padding-block: 48px 60px;
+            padding: 30px 10px;
   }
 
   .heading {
@@ -180,7 +181,10 @@
     font-size: 14px;
   }
   .art{
-    max-width: 309px;
-    margin: -22px 0px 0px -26px;
+        max-width: 111px;
+    margin: -28px 0px 2px 76px;
+  }
+  .layout{
+    gap:10px;
   }
 }

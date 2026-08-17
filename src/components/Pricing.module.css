@@ -169,16 +169,27 @@ max-width: 67%;
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 380px;
     margin-inline: auto;
+    gap: 10px;
   }
   .intro{
-    font-size: 15px;
+    font-size: 14px;
     max-width: unset;
   }
   .title{
     font-size: 20px;
     width: 100%;
   }
+  .amount{
+    font-size: 25px;
+  }
+  .inr{
+    font-size: 12px;
+  }
+  .explore,
+.contact {
+  font-size: 12px;
+}
 }
