@@ -21,8 +21,9 @@
 
 /* ---------------------------------------------------------------------------
    Two states. Default: heavy maroon scrim, outlined icon, white title only.
-   Hover: scrim lifts to reveal the full-colour artwork, and the description
-   plus service chips fade in over a light card.
+   Hover (desktop) / always (touch): scrim lifts, description + tags fade in.
+   Simple opacity/transform only — no height-animation tricks — so it behaves
+   the same everywhere.
    --------------------------------------------------------------------------- */
 .card {
   position: relative;
@@ -32,6 +33,7 @@
   overflow: hidden;
   background: var(--white);
   text-align: left;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -57,7 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding:50px 20px;
+  padding: 50px 20px;
 }
 
 .icon {
@@ -121,8 +123,8 @@
   line-height: 1.2;
 }
 
-/* ---- hover state --------------------------------------------------------- */
-@media (hover: hover) {
+/* ---- hover state: mouse/trackpad only ------------------------------------ */
+@media (hover: hover) and (pointer: fine) {
   .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
@@ -148,8 +150,8 @@
   }
 }
 
-/* Touch devices have no hover, so the design's hover state becomes default. */
-@media (hover: none) {
+/* ---- touch devices: hover state becomes the permanent default ------------ */
+@media (hover: none), (pointer: coarse) {
   .scrim {
     opacity: 0;
   }
@@ -174,21 +176,19 @@
   }
 
   .cardBody {
-    position: static;
-    padding: 50px 22px ;
+    position: relative;
+    padding: 50px 22px;
   }
 }
 
 /* ---- responsive ---------------------------------------------------------- */
 
-/* Large desktops and down (1200px - 1399px) */
 @media (max-width: 1399.98px) {
   .grid {
     gap: 32px;
   }
 }
 
-/* Desktop and down (992px - 1199px) */
 @media (max-width: 1199.98px) {
   .section {
     padding-block: 60px 75px;
@@ -222,7 +222,6 @@
   }
 }
 
-/* Tablet and down (768px - 991px) */
 @media (max-width: 991.98px) {
   .section {
     padding-block: 50px 65px;
@@ -253,7 +252,6 @@
   }
 }
 
-/* Small tablet and down (576px - 767px) */
 @media (max-width: 767.98px) {
   .section {
     padding-block: 48px 60px;
@@ -287,7 +285,6 @@
   }
 }
 
-/* Mobile and down (< 576px) */
 @media (max-width: 575.98px) {
   .section {
     padding-block: 40px 50px;
@@ -334,7 +331,6 @@
   }
 }
 
-/* Extra small devices (< 400px) */
 @media (max-width: 399.98px) {
   .section {
     padding-block: 36px 45px;

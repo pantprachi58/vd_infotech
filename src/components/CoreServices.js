@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { TbRosetteDiscount } from "react-icons/tb";
 import { FaCode } from "react-icons/fa6";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
@@ -33,36 +34,70 @@ export default function CoreServices() {
             const Icon = icons[service.icon];
             return (
               <Reveal key={service.title} delay={i * 0.08}>
-                <a href="#" className={styles.card}>
-                  <Image
-                    src={service.image}
-                    alt=""
-                    width={358}
-                    height={618}
-                    sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 25vw"
-                  />
-                  <span className={styles.scrim} aria-hidden="true" />
+                
+                {service.href ? (
+                  <Link href={service.href} className={styles.card}>
+                    <Image
+                      src={service.image}
+                      alt=""
+                      width={358}
+                      height={618}
+                      sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 25vw"
+                    />
+                    <span className={styles.scrim} aria-hidden="true" />
 
-                  <div className={styles.cardBody}>
-                    <span className={styles.icon} aria-hidden="true">
-                      <Icon />
-                    </span>
-                    <h3 className={styles.cardTitle}>{service.title}</h3>
+                    <div className={styles.cardBody}>
+                      <span className={styles.icon} aria-hidden="true">
+                        <Icon />
+                      </span>
+                      <h3 className={styles.cardTitle}>{service.title}</h3>
 
-                    <div className={styles.detail}>
-                      <div className={styles.detailInner}>
-                        <p className={styles.body}>{service.body}</p>
-                        <ul className={styles.tags}>
-                          {service.tags.map((tag) => (
-                            <li key={tag} className={styles.tag}>
-                              {tag}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className={styles.detail}>
+                        <div className={styles.detailInner}>
+                          <p className={styles.body}>{service.body}</p>
+                          <ul className={styles.tags}>
+                            {service.tags.map((tag) => (
+                              <li key={tag} className={styles.tag}>
+                                {tag}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className={styles.card} tabIndex={0}>
+                    <Image
+                      src={service.image}
+                      alt=""
+                      width={358}
+                      height={618}
+                      sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 25vw"
+                    />
+                    <span className={styles.scrim} aria-hidden="true" />
+
+                    <div className={styles.cardBody}>
+                      <span className={styles.icon} aria-hidden="true">
+                        <Icon />
+                      </span>
+                      <h3 className={styles.cardTitle}>{service.title}</h3>
+
+                      <div className={styles.detail}>
+                        <div className={styles.detailInner}>
+                          <p className={styles.body}>{service.body}</p>
+                          <ul className={styles.tags}>
+                            {service.tags.map((tag) => (
+                              <li key={tag} className={styles.tag}>
+                                {tag}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </a>
+                )}
               </Reveal>
             );
           })}

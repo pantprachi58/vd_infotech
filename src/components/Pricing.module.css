@@ -173,4 +173,12 @@ max-width: 67%;
     max-width: 380px;
     margin-inline: auto;
   }
+  .intro{
+    font-size: 15px;
+    max-width: unset;
+  }
+  .title{
+    font-size: 20px;
+    width: 100%;
+  }
 }

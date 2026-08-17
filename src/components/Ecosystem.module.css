@@ -1,380 +1,507 @@
+/* ======================================================
+   Growth Ecosystem section
+   All diagram sizing uses % (of the square-ish diagram
+   box) + container-query units (cqw) so the ENTIRE
+   diagram — circles, pills, icons, text — scales down
+   as one proportional unit all the way to mobile. The
+   layout never restacks; it only shrinks.
+====================================================== */
+
 .section {
-  position: relative;
-  padding-block: 74px 88px;
-  background: var(--white);
+  background: var(--off-white);
+  padding-block: 74px 90px;
   overflow: hidden;
 }
-
-.section::before {
-  content: "";
-  position: absolute;
-  top: 180px;
-  left: -220px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: var(--red-tint);
-  opacity: 0.65;
-  pointer-events: none;
+.btn{
+  border-radius: var(--radius-pill);
+    color: var(--white);
+    cursor: pointer;
+    background: #6b6b6b;
+    border: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 34px 8px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background .2s, transform .2s;
+    display: inline-flex;
 }
-
-.inner {
-  position: relative;
-  z-index: 1;
-}
-
 .head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  margin-bottom: 28px;
+  gap: 26px;
+  margin-bottom: 52px;
   text-align: center;
 }
 
-.title {
-  margin: 0;
-  font-size: 35px;
-  font-weight: 600;
-  line-height: 1.24;
-  color: var(--ink);
-}
-
-.plus {
+.accent {
   color: var(--red);
 }
 
-.underline {
+.description {
+  max-width: 720px;
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  color: var(--grey-600);
+  margin: 0;
+}
+
+/* ======================================================
+   Diagram
+====================================================== */
+.diagramWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.diagramBox {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 800 / 560;
+  container-type: inline-size;
+  container-name: diagram;
+}
+
+/* ---------- Dashed orbit ring ---------- */
+.ring {
+      aspect-ratio: 1;
+    z-index: 1;
+    border: 2px dashed #f5c7cc;
+    border-radius: 50%;
+    width: 85%;
+    position: absolute;
+    top: 57%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------- Venn circles ---------- */
+.circle {
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  color: var(--red);
-}
-
-.underline::before,
-.underline::after {
-  content: "";
-  width: 92px;
-  height: 3px;
-  background: var(--red);
-}
-
-.intro {
-  max-width: 65%;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--ink-soft);
   text-align: center;
 }
 
-/* ---- diagram ------------------------------------------------------------- */
-.diagram {
-  position: relative;
-  width: 100%;
-  max-width: 1220px;
-  margin: 40px auto 0;
-  aspect-ratio: 1220 / 880;
-}
-
-.orbitRing {
-  position: absolute;
-  inset: 8% 6% 6%;
-  border: 1.5px dashed var(--red);
-  border-radius: 50%;
-  opacity: 0.75;
-}
-
-/* Red nodes sitting on the dashed ring, positioned off the same 1220x880
-   coordinate space the circles and chips use. */
-.orbitDot {
-  position: absolute;
-  translate: -50% -50%;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--red);
-  z-index: 1;
-}
-
-.circle {
-  position: absolute;
-  translate: -50% -50%;
-  aspect-ratio: 1;
-  border-radius: 50%;
+.circleInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5%;
-  text-align: center;
+  padding-top: 8%;
+  width: 78%;
 }
 
-.creative {
-  background: #da0a0324;
-    border: 1px solid #da0a038c;
-    width: 30%;
-    top: 25.6%;
-    left: 37.4%;
+.circleCreative {
+  left: 35%;
+      top: 35%;
+  background: #fce8eb;
+  z-index: 1;
 }
 
-.marketing {
-  left: 65.6%;
-  top: 25.6%;
-  width: 30%;
-  background: rgba(218, 10, 3, 0.05);
-  border: 1px solid rgba(218, 10, 3, 0.35);
+.circleMarketing {
+     top: 35%;
+    left: 72%;
+  background: #f7d0d5;
+  z-index: 2;
 }
 
-.technology {
-  left: 50%;
-  top: 58%;
-   width: 30%;
-  background: rgba(0, 0, 0, 0.09);
-  border: 1px solid rgba(0, 0, 0, 0.35);
+.circleTechnology {
+  left: 54%;
+  top: 80%;
+  /* transparent so it blends with Creative/Marketing where the circles overlap */
+  background: color-mix(in srgb, var(--grey-200) 62%, transparent);
+  z-index: 3;
 }
 
-.circleIcon {
-  display: grid;
-  place-items: center;
-  width: 66px;
-  height: 66px;
+.iconCircle {
+  width: 17cqw;
+  height: 17cqw;
+  max-width: 64px;
+  max-height: 64px;
+  min-width: 28px;
+  min-height: 28px;
   border-radius: 50%;
-  color: var(--white);
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.2cqw;
 }
 
-.creative .circleIcon {
+.iconCreative {
   background: var(--red);
 }
 
-.marketing .circleIcon {
-  background: #8f0605;
+.iconMarketing {
+  background: var(--red-dark);
 }
 
-.technology .circleIcon {
-  background: var(--black);
+.iconTech {
+  background: var(--ink);
+}
+
+.icon {
+  width: 8.5cqw;
+  height: 8.5cqw;
+  max-width: 30px;
+  max-height: 30px;
+  min-width: 14px;
+  min-height: 14px;
+  color: #ffffff;
+  stroke-width: 2.1;
 }
 
 .circleTitle {
-  margin: 12px 0 2px;
-  font-size: 24px;
+  font-size: 3.4cqw;
   font-weight: 700;
+  color: var(--red-dark);
+  margin: 0 0 0.3cqw;
+  line-height: 1.2;
 }
 
-.creative .circleTitle,
-.marketing .circleTitle {
-  color: var(--red);
+.circleTechnology .circleTitle {
+  color: var(--ink);
 }
 
-.circleSub {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 700;
+.circleSubtitle {
+  font-size: 2cqw;
+  font-weight: 600;
+  color: var(--grey-600);
+  margin: 0 0 2.5cqw;
+  line-height: 1.3;
 }
 
 .circleList {
-  margin: 14px 0 0;
-  padding: 12px 0 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
   list-style: none;
-  text-align: left;
-  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1cqw;
 }
 
 .circleList li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 2px 0;
+  position: relative;
+  font-size: 1.75cqw;
+  line-height: 1.4;
+  color: var(--grey-600);
+  padding-left: 2.2cqw;
+  text-align: left;
 }
 
 .circleList li::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.9cqw;
+  height: 0.9cqw;
+  min-width: 3px;
+  min-height: 3px;
   border-radius: 50%;
   background: var(--red);
-  flex: none;
 }
 
-.technology .circleList li::before {
-  background: var(--black);
+.circleTechnology .circleList li::before {
+  background: var(--ink);
 }
 
-/* centre node */
-.core {
+/* ---------- Center "Business Growth" badge ---------- */
+.centerCircle {
   position: absolute;
-  left: 49.2%;
-  top: 33%;
-  translate: -50% -50%;
-  width: 10.8%;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
+  left: 53%;
+  top: 49.8%;
+  width: 12%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
   background: var(--white);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.2;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6cqw;
+  z-index: 5;
   text-align: center;
-  z-index: 2;
 }
 
-.coreIcon {
-  font-size: 20px;
-  color: #1a73e8;
+.centerIcon {
+  width: 7cqw;
+  height: 7cqw;
+  max-width: 24px;
+  max-height: 24px;
+  min-width: 12px;
+  min-height: 12px;
+  color: var(--green);
+  stroke-width: 2.4;
 }
 
-/* orbit chips */
-.chip {
+.centerCircle span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+/* ---------- Orbiting pills ---------- */
+.pill {
   position: absolute;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 18px;
-  border-radius: var(--radius-pill);
+  gap: 1.4cqw;
   background: var(--white);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.25;
-  white-space: pre-line;
-  z-index: 2;
+  border-radius: var(--radius-pill);
+  padding: 1.8cqw 2.6cqw;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  z-index: 6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.chipIcon {
-  flex: none;
+.pill:hover {
+  transform: translate(-50%, -50%) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.pillIcon {
+  width: 4.4cqw;
+  height: 4.4cqw;
+  max-width: 17px;
+  max-height: 17px;
+  min-width: 10px;
+  min-height: 10px;
   color: var(--red);
-  font-size: 20px;
+  stroke-width: 2.2;
+  flex-shrink: 0;
 }
 
-/* explicit slots rather than nth-of-type — the ring is a sibling span too */
-.chipLeftTop {
-  left: 8.5%;
-  top: 43%;
+.pill span {
+  font-size: 1.7cqw;
+  font-weight: 600;
+  color: var(--ink);
 }
 
-.chipRightTop {
-  left: 91.5%;
-  top: 43%;
+.pillSeo {
+     top: 59%;
+    left: 8%;
 }
 
-.chipLeftLow {
-  left: 16%;
-  top: 68%;
+.pillContent {
+     top: 62.5%;
+    left: 99.5%;
 }
 
-.chipRightLow {
-  left: 84%;
-  top: 68%;
+.pillAds {
+      top: 91.8%;
+    left: 16.5%;
 }
 
-.chipBottom {
-  left: 49%;
-  top: 85%;
+.pillAutomation {
+  top: 98.8%;
+    left: 88.5%;
 }
 
-.cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+.pillAnalytics {
+  left: 56%;
+  top: 116%;
 }
 
-/* ---- responsive ---------------------------------------------------------- */
+/* ---------- Decorative orbit dots ---------- */
+/* Wrapper spins around the ring's own center, so every dot keeps its
+   original spacing/position on the ring and only travels in a circle.
+   Pills (text) are outside this wrapper and never move. */
+.dotsOrbit {
+  position: absolute;
+  inset: 0;
+  transform-origin: 54% 55.5%; /* matches .ring's left/top */
+  animation: orbitSpin 18s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbitDot {
+  position: absolute;
+  width: 1.6%;
+  aspect-ratio: 1 / 1;
+  min-width: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  transform: translate(-50%, -50%);
+}
+
+.dot1 {
+          top: 4.2%;
+    left: 74%;
+}
+.dot2 {
+      top: 1.2%;
+    left: 35%;
+}
+.dot3 {
+      top: 100.6%;
+    left: 27.1%;
+}
+.dot4 {
+    top: 83.6%;
+    left: 92.9%;
+}
+.dot5 {
+           top: 40%;
+    left: 96%;
+}
+.dot6 {
+  top: 115.7%;
+    left: 61%;
+}
+.dot7 {
+  top: 49.7%;
+    left: 11%;
+}
+
+/* ======================================================
+   Responsive Design
+====================================================== */
+
+/* Large desktops and down (1200px - 1399px) */
 @media (max-width: 1399.98px) {
-  .title {
-    font-size: 46px;
-  }
-
-  .circleTitle {
-    font-size: 20px;
-  }
-
-  .circleList {
-    font-size: 11px;
-  }
-
-  .circleIcon {
-    width: 52px;
-    height: 52px;
-    font-size: 24px;
-  }
-
-  .chip {
-    font-size: 11px;
-    padding: 9px 13px;
+  .diagramWrapper {
+    margin-bottom: 40px;
   }
 }
 
+/* Desktop and down (992px - 1199px) */
+@media (max-width: 1199.98px) {
+  .section {
+    padding-block: 60px 75px;
+  }
+
+  .head {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .diagramWrapper {
+    margin-bottom: 36px;
+  }
+}
+
+/* Tablet and down (768px - 991px) */
 @media (max-width: 991.98px) {
-  .title {
-    font-size: 34px;
+  .section {
+    padding-block: 50px 65px;
   }
 
-  .underline::before,
-  .underline::after {
-    width: 44px;
-  }
-
-  /* the overlapping-circle layout stops being readable — stack it */
-  .diagram {
-    aspect-ratio: auto;
-    display: grid;
+  .head {
     gap: 18px;
-    max-width: 620px;
+    margin-bottom: 36px;
   }
 
-  .orbitRing,
-  .orbitDot {
-    display: none;
+  .description {
+    font-size: 15px;
   }
 
-  .circle {
-    position: static;
-    translate: none;
-    width: 100%;
-    aspect-ratio: auto;
-    padding: 26px 22px;
-    border-radius: var(--radius-lg);
-  }
-
-  .core {
-    position: static;
-    translate: none;
-    width: 100%;
-    aspect-ratio: auto;
-    padding: 18px;
-    border-radius: var(--radius-lg);
-    order: -1;
-  }
-
-  .chip {
-    position: static;
-    translate: none;
-    justify-content: center;
-  }
-
-  .chipWrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  .diagramWrapper {
+    margin-bottom: 32px;
   }
 }
 
-@media (max-width: 575.98px) {
+/* Small tablet and down (576px - 767px) */
+@media (max-width: 767.98px) {
   .section {
     padding-block: 48px 60px;
   }
 
-  .title {
-    font-size: 26px;
+  .head {
+    margin-bottom: 32px;
   }
 
-  .intro {
-    font-size: 15px;
+  .description {
+    font-size: 14px;
+  }
+
+  .diagramWrapper {
+    margin-bottom: 28px;
+  }
+}
+
+/* Mobile and down (< 576px) */
+@media (max-width: 575.98px) {
+  .section {
+    padding-block: 40px 50px;
+  }
+
+  .head {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .diagramWrapper {
+    margin-bottom: 24px;
+  }
+  .iconCircle{
+    max-width: 54px;
+    max-height: 54px;
+  }
+  .icon{
+    max-width: 25px;
+  }
+  .centerCircle{
+    width: 17%;
+  }
+  .centerCircle span{
+    font-size: 10px;
+  }
+  .btn{
+            gap: 12px;
+        /* padding-right: 9px; */
+        font-size: 10px;
+        left: 50%;
+        /* margin: 75px 82px; */
+        margin-left: 102px;
+        margin-top: 50px;
+  }
+}
+
+/* Extra small devices (< 400px) */
+@media (max-width: 399.98px) {
+  .section {
+    padding-block: 36px 45px;
+  }
+
+  .head {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .diagramWrapper {
+    margin-bottom: 20px;
   }
 }

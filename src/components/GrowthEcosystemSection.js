@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
-import styles from '../components/GrowthEcosystemSection.module.css';
-import styles from "./Ecosystem.module.css";
-// import LeadForm from './LeadForm';
+import styles from './GrowthEcosystemSection.module.css';
 
 /* ── Data ─────────────────────────────────────────────── */
 const circles = [
@@ -264,17 +262,7 @@ export default function GrowthEcosystem() {
 
       </div>{/* end videoSection */}
 
-      {/* ── Cards ── */}
 
-
-      {/* ── Banner ── */}
-      
-
-      {/* Lead Form Modal */}
-      {/* <LeadForm 
-        isOpen={isFormOpen} 
-        onClose={() => setIsFormOpen(false)} 
-      /> */}
 
     </div>
   );

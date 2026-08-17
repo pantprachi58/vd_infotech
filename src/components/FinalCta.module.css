@@ -14,7 +14,7 @@
 
 .title {
   margin: 0;
-  font-size: var(--fs-display);
+  font-size: 35px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -24,11 +24,11 @@
 }
 
 .intro {
-  max-width: 1120px;
-  margin: 0;
-  font-size: var(--fs-lead);
-  line-height: 1.5;
-  color: var(--ink-soft);
+ max-width: 80%;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .form {
@@ -106,5 +106,12 @@
 
   .title {
     font-size: 24px;
+  }
+  .intro{
+    max-width: unset;
+  }
+  .form{
+    grid-template-columns: 1fr 1fr;
+   gap: 10px;
   }
 }

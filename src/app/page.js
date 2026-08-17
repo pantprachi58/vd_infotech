@@ -7,7 +7,7 @@ import Industries from "@/components/Industries";
 import Consultation from "@/components/Consultation";
 import StatsBar from "@/components/StatsBar";
 import WhatWeDo from "@/components/WhatWeDo";
-import Ecosystem from "@/components/Ecosystem";
+// import Ecosystem from "@/components/Ecosystem";
 import Tools from "@/components/Tools";
 import Process from "@/components/Process";
 import Experts from "@/components/Experts";
@@ -18,6 +18,7 @@ import Blog from "@/components/Blog";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import GrowthEcosystem from "@/components/Ecosystem";
 
 export default function Home() {
   return (
@@ -32,18 +33,18 @@ export default function Home() {
          <Consultation />
         <StatsBar />
         <WhatWeDo />
-        <Ecosystem />
+        <GrowthEcosystem/>
         <Tools />
         <Process />
         <Experts />
         <Clients />
         <Testimonials />
         <Pricing />
-        {/* <Blog />
+         <Blog />
         <Faq />
-        <FinalCta /> */}
-      </main> 
-      {/* <Footer />  */}
+        <FinalCta />
+              </main> 
+        {/* <Footer /> */}
     </>
   );
 }

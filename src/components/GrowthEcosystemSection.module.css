@@ -260,6 +260,7 @@
   border: 2px solid rgba(200, 200, 200, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  line-height: 1.4;
 }
 
 /* Add dotted line connectors from badges */
@@ -421,14 +422,14 @@
 /* Circle icon styling */
 .circleIcon {
   width: 25%;
-  height: 25%;
+  height: auto;
+  aspect-ratio: 1;
   background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  /* margin-bottom: 16px; */
+  font-size: clamp(18px, 2vw, 24px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   border: 3px solid transparent;
   transition: all 0.3s ease;
@@ -460,15 +461,14 @@
 .circleLabel {
   font-family: 'Sora', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  margin-bottom: 6px;
+  font-size: clamp(20px, 2.5vw, 26px);
+  margin-bottom: clamp(4px, 0.5vw, 6px);
   letter-spacing: -0.01em;
 }
 
 .circleSub {
-  font-size: 15px;
+  font-size: clamp(12px, 1.5vw, 15px);
   font-weight: 500;
-  /* margin-bottom: 14px; */
   opacity: 0.85;
 }
 
@@ -539,15 +539,15 @@
 }
 
 .coreIcon {
-  font-size: 36px;
-  margin-bottom: 8px;
+  font-size: clamp(28px, 3vw, 36px);
+  margin-bottom: clamp(4px, 1vw, 8px);
   color: #424242;
   display: inline-block;
 }
 
 .coreTitle {
   font-family: 'Sora', sans-serif;
-  font-size: 18px;
+  font-size: clamp(14px, 1.8vw, 18px);
   font-weight: 700;
   color: #424242;
   line-height: 1.3;
@@ -736,15 +736,15 @@
 
 /* ── Responsive ── */
 
-/* Large tablets and small desktops */
+/* Large tablets and small desktops (1024px) */
 @media (max-width: 1024px) {
   .heading {
-    font-size: 36px;
+    font-size: clamp(32px, 4vw, 36px);
   }
 
   .subheading {
-    font-size: 16px;
-    max-width: 60%;
+    font-size: clamp(15px, 2vw, 16px);
+    max-width: 70%;
   }
 
   .vennSection {
@@ -753,7 +753,6 @@
 
   .vennGrid {
     padding: 100px 20px;
-    gap: 0;
   }
 
   .sideBadge {
@@ -773,38 +772,43 @@
   }
 
   .circle {
-    padding-top: 22px;
+    padding-top: 20px;
   }
 
   .circleIcon {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
+    width: 22%;
+    height: auto;
+    aspect-ratio: 1;
+    font-size: clamp(18px, 2vw, 24px);
     margin-bottom: 12px;
   }
 
   .circleTech {
-    padding-top: 60px;
+    padding-top: 55px;
   }
 
   .circleLabel {
-    font-size: 22px;
+    font-size: clamp(20px, 2.5vw, 22px);
   }
 
   .circleSub {
-    font-size: 14px;
+    font-size: clamp(13px, 1.5vw, 14px);
   }
 
   .bulletList li {
     font-size: 12px;
   }
 
+  .coreBadge {
+    width: 22%;
+  }
+
   .coreTitle {
-    font-size: 16px;
+    font-size: clamp(14px, 1.8vw, 16px);
   }
 
   .coreIcon {
-    font-size: 28px;
+    font-size: clamp(24px, 3vw, 28px);
     margin-bottom: 6px;
   }
 
@@ -821,7 +825,7 @@
   }
 
   .banner {
-    max-width: 50%;
+    max-width: 60%;
     padding: 20px 32px;
   }
 
@@ -830,10 +834,10 @@
   }
 }
 
-/* Tablets */
+/* Tablets (768px) */
 @media (max-width: 768px) {
   .heroSection {
-    padding: 60px 0;
+    padding: 60px 0 50px;
   }
 
   .headingWrapper {
@@ -851,26 +855,28 @@
   }
 
   .heading {
-    font-size: 28px;
+    font-size: clamp(26px, 4.5vw, 32px);
     line-height: 1.3;
   }
 
   .subheading {
-    font-size: 15px;
-    max-width: 85%;
+    font-size: clamp(14px, 2.2vw, 16px);
+    max-width: 90%;
     margin-top: 16px;
   }
 
   .vennSection {
-    max-width: 600px;
-    padding-bottom: 60px;
+    max-width: 100%;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .vennGrid {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     padding: 40px 20px;
-    gap: 24px;
+    gap: 30px;
     border-radius: 32px;
   }
 
@@ -885,8 +891,10 @@
   }
 
   .sideBadge {
-    font-size: 13px;
-    padding: 8px 14px 8px 10px;
+    font-size: 12px;
+    padding: 10px 16px 10px 12px;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .sideBadge::before {
@@ -894,19 +902,21 @@
   }
 
   .badgeIcon {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     font-size: 14px;
   }
 
   .vennDiagram {
-    max-width: 400px;
-    aspect-ratio: 1 / 0.95;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.88;
   }
 
   .orbitCircle {
-    width: 120%;
-    height: 120%;
+    width: 115%;
+    height: 115%;
     animation: rotateOrbit 50s linear infinite;
   }
 
@@ -918,23 +928,24 @@
   }
 
   .circle {
-    width: 55%;
-    padding-top: 20px;
+    width: 52%;
+    padding-top: 18px;
   }
 
   .circleIcon {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    margin-bottom: 10px;
+    width: 19%;
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 20px;
+    margin-bottom: 8px;
   }
 
   .circleCreative {
-    left: 0;
+    left: 2%;
   }
 
   .circleMarketing {
-    right: 0;
+    right: 2%;
   }
 
   .circleTech {
@@ -946,16 +957,17 @@
   }
 
   .circleSub {
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 11px;
+    margin-bottom: 8px;
   }
 
   .bulletList li {
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.6;
   }
 
   .coreBadge {
-    width: 24%;
+    width: 22%;
   }
 
   .coreTitle {
@@ -964,7 +976,7 @@
 
   .coreIcon {
     font-size: 22px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   .cardsSection {
@@ -974,9 +986,9 @@
   }
 
   .banner {
-    max-width: 70%;
-    padding: 18px 28px;
-    margin-bottom: 60px;
+    max-width: 80%;
+    padding: 20px 28px;
+    margin-bottom: 50px;
   }
 
   .bannerText {
@@ -988,31 +1000,31 @@
   }
 }
 
-/* Mobile devices */
+/* Mobile devices (480px) */
 @media (max-width: 480px) {
   .heroSection {
-    padding: 40px 0;
+    padding: 50px 0 40px;
   }
 
   .content {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
   .headingWrapper {
-    gap: 12px;
+    gap: 14px;
   }
 
   .animatedBtn {
     font-size: 13px;
-    padding: 10px 20px;
+    padding: 11px 22px;
   }
 
   .btnIcon {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .heading {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.4;
   }
 
@@ -1022,48 +1034,65 @@
 
   .subheading {
     font-size: 14px;
-    max-width: 95%;
-    margin-top: 12px;
+    max-width: 100%;
+    margin-top: 14px;
     line-height: 1.6;
   }
 
   .vennSection {
     max-width: 100%;
     padding-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .vennGrid {
-    padding: 30px 16px;
-    gap: 20px;
+    padding: 35px 16px;
+    gap: 24px;
     border-radius: 24px;
   }
 
+  /* Stack badges vertically on mobile for better visibility */
   .sideLeft,
   .sideRight {
-    gap: 8px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 100%;
   }
 
   .sideBadge {
-    font-size: 12px;
-    padding: 6px 12px 6px 8px;
-    gap: 6px;
+    font-size: 11px;
+    padding: 11px 14px;
+    white-space: normal;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.5;
   }
 
   .badgeIcon {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 8px;
+    flex-shrink: 0;
   }
 
   .vennDiagram {
-    max-width: 320px;
-    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.95;
   }
 
   .orbitCircle {
-    width: 125%;
-    height: 125%;
-    animation: rotateOrbit 40s linear infinite;
+    width: 118%;
+    height: 118%;
+    animation: rotateOrbit 45s linear infinite;
+    border-width: 1.5px;
   }
 
   .orbitDot {
@@ -1074,33 +1103,35 @@
   }
 
   .circle {
-    width: 60%;
+    width: 54%;
     padding-top: 16px;
+    border-width: 2.5px;
   }
 
   .circleIcon {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
+    width: 18%;
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 18px;
     margin-bottom: 8px;
     border-width: 2px;
   }
 
   .circleCreative {
-    left: -2%;
+    left: 1%;
   }
 
   .circleMarketing {
-    right: -2%;
+    right: 1%;
   }
 
   .circleTech {
-    padding-top: 42px;
+    padding-top: 46px;
   }
 
   .circleLabel {
-    font-size: 15px;
-    margin-bottom: 4px;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
 
   .circleSub {
@@ -1108,23 +1139,234 @@
     margin-bottom: 8px;
   }
 
+  .bulletList {
+    padding: 0 8px;
+  }
+
   .bulletList li {
-    font-size: 9px;
-    line-height: 1.6;
-    padding-left: 10px;
+    font-size: 9.5px;
+    line-height: 1.7;
+    padding-left: 12px;
   }
 
   .bulletList li::before {
-    font-size: 8px;
-    left: 0;
+    font-size: 7px;
+    left: 2px;
   }
 
   .coreBadge {
-    width: 28%;
+    width: 24%;
+    border-width: 3px;
+  }
+
+  .coreTitle {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .coreIcon {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .cardsSection {
+    padding: 0 20px;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardSub {
+    font-size: 0.75rem;
+    margin-bottom: 14px;
+  }
+
+  .cardList {
+    gap: 7px;
+  }
+
+  .cardList li {
+    font-size: 0.78rem;
+  }
+
+  .aiSection {
+    padding: 0 20px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .aiPill {
+    font-size: 0.78rem;
+    padding: 10px 18px 10px 14px;
+    gap: 8px;
+  }
+
+  .aiPillIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    max-width: 90%;
+    padding: 18px 24px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    gap: 10px;
+  }
+
+  .bannerText {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .bannerRocket {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+  .heroSection {
+    padding: 45px 0 35px;
+  }
+
+  .content {
+    padding: 0 16px;
+  }
+
+  .heading {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .subheading {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .vennSection {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 35px;
+  }
+
+  .vennGrid {
+    padding: 30px 12px;
+    gap: 20px;
+  }
+
+  .sideLeft,
+  .sideRight {
+    gap: 10px;
+  }
+
+  .sideBadge {
+    font-size: 10px;
+    padding: 9px 12px;
+    gap: 8px;
+  }
+
+  .badgeIcon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 7px;
+  }
+
+  .vennDiagram {
+    aspect-ratio: 1 / 1;
+  }
+
+  .orbitCircle {
+    width: 120%;
+    height: 120%;
+    animation: rotateOrbit 40s linear infinite;
+    border-width: 1px;
+  }
+
+  .orbitDot {
+    width: 5px;
+    height: 5px;
+    margin-left: -2.5px;
+    margin-top: -2.5px;
+  }
+
+  .circle {
+    width: 55%;
+    padding-top: 14px;
+    border-width: 2px;
+  }
+
+  .circleIcon {
+    width: 17%;
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 16px;
+    margin-bottom: 6px;
+    border-width: 2px;
+  }
+
+  .circleCreative {
+    left: 0.5%;
+  }
+
+  .circleMarketing {
+    right: 0.5%;
+  }
+
+  .circleTech {
+    padding-top: 42px;
+  }
+
+  .circleLabel {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .circleSub {
+    font-size: 9px;
+    margin-bottom: 7px;
+  }
+
+  .bulletList {
+    padding: 0 6px;
+  }
+
+  .bulletList li {
+    font-size: 8.5px;
+    line-height: 1.7;
+    padding-left: 11px;
+  }
+
+  .bulletList li::before {
+    font-size: 6px;
+    left: 2px;
+  }
+
+  .coreBadge {
+    width: 25%;
+    border-width: 2.5px;
   }
 
   .coreTitle {
     font-size: 10px;
+    line-height: 1.2;
   }
 
   .coreIcon {
@@ -1132,21 +1374,14 @@
     margin-bottom: 3px;
   }
 
-  .cardsSection {
-    padding: 0 16px;
-    gap: 12px;
-    margin-bottom: 48px;
-  }
-
   .card {
-    padding: 20px 18px;
+    padding: 20px 16px;
   }
 
   .cardIcon {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 
   .cardTitle {
@@ -1155,133 +1390,32 @@
 
   .cardSub {
     font-size: 0.72rem;
-    margin-bottom: 12px;
-  }
-
-  .cardList {
-    gap: 6px;
   }
 
   .cardList li {
     font-size: 0.75rem;
   }
 
-  .aiSection {
-    padding: 0 16px;
-    gap: 8px;
-    margin-bottom: 40px;
-  }
-
   .aiPill {
-    font-size: 0.75rem;
-    padding: 10px 16px 10px 12px;
-    gap: 8px;
+    font-size: 0.72rem;
+    padding: 9px 15px 9px 12px;
   }
 
   .aiPillIcon {
     width: 28px;
     height: 28px;
-    font-size: 0.85rem;
   }
 
   .banner {
-    max-width: 90%;
+    max-width: 94%;
     padding: 16px 20px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    flex-direction: column;
-    gap: 8px;
   }
 
   .bannerText {
     font-size: 0.85rem;
-    text-align: center;
   }
 
   .bannerRocket {
     font-size: 1.2rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 360px) {
-  .heading {
-    font-size: 20px;
-  }
-
-  .subheading {
-    font-size: 13px;
-  }
-
-  .vennDiagram {
-    max-width: 320px;
-  }
-
-  .circle {
-    width: 55%;
-  }
-
-  .circleIcon {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    margin-bottom: 6px;
-    border-width: 2px;
-  }
-
-  .circleLabel {
-    font-size: 13px;
-  }
-
-  .circleSub {
-    font-size: 9px;
-  }
-
-  .bulletList li {
-    font-size: 8px;
-  }
-
-  .coreBadge {
-    width: 30%;
-    border-width: 3px;
-  }
-
-  .coreTitle {
-    font-size: 9px;
-  }
-
-  .coreIcon {
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-
-  .sideBadge {
-    font-size: 11px;
-    padding: 6px 12px 6px 8px;
-  }
-
-  .badgeIcon {
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-  }
-
-  .bannerText {
-    font-size: 0.8rem;
-  }
-  .circleTech {
-    padding-top:55px;
-  }
-
-  /* Hide orbit dots on very small screens for performance */
-  .orbitCircle {
-    animation: rotateOrbit 30s linear infinite;
-  }
-
-  .orbitDot {
-    width: 5px;
-    height: 5px;
-    margin-left: -2.5px;
-    margin-top: -2.5px;
   }
 }

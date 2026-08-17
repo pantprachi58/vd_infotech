@@ -1,113 +1,145 @@
-import { FaHandshakeAngle } from "react-icons/fa6";
-import { HiOutlineSpeakerphone } from "react-icons/hi";
-import { TbBrain, TbChartBar } from "react-icons/tb";
+"use client";
+
 import {
-  MdOutlineScreenSearchDesktop,
-  MdOutlineArticle,
-  MdAutorenew,
-  MdPlayCircleFilled,
-  MdInsertChartOutlined,
-} from "react-icons/md";
-import { ecosystem } from "@/data/site";
+  Palette,
+  Megaphone,
+  Bot,
+  TrendingUp,
+  Search,
+  MessageSquareText,
+  RefreshCw,
+  Cog,
+  BarChart3,
+} from "lucide-react";
 import SectionLabel from "./ui/SectionLabel";
-import ArrowButton from "./ui/ArrowButton";
+import SectionTitle from "./ui/SectionTitle";
+
 import Reveal from "./ui/Reveal";
 import styles from "./Ecosystem.module.css";
 
-const circleIcons = {
-  creative: FaHandshakeAngle,
-  marketing: HiOutlineSpeakerphone,
-  technology: TbBrain,
-};
-
-// Red nodes on the dashed ring, as [left%, top%] of the diagram box.
-const orbitDots = [
-  [10.2, 30.2],
-  [8.2, 53.8],
-  [90, 30.2],
-  [91.8, 54.1],
-  [34, 82.4],
-  [63.9, 83],
-];
-
-// Each orbit chip has a fixed slot around the diagram, matching the design.
-const chips = [
-  { index: 0, Icon: MdOutlineScreenSearchDesktop, slot: "chipLeftTop" },
-  { index: 2, Icon: MdAutorenew, slot: "chipLeftLow" },
-  { index: 1, Icon: MdOutlineArticle, slot: "chipRightTop" },
-  { index: 3, Icon: MdPlayCircleFilled, slot: "chipRightLow" },
-  { index: 4, Icon: MdInsertChartOutlined, slot: "chipBottom" },
-];
-
-export default function Ecosystem() {
+export default function GrowthEcosystem() {
   return (
-    <section className={styles.section} aria-labelledby="ecosystem">
-      <div className={`container ${styles.inner}`}>
+    <section className={styles.section} aria-labelledby="growth-ecosystem">
+      <div className="container">
         <Reveal className={styles.head}>
           <SectionLabel>Growth Ecosystem</SectionLabel>
-          <h2 id="ecosystem" className={styles.title}>
-            AI <span className={styles.plus}>+</span> Creative <span className={styles.plus}>+</span>{" "}
-            Technology <span className={styles.plus}>+</span> Marketing
-            <br />
-            <span className={styles.underline}>Under One Roof</span>
-          </h2>
-          <p className={styles.intro}>
-            Modern business growth needs more than just marketing. We combine AI, creativity,
-            technology, and marketing into one connected ecosystem that helps businesses build, grow,
-            automate, and scale.
+          <SectionTitle id="growth-ecosystem" ruled>
+            AI + Creative + Technology + Marketing{" "}
+            <span className={styles.accent}>Under One Roof</span>
+          </SectionTitle>
+          <p className={styles.description}>
+            Modern business growth needs more than just marketing. We combine
+            AI, creativity, technology, and marketing into one connected
+            ecosystem that helps businesses build, grow, automate, and scale.
           </p>
         </Reveal>
 
-        <Reveal className={styles.diagram}>
-          <span className={styles.orbitRing} aria-hidden="true" />
+        <Reveal delay={0.1}>
+          <div className={styles.diagramWrapper}>
+            <div className={styles.diagramBox}>
+            {/* dashed outer ring */}
+            <div className={styles.ring} aria-hidden="true" />
 
-          {orbitDots.map(([left, top]) => (
-            <span
-              key={`${left}-${top}`}
-              className={styles.orbitDot}
-              style={{ left: `${left}%`, top: `${top}%` }}
-              aria-hidden="true"
-            />
-          ))}
+            {/* decorative dots along the ring — rotate together as one unit */}
+            <div className={styles.dotsOrbit} aria-hidden="true">
+              <span className={`${styles.orbitDot} ${styles.dot1}`} />
+              <span className={`${styles.orbitDot} ${styles.dot2}`} />
+              <span className={`${styles.orbitDot} ${styles.dot3}`} />
+              <span className={`${styles.orbitDot} ${styles.dot4}`} />
+              <span className={`${styles.orbitDot} ${styles.dot5}`} />
+              <span className={`${styles.orbitDot} ${styles.dot6}`} />
+              <span className={`${styles.orbitDot} ${styles.dot7}`} />
+            </div>
 
-          {ecosystem.circles.map((circle) => {
-            const Icon = circleIcons[circle.key];
-            return (
-              <div key={circle.key} className={`${styles.circle} ${styles[circle.key]}`}>
-                <span className={styles.circleIcon} aria-hidden="true">
-                  <Icon />
-                </span>
-                <h3 className={styles.circleTitle}>{circle.title}</h3>
-                <p className={styles.circleSub}>{circle.subtitle}</p>
+            {/* Technology circle (back layer) */}
+            <div className={`${styles.circle} ${styles.circleTechnology}`}>
+              <div className={styles.circleInner}>
+                <div className={`${styles.iconCircle} ${styles.iconTech}`}>
+                  <Bot className={styles.icon} />
+                </div>
+                <h3 className={styles.circleTitle}>Technology</h3>
+                <p className={styles.circleSubtitle}>
+                  Build, Automate &amp; Scale
+                </p>
                 <ul className={styles.circleList}>
-                  {circle.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
+                  <li>Website Development</li>
+                  <li>App Development</li>
+                  <li>Business Automation</li>
+                  <li>Software Solutions</li>
                 </ul>
               </div>
-            );
-          })}
+            </div>
 
-          <div className={styles.core}>
-            <span>
-              <TbChartBar className={styles.coreIcon} aria-hidden="true" />
-              <br />
-              Business
-              <br />
-              Growth
-            </span>
+            {/* Creative circle */}
+            <div className={`${styles.circle} ${styles.circleCreative}`}>
+              <div className={styles.circleInner}>
+                <div className={`${styles.iconCircle} ${styles.iconCreative}`}>
+                  <Palette className={styles.icon} />
+                </div>
+                <h3 className={styles.circleTitle}>Creative</h3>
+                <p className={styles.circleSubtitle}>
+                  Build Trust &amp; Recognition
+                </p>
+                <ul className={styles.circleList}>
+                  <li>Branding</li>
+                  <li>Creative Design</li>
+                  <li>Content Creation</li>
+                  <li>Video Production</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Marketing circle */}
+            <div className={`${styles.circle} ${styles.circleMarketing}`}>
+              <div className={styles.circleInner}>
+                <div className={`${styles.iconCircle} ${styles.iconMarketing}`}>
+                  <Megaphone className={styles.icon} />
+                </div>
+                <h3 className={styles.circleTitle}>Marketing</h3>
+                <p className={styles.circleSubtitle}>
+                  Drive Visibility &amp; Leads
+                </p>
+                <ul className={styles.circleList}>
+                  <li>SEO</li>
+                  <li>Performance Marketing</li>
+                  <li>Social Media Marketing</li>
+                  <li>Lead Generation</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Center badge */}
+            <div className={styles.centerCircle}>
+              <TrendingUp className={styles.centerIcon} />
+              <span>Business Growth</span>
+            </div>
+
+            {/* Orbiting pills */}
+            <div className={`${styles.pill} ${styles.pillSeo}`}>
+              <Search className={styles.pillIcon} />
+              <span>AI-Powered SEO</span>
+            </div>
+            <div className={`${styles.pill} ${styles.pillContent}`}>
+              <MessageSquareText className={styles.pillIcon} />
+              <span>AI Content Assistance</span>
+            </div>
+            <div className={`${styles.pill} ${styles.pillAds}`}>
+              <RefreshCw className={styles.pillIcon} />
+              <span>AI-Enhanced Ad Optimization</span>
+            </div>
+            <div className={`${styles.pill} ${styles.pillAutomation}`}>
+              <Cog className={styles.pillIcon} />
+              <span>AI Automation Systems</span>
+            </div>
+            <div className={`${styles.pill} ${styles.pillAnalytics}`}>
+              <BarChart3 className={styles.pillIcon} />
+              <span>AI Analytics & Insights</span>
+            </div>
+            </div>
           </div>
-
-          {chips.map(({ index, Icon, slot }) => (
-            <span key={ecosystem.orbit[index]} className={`${styles.chip} ${styles[slot]}`}>
-              <Icon className={styles.chipIcon} aria-hidden="true" />
-              {ecosystem.orbit[index]}
-            </span>
-          ))}
         </Reveal>
-
-        <Reveal className={styles.cta}>
-          <ArrowButton href="#contact">Build Your Growth System</ArrowButton>
+        <Reveal delay={0.15}>
+          <button className="btn" href="#contact">Build Your Growth System</button>
         </Reveal>
       </div>
     </section>

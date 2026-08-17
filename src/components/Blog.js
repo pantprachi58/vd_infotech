@@ -61,7 +61,7 @@ export default function Blog() {
                       alt=""
                       width={380}
                       height={276}
-                      sizes="(max-width: 575px) 100vw, 22vw"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1199px) 220px, 380px"
                     />
                   </div>
                   <div className={styles.postBody}>
