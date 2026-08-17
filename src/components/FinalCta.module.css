@@ -40,11 +40,11 @@
 
 .input {
   width: 100%;
-  padding: 18px 22px;
+  padding: 15px 22px;
   border: 0;
   border-radius: var(--radius-sm);
   background: #d6d6d6;
-  font-size: var(--fs-lead);
+  font-size: 15px;
   color: var(--ink);
   transition: box-shadow 0.18s ease, background 0.18s ease;
 }
