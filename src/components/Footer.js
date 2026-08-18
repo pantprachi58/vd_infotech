@@ -14,7 +14,6 @@ import {
 import { SiThreads } from "react-icons/si";
 import { FiSmartphone, FiMapPin, FiClock } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
-import { TbTargetArrow } from "react-icons/tb";
 import { site, footer } from "@/data/site";
 import styles from "./Footer.module.css";
 
@@ -31,7 +30,7 @@ const socials = [
   FaBehance,
 ];
 
-function Presence({ artwork, name, tag, label, labelIcon, cities }) {
+function Presence({ artwork, name, tag, cities, isInternational }) {
   return (
     <div className={styles.presenceRow}>
       <div className={styles.presenceBrand}>
@@ -48,15 +47,18 @@ function Presence({ artwork, name, tag, label, labelIcon, cities }) {
       </div>
 
       <div>
-        <p className={styles.presenceLabel}>
-          {labelIcon}
-          {label}
-        </p>
         <ul className={styles.cities}>
           {cities.map((city) => (
-            <li key={city} className={styles.city}>
-              {city}
-              <span className={styles.citySoon}>Coming soon</span>
+            <li key={city.name} className={styles.city}>
+              <Image 
+                src={city.icon} 
+                alt={city.name} 
+                width={32} 
+                height={32}
+                className={styles.cityIcon}
+              />
+              <span className={styles.cityName}>{city.name}</span>
+              {!isInternational && <span className={styles.citySoon}>Coming soon</span>}
             </li>
           ))}
         </ul>
@@ -134,33 +136,41 @@ export default function Footer() {
 
         {/* presence + certifications */}
         <div className={styles.middle}>
-          <div>
+          <div className={styles.presenceSection}>
             <Presence
-              artwork="/images/chatgpt-image-aug-5-2026-03-58-27-pm-1.webp"
+              artwork="/images/main icons/Dehradun, India.png"
               name="DEHRADUN, INDIA"
               tag="Head Office"
-              label="Upcoming Expansion:"
-              labelIcon={<span aria-hidden="true">⠿</span>}
               cities={footer.expansionCities}
+              isInternational={false}
             />
             <Presence
-              artwork="/images/2018-1.webp"
+              artwork="/images/main icons/International.png"
               name="INTERNATIONAL PRESENCE"
-              label="Target Markets:"
-              labelIcon={<TbTargetArrow size={20} />}
               cities={footer.targetMarkets}
+              isInternational={false}
             />
           </div>
 
-          <div>
+          <div className={styles.certSection}>
             <h3 className={styles.certTitle}>Certifications &amp; Registrations</h3>
-            <ul className={styles.certGrid}>
-              {footer.certifications.map((src) => (
-                <li key={src} className={styles.cert}>
-                  <Image src={src} alt="" width={90} height={50} />
-                </li>
-              ))}
-            </ul>
+            <div className={styles.certCarouselWrapper}>
+              <ul className={styles.certGrid}>
+                {footer.certifications.map((src, idx) => (
+                  <li key={`${src}-${idx}`} className={styles.cert}>
+                    <Image src={src} alt="" width={90} height={50} />
+                  </li>
+                ))}
+              </ul>
+              {/* Duplicate for seamless loop */}
+              <ul className={styles.certGrid} aria-hidden="true">
+                {footer.certifications.map((src, idx) => (
+                  <li key={`${src}-duplicate-${idx}`} className={styles.cert}>
+                    <Image src={src} alt="" width={90} height={50} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -187,7 +197,7 @@ export default function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className={styles.bottom}>
+        {/* <div className={styles.bottom}>
           <span className={styles.crafted}>
             Crafted with <FaHeart className={styles.heart} /> by VD Infotech
           </span>
@@ -207,11 +217,40 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
 
-      <div className={styles.copyright}>
-        Copyright © 2026 VD Infotech Technologies Pvt. Ltd. All Rights Reserved.
+      {/* Lower footer */}
+      <div className={styles.lowerFooter}>
+        <div className="container">
+          <div className={styles.lowerFooterContent}>
+            <span className={styles.craftedLower}>
+              Crafted with <FaHeart className={styles.heartLower} /> by VD Infotech
+            </span>
+            
+            <ul className={styles.serviceLinks}>
+              {footer.bottomLinks.map((link, index) => (
+                <li key={link}>
+                  <a href="#">{link}</a>
+                  {index < footer.bottomLinks.length - 1 && <span className={styles.separator}>|</span>}
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.copyrightLower}>
+              Copyright © 2026 VD Infotech Technologies Pvt. Ltd. All Rights Reserved.
+            </div>
+
+            <ul className={styles.policyLinks}>
+              {footer.legalLinks.map((link, index) => (
+                <li key={link}>
+                  <a href="#">{link}</a>
+                  {index < footer.legalLinks.length - 1 && <span className={styles.separator}>|</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   );
