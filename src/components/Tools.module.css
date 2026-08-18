@@ -124,7 +124,6 @@
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
   .tool{
     aspect-ratio: 2;
   }
@@ -133,6 +132,7 @@
     width: auto;
     /* max-width: 139%; */
     /* height: auto; */
+  
     max-height: 85%;
   }
 }
