@@ -66,3 +66,14 @@
     font-size: 14px;
   }
 }
+@media (max-width: 360px) {
+  .value{
+    font-size: 20px;
+  }
+  .grid{
+    gap:10px;
+  }
+  .label{
+    font-size:11px;
+  }
+}

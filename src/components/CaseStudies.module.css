@@ -185,3 +185,21 @@
     display: none;
   }
 }
+@media (max-width: 360.98px) {
+  .name{
+    font-size: 20px;
+    margin: unset;
+  }
+  .text{
+    font-size: 13px;
+    margin: 0px 0px 10px;
+  }
+  .stats{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stat{
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

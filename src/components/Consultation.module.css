@@ -567,6 +567,7 @@
 
   .analyzeGrid {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .analyzeIcon {
@@ -659,4 +660,28 @@
   width: 70%;
         height: 100%;
 }
+}
+@media (max-width: 360px) {
+  .head{
+    gap:10px;
+  }
+  .analyzeItem{
+    flex-direction: unset;
+    font-size: 12px;
+    min-height: unset;
+    align-items: center;
+    padding: 10px;
+  }
+  .receiveItem{
+    border: 1px solid var(--grey-200);
+    border-radius: var(--radius);
+    background: var(--white);
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+  }
+
 }

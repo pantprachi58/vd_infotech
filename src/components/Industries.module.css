@@ -91,3 +91,13 @@
     width: 148px;
   }
 }
+@media (max-width: 360px) {
+  .head{
+    gap:10px;
+  }
+  .intro,
+  .quote,
+  .label {
+    font-size: 13px;
+  }
+}
