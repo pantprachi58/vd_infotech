@@ -152,13 +152,25 @@ export default function Footer() {
           <div className={styles.certs}>
             <h3 className={styles.certsTitle}>{footer.certifications.title}</h3>
             <span className={styles.rule} aria-hidden="true" />
-            <ul className={styles.certGrid}>
-              {footer.certifications.items.map((c) => (
-                <li key={c.name} className={styles.certCard}>
-                  <Image src={c.image} alt={c.name} width={110} height={62} />
-                </li>
-              ))}
-            </ul>
+            <div className={styles.certCarouselWrapper}>
+              <div className={styles.certCarousel}>
+                <ul className={styles.certGrid}>
+                  {footer.certifications.items.map((c, idx) => (
+                    <li key={`${c.name}-${idx}`} className={styles.certCard}>
+                      <Image src={c.image} alt={c.name} width={110} height={62} />
+                    </li>
+                  ))}
+                </ul>
+                {/* Duplicate for seamless loop */}
+                <ul className={styles.certGrid} aria-hidden="true">
+                  {footer.certifications.items.map((c, idx) => (
+                    <li key={`${c.name}-duplicate-${idx}`} className={styles.certCard}>
+                      <Image src={c.image} alt={c.name} width={110} height={62} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 

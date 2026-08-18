@@ -44,7 +44,7 @@ export default function Home() {
         <Faq />
         <FinalCta />
               </main> 
-        {/* <Footer /> */}
+        <Footer />
     </>
   );
 }
