@@ -290,7 +290,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(8px, 1vw, 12px);
   padding: 10px 14px;
   border-radius: var(--radius);
   background: var(--white);
@@ -325,13 +325,37 @@
 }
 
 .badgeIcon {
+  flex: none;
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
+  width: clamp(34px, 3vw, 42px);
+  height: clamp(34px, 3vw, 42px);
+  border-radius: 12px;
   background: var(--grey-50);
-  font-size: 15px;
+}
+
+.badge:nth-child(1) .badgeIcon,
+.badge:nth-child(2) .badgeIcon {
+  background: #fff0ef;
+}
+
+.badge:nth-child(3) .badgeIcon {
+  background: #edf3ff;
+}
+
+.badge:nth-child(4) .badgeIcon {
+  background: #eefaf1;
+}
+
+.badge:nth-child(5) .badgeIcon {
+  background: #fff7e6;
+}
+
+.badgeIcon img {
+  width: min(64%, 24px);
+  height: auto;
+  max-height: 24px;
+  object-fit: contain;
 }
 
 .badgeLabel {
@@ -390,11 +414,12 @@
 .analyzeItem {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 10px 10px;
-  border: 1px solid var(--grey-200);
+  gap: 8px;
+  min-height: 88px;
+  padding: 12px 12px;
+  border: 1px solid #e1e1e1;
   border-radius: var(--radius);
-  background: #e6e6e6;
+  background: #f7f7f7;
   font-size: 14px;
   font-weight: 500;
   transition: border-color 0.18s ease, transform 0.18s ease;
@@ -406,13 +431,20 @@
 }
 
 .analyzeIcon {
+  flex: none;
   display: grid;
   place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
+  width: clamp(32px, 3vw, 40px);
+  height: clamp(32px, 3vw, 40px);
+  border-radius: 10px;
   background: #fff;
-  font-size: 13px;
+}
+
+.analyzeIcon img {
+  width: min(58%, 18px);
+  height: auto;
+  max-height: 18px;
+  object-fit: contain;
 }
 
 .receiveGrid {
@@ -451,17 +483,6 @@
 
   .strategist {
     margin-inline: 60px;
-  }
-
-  .badge:nth-child(1),
-  .badge:nth-child(2),
-  .badge:nth-child(3) {
-    left: -40px;
-  }
-
-  .badge:nth-child(4),
-  .badge:nth-child(5) {
-    right: -40px;
   }
 }
 
@@ -548,6 +569,18 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .analyzeIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  .analyzeIcon img {
+    width: 58%;
+    height: auto;
+    max-height: 16px;
+  }
+
   .strategist {
     padding: 24px 18px;
   }
@@ -582,6 +615,18 @@
   }
   .badge{
     padding: 5px 10px;
+  }
+
+  .badgeIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+
+  .badgeIcon img {
+    width: 64%;
+    height: auto;
+    max-height: 19px;
   }
 }
 @media (max-width: 499.98px) {

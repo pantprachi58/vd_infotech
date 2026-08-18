@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
 import { processSteps } from "@/data/site";
 import SectionLabel from "./ui/SectionLabel";
 import SectionTitle from "./ui/SectionTitle";
@@ -9,9 +10,9 @@ import styles from "./Process.module.css";
 
 /**
  * The connector draws itself one leg at a time, following the numbered order:
- * 01 → 04 across the top, down and back, then 05 → 07. Each leg is a plain
- * dashed box revealed with clip-path, so the dash pattern never stretches the
- * way a scale transform would.
+ * 01 → 04 across the top, down and back, then 05 → 07. Each leg uses a
+ * repeating dash background revealed with clip-path, so the dash pattern never
+ * stretches the way a scale transform would.
  */
 const reveals = {
   ltr: { from: "inset(0 100% 0 0)", to: "inset(0 0 0 0)" },
@@ -19,15 +20,14 @@ const reveals = {
   ttb: { from: "inset(0 0 100% 0)", to: "inset(0 0 0 0)" },
 };
 
-function Leg({ shape, dir, delay, duration }) {
+function Leg({ shape, dir, delay, duration, active }) {
   const { from, to } = reveals[dir];
   return (
     <motion.span
       aria-hidden="true"
       className={`${styles.seg} ${styles[shape]}`}
       initial={{ clipPath: from }}
-      whileInView={{ clipPath: to }}
-      viewport={{ once: true, amount: 0.4 }}
+      animate={{ clipPath: active ? to : from }}
       transition={{ delay, duration, ease: "linear" }}
     />
   );
@@ -44,18 +44,23 @@ function Step({ step }) {
 }
 
 export default function Process() {
+  const rowsRef = useRef(null);
+  const isInView = useInView(rowsRef, { once: true, amount: 0.35 });
+
   return (
     <section className={styles.section} aria-labelledby="process">
       <div className="container">
         <Reveal className={styles.head}>
           <SectionLabel>The Perocess</SectionLabel>
-          <SectionTitle id="process">Where Strategy Becomes Results</SectionTitle>
+          <SectionTitle id="process" className={styles.title}>
+            Where Strategy Becomes Results
+          </SectionTitle>
         </Reveal>
 
-        <div className={styles.rows}>
+        <div ref={rowsRef} className={styles.rows}>
           <div className={`${styles.row} ${styles.rowOne}`}>
-            <Leg shape="hTop" dir="ltr" delay={0.2} duration={1.5} />
-            <Leg shape="vRight" dir="ttb" delay={1.7} duration={0.35} />
+            <Leg shape="hTop" dir="ltr" delay={0.12} duration={1.15} active={isInView} />
+            <Leg shape="vRight" dir="ttb" delay={1.27} duration={0.35} active={isInView} />
 
             {processSteps.slice(0, 4).map((step, i) => (
               <Reveal key={step.no} delay={i * 0.07}>
@@ -65,9 +70,9 @@ export default function Process() {
           </div>
 
           <div className={`${styles.row} ${styles.rowTwo}`}>
-            <Leg shape="hMid" dir="rtl" delay={2.05} duration={0.9} />
-            <Leg shape="vLeft" dir="ttb" delay={2.95} duration={0.35} />
-            <Leg shape="hBottom" dir="ltr" delay={3.3} duration={1.1} />
+            <Leg shape="hMid" dir="rtl" delay={1.62} duration={1.05} active={isInView} />
+            <Leg shape="vLeft" dir="ttb" delay={2.67} duration={0.35} active={isInView} />
+            <Leg shape="hBottom" dir="ltr" delay={3.02} duration={0.95} active={isInView} />
 
             {processSteps.slice(4).map((step, i) => (
               <Reveal key={step.no} delay={i * 0.07}>

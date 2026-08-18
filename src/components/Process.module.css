@@ -1,5 +1,5 @@
 .section {
-  padding-block: 76px 90px;
+  padding-block: 80px 96px;
   background: var(--white);
   text-align: center;
 }
@@ -8,15 +8,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
-  margin-bottom: 60px;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.title {
+  width: 100%;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.14;
 }
 
 /* Two rows of steps with a dashed connector snaking between them: across row
    one, down the right, back along the middle, down the left, across row two. */
 .rows {
   position: relative;
-  max-width: 1180px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -24,12 +31,17 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px;
+  gap: clamp(46px, 5vw, 82px);
   text-align: left;
 }
 
 .rowTwo {
-  margin-top: 78px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 86px;
+}
+
+.rowTwo > *:last-child {
+  grid-column: 3;
 }
 
 /* ---- connector ----------------------------------------------------------- */
@@ -40,43 +52,63 @@
 }
 
 .hTop {
-  top: 38px;
-  left: 13%;
+  top: 45px;
+  left: 10%;
   right: 0;
-  height: 0;
-  border-top: 3px dotted var(--red);
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--red) 0 18px,
+    transparent 18px 30px
+  );
 }
 
 .vRight {
-  top: 38px;
+  top: 45px;
   right: 0;
-  bottom: -39px;
-  width: 0;
-  border-left: 3px dotted var(--red);
+  bottom: -44px;
+  width: 3px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--red) 0 18px,
+    transparent 18px 30px
+  );
 }
 
 .hMid {
-  top: -39px;
-  left: 2%;
+  top: -44px;
+  left: 0;
   right: 0;
-  height: 0;
-  border-top: 3px dotted var(--red);
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--red) 0 18px,
+    transparent 18px 30px
+  );
 }
 
 .vLeft {
-  top: -39px;
-  left: 2%;
-  height: 77px;
-  width: 0;
-  border-left: 3px dotted var(--red);
+  top: -44px;
+  left: 0;
+  height: 89px;
+  width: 3px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--red) 0 18px,
+    transparent 18px 30px
+  );
 }
 
 .hBottom {
-  top: 38px;
-  left: 2%;
-  width: 70%;
-  height: 0;
-  border-top: 3px dotted var(--red);
+  top: 45px;
+  left: 0;
+  width: calc(50% + 36px);
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--red) 0 18px,
+    transparent 18px 30px
+  );
 }
 
 /* ---- steps --------------------------------------------------------------- */
@@ -89,51 +121,59 @@
    of the row, which is how it reads in the design. */
 .no {
   display: inline-block;
-  padding-right: 14px;
   background: var(--white);
-  font-size: 76px;
-  font-weight: 800;
+  font-size: 88px;
+  font-weight: 900;
   line-height: 0.95;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   color: var(--red);
 }
 
 .stepTitle {
-  margin: 6px 0 4px;
-  font-size: 24px;
-  font-weight: 700;
+  margin: 8px 0 4px;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 .stepBody {
   margin: 0;
-  font-size: var(--fs-body);
-  line-height: 1.45;
-  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.25;
+  color: var(--ink);
   white-space: pre-line;
 }
 
 /* ---- responsive ---------------------------------------------------------- */
 @media (max-width: 1199.98px) {
+  .title {
+    font-size: 44px;
+  }
+
   .no {
-    font-size: 58px;
+    font-size: 68px;
   }
 
   .stepTitle {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .stepBody {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .hTop,
   .vRight,
   .hBottom {
-    top: 29px;
+    top: 34px;
   }
 
   .vLeft {
-    height: 68px;
+    height: 78px;
+  }
+
+  .hBottom {
+    width: calc(50% + 28px);
   }
 }
 
@@ -141,6 +181,10 @@
   .row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 24px;
+  }
+
+  .rowTwo > *:last-child {
+    grid-column: auto;
   }
 
   .rowTwo {
@@ -160,6 +204,10 @@
 
   .head {
     margin-bottom: 36px;
+  }
+
+  .title {
+    font-size: 26px;
   }
 
   .row {

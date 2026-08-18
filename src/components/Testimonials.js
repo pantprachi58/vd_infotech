@@ -17,7 +17,7 @@ export default function Testimonials() {
           <SectionLabel>Client Success Stories</SectionLabel>
           <div>
             <h2 className={styles.title} id="testimonials">Experiences We&apos;ve Built Together</h2>
-            <p as="p" ruled className={styles.title}>
+            <p as="p"  className={styles.title}>
               What <span className={styles.subtitle}>Our Clients Are Saying</span>
             </p>
           </div>
