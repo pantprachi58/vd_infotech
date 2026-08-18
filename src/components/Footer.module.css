@@ -1,782 +1,671 @@
+/* Footer — Figma home frame 585:1982, footer block at y20561.
+   Authored on a 1720px content width inside a 1920px frame.
+
+   Every size below is written as `calc(N * var(--u))`, where N is the literal
+   Figma pixel value. Above 1400px `--u` shrinks with the viewport so the whole
+   block keeps the design's proportions instead of holding design-size text in a
+   narrower container; below that it is a plain 1px and the stacked layouts in
+   the media queries take over. */
+
 .footer {
-  background: #131313;
+  --u: 1px;
+  background: #0c0c0c;
   color: var(--white);
-  font-size: 14px;
+  padding-top: calc(88 * var(--u));
 }
 
-/* ---- top: brand + link columns + contact --------------------------------- */
+@media (min-width: 1400px) {
+  .footer {
+    /* the shared .container caps at 1720px *including* its 24px padding, so the
+       real content box is 1672 at its widest — scale against that, not the
+       viewport, so the footer's internal proportions match Figma exactly */
+    --u: calc((min(1720px, 100vw) - 48px) / 1720);
+  }
+}
+
+/* The short red rule that sits under every heading in this footer. */
+.rule {
+  display: block;
+  width: calc(40 * var(--u));
+  height: calc(4 * var(--u));
+  background: var(--red);
+  border-radius: calc(2 * var(--u));
+}
+
+/* ---------------------------------------------------------------- top row */
+
 .top {
   display: grid;
-  grid-template-columns: 1.35fr 0.85fr 1.1fr 1.05fr 1.15fr;
-  gap: 40px;
-  padding-block: 60px 46px;
+  grid-template-columns: calc(448 * var(--u)) repeat(4, minmax(0, 1fr));
+  gap: 0 calc(60 * var(--u));
+  padding-bottom: calc(46 * var(--u));
 }
 
 .logo {
-  height: 46px;
-  width: auto;
-  margin-bottom: 18px;
+  width: calc(383 * var(--u));
+  height: auto;
 }
 
 .blurb {
-  margin: 0 0 22px;
-  max-width: 400px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #cfcfcf;
+  margin: calc(13 * var(--u)) 0 0;
+  font-size: calc(14 * var(--u));
+  font-weight: 300;
+  line-height: 1.5;
+  color: #f9f9f9;
 }
 
 .followTitle {
-  margin: 0 0 12px;
-  font-size: var(--fs-body);
+  margin: calc(20 * var(--u)) 0 calc(10 * var(--u));
+  font-size: calc(16 * var(--u));
   font-weight: 700;
-  color: var(--red);
+  color: #ef0303;
 }
 
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  list-style: none;
+  gap: calc(14 * var(--u));
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .social {
   display: grid;
   place-items: center;
-  width: 24px;
-  height: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  width: calc(26 * var(--u));
+  height: calc(26 * var(--u));
+  border: 1px solid #6f6f6f;
   border-radius: 50%;
-  font-size: 13px;
-  transition: background 0.18s ease, border-color 0.18s ease;
+  font-size: calc(12 * var(--u));
+  color: var(--white);
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .social:hover {
   background: var(--red);
   border-color: var(--red);
+  color: var(--white);
 }
 
 .colTitle {
-  margin: 0 0 16px;
-  font-size: var(--fs-lead);
-  font-weight: 700;
+  margin: 0 0 calc(8 * var(--u));
+  font-size: calc(20 * var(--u));
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--red-deep);
+}
+
+.colLinks,
+.contact {
+  margin: calc(6 * var(--u)) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.colLinks a,
+.contact a {
+  font-size: calc(14 * var(--u));
+  font-weight: 300;
+  color: var(--white);
+  transition: color 0.2s ease;
+}
+
+.colLinks li {
+  line-height: calc(21 * var(--u));
+}
+
+.colLinks a:hover,
+.contact a:hover {
   color: var(--red);
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.contact li {
+  display: grid;
+  grid-template-columns: calc(16 * var(--u)) 1fr;
+  gap: 0 calc(8 * var(--u));
+  align-items: start;
+  margin-bottom: calc(5 * var(--u));
+  font-size: calc(14 * var(--u));
+  font-weight: 300;
+  line-height: calc(21 * var(--u));
 }
 
-.links a {
-  color: #dcdcdc;
-  transition: color 0.16s ease, padding-left 0.16s ease;
-}
-
-.links a:hover {
+.contact svg {
+  margin-top: calc(4 * var(--u));
+  font-size: calc(13 * var(--u));
   color: var(--white);
-  padding-left: 4px;
-}
-
-.contactList {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: #dcdcdc;
-}
-
-.contactItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  line-height: 1.45;
-}
-
-.contactItem svg {
-  flex: none;
-  margin-top: 3px;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
-  margin-top: 6px;
+  width: calc(9 * var(--u));
+  height: calc(9 * var(--u));
+  margin-top: calc(6 * var(--u));
   border-radius: 50%;
   background: var(--green);
-  flex: none;
 }
 
-/* ---- middle: presence + certifications ----------------------------------- */
+/* ------------------------------------------------- locations + certs row */
+
+/* left block 1012, gutter 135, right block 577 — measured off the design */
 .middle {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 46px;
-  padding-bottom: 44px;
+  grid-template-columns: minmax(0, 1012fr) minmax(0, 577fr);
+  gap: calc(135 * var(--u));
+  padding-bottom: calc(90 * var(--u));
 }
 
-.presenceSection {
-  display: flex;
-  flex-direction: column;
-}
-
-.presenceRow {
+.locations {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 30px;
-  align-items: start;
-  padding-bottom: 26px;
+  gap: calc(58 * var(--u));
+  align-content: start;
 }
 
-.presenceRow + .presenceRow {
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  padding-top: 26px;
-}
-
-.presenceBrand {
-  display: flex;
-  flex-direction: column;
+/* illustration | divider | icon + title | 5-across tile grid */
+.locationRow {
+  display: grid;
+  grid-template-columns: calc(210 * var(--u)) calc(258 * var(--u)) minmax(0, 1fr);
   align-items: center;
-  gap: 12px;
-  padding-right: 26px;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.presence {
+  display: grid;
+  justify-items: center;
+  gap: calc(5 * var(--u));
+  padding-right: calc(30 * var(--u));
+  border-right: 1px solid #4a4a4a;
   text-align: center;
 }
 
-.presenceBrand img {
-  width: 100%;
-  /* height: auto; */
-  opacity: 0.85;
-  filter: brightness(0.95);
+.presence img {
+  width: auto;
+  max-height: calc(107 * var(--u));
+  object-fit: contain;
 }
 
-.presenceName {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1.4;
-}
-
-.presenceTag {
-  font-size: 11px;
-  color: var(--red);
-  font-weight: 600;
+.presenceWide img {
+  max-height: calc(99 * var(--u));
 }
 
 .presenceLabel {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 16px;
-  font-size: 13px;
+  margin: calc(4 * var(--u)) 0 0;
+  font-size: calc(12 * var(--u));
   font-weight: 600;
-  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grey-50);
 }
 
-.dotsIcon {
-  font-size: 18px;
-  opacity: 0.7;
+.presence .rule {
+  width: calc(46 * var(--u));
+  height: calc(3 * var(--u));
 }
 
-.cities {
+.presenceCaption {
+  margin: 0;
+  font-size: calc(16 * var(--u));
+  color: #dc0303;
+}
+
+.locationLead {
+  display: grid;
+  justify-items: center;
+  gap: calc(10 * var(--u));
+  padding: 0 calc(24 * var(--u));
+}
+
+.locationIcon {
+  width: calc(89 * var(--u));
+  height: auto;
+}
+
+.locationTitle {
+  margin: 0;
+  font-size: calc(16 * var(--u));
+  color: var(--grey-100);
+  white-space: nowrap;
+}
+
+.places {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px 10px;
-  list-style: none;
+  gap: calc(5 * var(--u)) calc(12 * var(--u));
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.city {
+.place {
+  display: grid;
+  justify-items: start;
+  align-content: end;
+}
+
+.placeIcon {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  color: #e8e8e8;
-  line-height: 1.3;
-  text-align: center;
+  align-items: flex-end;
+  height: calc(48 * var(--u));
 }
 
-.cityIcon {
-  width: 100px;
-  height: 45px;
+.placeIcon img {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(48 * var(--u));
   object-fit: contain;
-  border-radius: 4px;
-  transition: transform 0.2s ease;
+  object-position: left bottom;
 }
 
-.city:hover .cityIcon {
-  transform: scale(1.1);
+.placeName {
+  margin-top: calc(3 * var(--u));
+  font-size: calc(14 * var(--u));
+  line-height: calc(17 * var(--u));
+  color: var(--white);
 }
 
-.cityName {
-  display: block;
-  font-size: 12px;
+.placeSoon {
+  font-size: calc(9 * var(--u));
+  line-height: calc(12 * var(--u));
+  font-weight: 500;
+  color: var(--red-deep);
+}
+
+/* certifications */
+
+.certsTitle {
+  margin: 0 0 calc(8 * var(--u));
+  font-size: calc(22 * var(--u));
   font-weight: 600;
-  color: #fff;
-}
-
-.citySoon {
-  font-size: 10px;
-  color: #da0a03;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.certSection {
-  display: flex;
-  flex-direction: column;
-}
-
-.certTitle {
-  margin: 0 0 20px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.certTitle::after {
-  content: "";
-  display: block;
-  width: 54px;
-  height: 2px;
-  margin-top: 8px;
-  background: var(--red);
-}
-
-.certCarouselWrapper {
-  position: relative;
-  overflow: hidden;
-  max-height: 320px;
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  line-height: 1.2;
+  color: var(--white);
 }
 
 .certGrid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  list-style: none;
-  /* margin: 0; */
-  margin-top: 10px;
+  gap: calc(30 * var(--u)) calc(24 * var(--u));
+  margin: calc(12 * var(--u)) 0 0;
   padding: 0;
-  animation: scrollUp 30s linear infinite;
+  list-style: none;
 }
 
-.certCarouselWrapper:hover .certGrid {
-  animation-play-state: paused;
-}
-
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.cert {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  height: 72px;
-  padding: 12px;
-  border-radius: 8px;
-  background: var(--white);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cert:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-}
-
-.cert img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  /* height: auto; */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.cert:hover img {
-  transform: scale(1.1);
-}
-
-/* ---- payments + trust badges --------------------------------------------- */
-.payRow {
+.certCard {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 46px;
+  place-items: center;
+  aspect-ratio: 96 / 54;
+  min-height: 0;
+  padding: calc(7 * var(--u));
+  border-radius: calc(7 * var(--u));
+  background: #ececec;
+}
+
+.certCard img {
+  width: auto;
+  height: auto;
+  max-width: calc(82 * var(--u));
+  max-height: calc(40 * var(--u));
+  object-fit: contain;
+}
+
+/* ------------------------------------------------ payments + trust badges */
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1012fr) minmax(0, 577fr);
+  gap: calc(135 * var(--u));
   align-items: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: calc(40 * var(--u));
 }
 
-.payLeft {
-      grid-template-columns: 163px 1fr;
-    align-items: center;
-    gap: 23px;
-    display: grid;
+.payments {
+  display: grid;
+  grid-template-columns: calc(236 * var(--u)) minmax(0, 1fr);
+  align-items: center;
 }
 
-.payTitle {
+/* the red rule sits beside the heading's last line, per the design */
+.payHeading {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: end;
+  gap: 0 calc(12 * var(--u));
+  padding-right: calc(30 * var(--u));
+  border-right: 1px solid #4a4a4a;
+  min-height: calc(60 * var(--u));
+}
+
+.payHeading h3 {
+  grid-column: 1 / -1;
+  grid-row: 1;
   margin: 0;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  line-height: 1.4;
+  font-size: calc(16 * var(--u));
+  font-weight: 600;
+  line-height: calc(19 * var(--u));
+  text-align: right;
+  color: var(--white);
 }
 
-.payTitle::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  margin: 8px auto 0;
-  background: var(--red);
+.payHeading .rule {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin-bottom: calc(8 * var(--u));
+  width: calc(28 * var(--u));
+  height: calc(3 * var(--u));
 }
 
 .payGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 11px;
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: calc(14 * var(--u));
   margin: 0;
   padding: 0;
+  max-width: calc(776 * var(--u));
+  list-style: none;
 }
 
-.pay {
+.payCard {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  /* width: 62px; */
-  height: 40px;
-  border: 1px solid #fff;
-  padding: 6px;
-  border-radius: 5px;
-  background: #ffffff1a;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: calc(2 * var(--u));
+  aspect-ratio: 65 / 49;
+  min-height: 0;
+  border-radius: calc(8 * var(--u));
+  background: #2b2b2b;
+  border: 1px solid #3d3d3d;
 }
 
-.pay:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.pay img {
-  max-width: 32px;
-  max-height: 100%;
+.payCard img {
   width: auto;
-  /* height: auto; */
+  height: auto;
+  max-width: calc(51 * var(--u));
+  max-height: calc(32 * var(--u));
   object-fit: contain;
+}
+
+/* Net Banking is the one card in the design that pairs its icon with a label */
+.payLabel {
+  font-size: calc(9 * var(--u));
+  line-height: 1;
+  color: var(--white);
 }
 
 .badges {
   display: flex;
   align-items: center;
-  gap: 24px;
-  list-style: none;
+  justify-content: space-between;
+  gap: calc(24 * var(--u));
   margin: 0;
   padding: 0;
-}
-
-.badges li {
-  display: flex;
-  align-items: center;
+  list-style: none;
 }
 
 .badges img {
-  height: 56px;
   width: auto;
+  max-height: calc(84 * var(--u));
   object-fit: contain;
-  transition: transform 0.2s ease;
 }
 
-.badges img:hover {
-  transform: scale(1.05);
+/* ------------------------------------------------------------- legal bar */
+
+.legal {
+  background: #1c1c1c;
+  padding: calc(18 * var(--u)) 0;
 }
 
-/* ---- bottom bars --------------------------------------------------------- */
-.bottom {
-  display: flex;
+.legalInner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  flex-wrap: wrap;
-  padding-block: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  color: #cfcfcf;
+  gap: calc(20 * var(--u));
+  font-size: calc(12 * var(--u));
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.crafted,
+.copyright,
+.legalLinks {
+  margin: 0;
 }
 
 .crafted {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: calc(18 * var(--u));
 }
 
-.heart {
-  color: var(--red);
-}
-
-.bottomLinks,
-.legalLinks {
+.craftedLinks {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.bottomLinks li + li,
-.legalLinks li + li {
-  border-left: 1px solid rgba(255, 255, 255, 0.35);
+.craftedLinks a {
+  padding: 0 calc(9 * var(--u));
+  border-right: 1px solid #5a5a5a;
+  transition: color 0.2s ease;
 }
 
-.bottomLinks a,
-.legalLinks a {
-  display: inline-block;
-  padding: 0 14px;
-  transition: color 0.16s ease;
+.craftedLinks a:last-child {
+  border-right: 0;
 }
 
-.bottomLinks a:hover,
+.craftedLinks a:hover,
 .legalLinks a:hover {
-  color: var(--white);
+  color: var(--red);
 }
 
 .copyright {
-  padding-block: 22px;
-  background: #1e1e1e;
-  color: #d4d4d4;
   text-align: center;
 }
 
-/* ---- lower footer -------------------------------------------------------- */
-.lowerFooter {
-  background: #0a0a0a;
-  color: #b5b5b5;
-  font-size: 13px;
-  padding-block: 12px;
-}
-
-.lowerFooterContent {
+.legalLinks {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-.craftedLower {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  white-space: nowrap;
+.legalLinks a::after {
+  content: "·";
+  padding: 0 calc(6 * var(--u));
+  color: #7a7a7a;
 }
 
-.heartLower {
-  color: var(--red);
-  font-size: 10px;
-}
-
-.serviceLinks,
-.policyLinks {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 0;
-  list-style: none;
-  margin: 0;
+.legalLinks a:last-child::after {
+  content: "";
   padding: 0;
 }
 
-.serviceLinks li,
-.policyLinks li {
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
+/* ============================================================ responsive */
 
-.serviceLinks a,
-.policyLinks a {
-  font-size: 10px;
-  color: #b5b5b5;
-  transition: color 0.16s ease;
-  white-space: nowrap;
-  padding: 0 5px;
-}
-
-.serviceLinks a:hover,
-.policyLinks a:hover {
-  color: var(--white);
-}
-
-.separator {
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 10px;
-}
-
-.copyrightLower {
-  font-size: 11px;
-  color: #999;
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* ---- responsive ---------------------------------------------------------- */
+/* below the design width the two-column split and the one-line legal bar
+   stop fitting, so both stack */
 @media (max-width: 1399.98px) {
-  .top {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .middle,
+  .bottomRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 56px;
   }
 
-  .cities {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
+  /* once stacked the right-hand blocks would stretch the full width, so hold
+     them near the size they have in the design */
   .certGrid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 620px;
   }
 
-  .certCarouselWrapper {
-    max-height: 400px;
+  .badges {
+    justify-content: flex-start;
+    gap: 48px;
+  }
+
+  .legalInner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 20px;
+    white-space: normal;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .top {
+    grid-template-columns: 360px repeat(4, minmax(0, 1fr));
+    gap: 0 40px;
+  }
+
+  .locationRow {
+    grid-template-columns: 200px 190px minmax(0, 1fr);
+  }
+
+  .payments {
+    grid-template-columns: 200px minmax(0, 1fr);
   }
 }
 
 @media (max-width: 1199.98px) {
-  .middle,
-  .payRow {
-    grid-template-columns: 1fr;
+  .top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 44px 40px;
   }
 
-  .certGrid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .brand {
+    grid-column: 1 / -1;
   }
 
-  .certCarouselWrapper {
-    max-height: 280px;
+  .locationRow {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 24px 0;
   }
 
-  .badges {
-    justify-content: flex-start;
+  .locationLead {
+    justify-items: start;
+    padding: 0 0 0 24px;
+  }
+
+  .places {
+    grid-column: 1 / -1;
+    gap: 22px 12px;
+  }
+
+  .payments {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .payHeading {
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    border-right: 0;
+    min-height: 0;
+  }
+
+  .payHeading h3 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .payHeading .rule {
+    grid-column: 1;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .payGrid {
+    padding-left: 0;
   }
 }
 
 @media (max-width: 991.98px) {
-  .top {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
+  .footer {
+    padding-top: 56px;
   }
 
-  .presenceRow,
-  .payLeft {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .logo {
+    width: 300px;
   }
 
-  .presenceBrand {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-right: 0;
-    padding-bottom: 14px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-  }
-
-  .presenceBrand img {
-    width: 80px;
-  }
-
-  .payTitle {
-    text-align: left;
-  }
-
-  .payTitle::after {
-    margin-inline: 0;
-  }
-
-  .certGrid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .certCarouselWrapper {
-    max-height: 320px;
-  }
-
-  .cities {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .cityIcon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .lowerFooterContent {
-    gap: 12px;
-    font-size: 10px;
-  }
-
-  .craftedLower {
-    font-size: 10px;
-  }
-
-  .serviceLinks a,
-  .policyLinks a {
-    font-size: 10px;
-    padding: 0 8px;
-  }
-
-  .copyrightLower {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 767.98px) {
   .certGrid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .certCarouselWrapper {
-    max-height: 360px;
-  }
-
   .payGrid {
-    gap: 6px;
-  }
-
-  .pay {
-    width: 56px;
-    height: 36px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .top {
-    grid-template-columns: 1fr;
-    padding-block: 40px 32px;
-  }
-
-  .cities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 10px;
-  }
-
-  .cityIcon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .cityName {
-    font-size: 10px;
-  }
-
-  .citySoon {
-    font-size: 7px;
-  }
-
-  .certGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-  }
-
-  .certCarouselWrapper {
-    max-height: 420px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .badges {
     flex-wrap: wrap;
-    gap: 16px;
+    justify-content: center;
   }
 
   .badges img {
-    height: 48px;
+    max-height: 68px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    padding-bottom: 48px;
   }
 
-  .bottom {
-    justify-content: flex-start;
+  .locationRow {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 20px;
   }
 
-  .bottomLinks a,
-  .legalLinks a {
-    padding: 0 10px;
+  .presence {
+    padding: 0 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #4a4a4a;
+    width: 100%;
+    max-width: 260px;
   }
 
-  .presenceLabel {
-    font-size: 12px;
+  .locationLead {
+    justify-items: center;
+    padding: 0;
   }
 
-  .city {
-    font-size: 11px;
+  .places {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 24px 10px;
   }
 
-  .payLeft {
-    gap: 14px;
+  .place {
+    justify-items: center;
   }
 
-  .payTitle {
-    font-size: 13px;
+  .placeIcon img {
+    object-position: center bottom;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .certGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lowerFooterContent {
-    gap: 8px;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-inline: 10px;
+  .payGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .craftedLower {
-    font-size: 9px;
+  .places {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .serviceLinks,
-  .policyLinks {
-    gap: 0;
+  .logo {
+    width: 240px;
   }
 
-  .serviceLinks a,
-  .policyLinks a {
-    font-size: 9px;
-    padding: 0 6px;
-  }
-
-  .separator {
-    font-size: 9px;
-  }
-
-  .copyrightLower {
-    font-size: 9px;
+  .certsTitle {
+    font-size: 18px;
   }
 }

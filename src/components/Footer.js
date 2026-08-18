@@ -7,62 +7,65 @@ import {
   FaXTwitter,
   FaPinterestP,
   FaQuora,
-  FaReddit,
+  FaRedditAlien,
+  FaMedium,
   FaBehance,
-  FaHeart,
 } from "react-icons/fa6";
-import { SiThreads } from "react-icons/si";
-import { FiSmartphone, FiMapPin, FiClock } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
+import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import { site, footer } from "@/data/site";
 import styles from "./Footer.module.css";
 
-const socials = [
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedinIn,
-  FaXTwitter,
-  FaPinterestP,
-  FaQuora,
-  FaReddit,
-  SiThreads,
-  FaBehance,
-];
+const socialIcons = {
+  facebook: FaFacebookF,
+  instagram: FaInstagram,
+  youtube: FaYoutube,
+  linkedin: FaLinkedinIn,
+  x: FaXTwitter,
+  pinterest: FaPinterestP,
+  quora: FaQuora,
+  reddit: FaRedditAlien,
+  medium: FaMedium,
+  behance: FaBehance,
+};
 
-function Presence({ artwork, name, tag, cities, isInternational }) {
+/** One "icon over label over Coming soon" tile, used by both location rows. */
+function PlaceTile({ item }) {
   return (
-    <div className={styles.presenceRow}>
-      <div className={styles.presenceBrand}>
-        <Image src={artwork} alt="" width={200} height={140} />
-        <span>
-          <span className={styles.presenceName}>{name}</span>
-          {tag && (
-            <>
-              <br />
-              <span className={styles.presenceTag}>{tag}</span>
-            </>
-          )}
-        </span>
-      </div>
+    <li className={styles.place}>
+      <span className={styles.placeIcon}>
+        <Image src={item.image} alt="" width={80} height={56} />
+      </span>
+      <span className={styles.placeName}>{item.name}</span>
+      <span className={styles.placeSoon}>{footer.comingSoon}</span>
+    </li>
+  );
+}
 
-      <div>
-        <ul className={styles.cities}>
-          {cities.map((city) => (
-            <li key={city.name} className={styles.city}>
-              <Image 
-                src={city.icon} 
-                alt={city.name} 
-                width={32} 
-                height={32}
-                className={styles.cityIcon}
-              />
-              <span className={styles.cityName}>{city.name}</span>
-              {!isInternational && <span className={styles.citySoon}>Coming soon</span>}
-            </li>
-          ))}
-        </ul>
+/** Illustration + label + red rule + optional caption, at the head of each row. */
+function PresenceBlock({ image, label, caption, wide = false }) {
+  return (
+    <div className={`${styles.presence} ${wide ? styles.presenceWide : ""}`}>
+      <Image src={image} alt="" width={wide ? 171 : 145} height={wide ? 99 : 107} />
+      <p className={styles.presenceLabel}>{label}</p>
+      <span className={styles.rule} aria-hidden="true" />
+      {caption ? <p className={styles.presenceCaption}>{caption}</p> : null}
+    </div>
+  );
+}
+
+function LocationRow({ block, group, wide }) {
+  return (
+    <div className={styles.locationRow}>
+      <PresenceBlock {...block} wide={wide} />
+      <div className={styles.locationLead}>
+        <Image src={group.icon} alt="" width={97} height={97} className={styles.locationIcon} />
+        <p className={styles.locationTitle}>{group.title}</p>
       </div>
+      <ul className={styles.places}>
+        {group.items.map((item) => (
+          <PlaceTile key={item.name} item={item} />
+        ))}
+      </ul>
     </div>
   );
 }
@@ -71,184 +74,143 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        {/* brand, links, contact */}
+        {/* ---- brand + link columns ---- */}
         <div className={styles.top}>
-          <div>
+          <div className={styles.brand}>
             <Image
-              className={styles.logo}
-              src="/images/vd-infotech-white-red-final-2.webp"
+              src={footer.logo}
               alt="VD Infotech"
               width={383}
               height={73}
+              className={styles.logo}
             />
             <p className={styles.blurb}>{footer.blurb}</p>
             <p className={styles.followTitle}>Follow us on</p>
             <ul className={styles.socials}>
-              {socials.map((Icon, i) => (
-                <li key={i}>
-                  <a className={styles.social} href="#" aria-label="Social profile">
-                    <Icon />
-                  </a>
+              {footer.socials.map((s) => {
+                const Icon = socialIcons[s.icon];
+                return (
+                  <li key={s.name}>
+                    <a href={s.href} className={styles.social} aria-label={s.name}>
+                      <Icon aria-hidden="true" />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {footer.columns.map((col) => (
+            <nav key={col.title} className={styles.col}>
+              <h3 className={styles.colTitle}>{col.title}</h3>
+              <span className={styles.rule} aria-hidden="true" />
+              <ul className={styles.colLinks}>
+                {col.links.map((l) => (
+                  <li key={l}>
+                    <a href="#">{l}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+
+          <div className={styles.col}>
+            <h3 className={styles.colTitle}>Contact</h3>
+            <span className={styles.rule} aria-hidden="true" />
+            <ul className={styles.contact}>
+              <li>
+                <FiPhone aria-hidden="true" />
+                <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
+              </li>
+              <li>
+                <FiMail aria-hidden="true" />
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+              </li>
+              <li>
+                <FiMapPin aria-hidden="true" />
+                <span>{site.address}</span>
+              </li>
+              <li>
+                <FiClock aria-hidden="true" />
+                <span>{site.hours.days}</span>
+              </li>
+              <li>
+                <span className={styles.dot} aria-hidden="true" />
+                <span>{site.hours.time}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* ---- locations (left) + certifications (right) ---- */}
+        <div className={styles.middle}>
+          <div className={styles.locations}>
+            <LocationRow block={footer.presence.head} group={footer.expansion} />
+            <LocationRow block={footer.presence.international} group={footer.markets} wide />
+          </div>
+
+          <div className={styles.certs}>
+            <h3 className={styles.certsTitle}>{footer.certifications.title}</h3>
+            <span className={styles.rule} aria-hidden="true" />
+            <ul className={styles.certGrid}>
+              {footer.certifications.items.map((c) => (
+                <li key={c.name} className={styles.certCard}>
+                  <Image src={c.image} alt={c.name} width={110} height={62} />
                 </li>
               ))}
             </ul>
           </div>
-
-          {footer.columns.map((column) => (
-            <div key={column.title}>
-              <h3 className={styles.colTitle}>{column.title}</h3>
-              <ul className={styles.links}>
-                {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          <div>
-            <h3 className={styles.colTitle}>Contact</h3>
-            <ul className={styles.contactList}>
-              <li className={styles.contactItem}>
-                <FiSmartphone size={15} />
-                <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
-              </li>
-              <li className={styles.contactItem}>
-                <MdEmail size={15} />
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </li>
-              <li className={styles.contactItem}>
-                <FiMapPin size={15} />
-                {site.address}
-              </li>
-              <li className={styles.contactItem}>
-                <FiClock size={15} />
-                {site.hours.days}
-              </li>
-              <li className={styles.contactItem}>
-                <span className={styles.dot} aria-hidden="true" />
-                {site.hours.time}
-              </li>
-            </ul>
-          </div>
         </div>
 
-        {/* presence + certifications */}
-        <div className={styles.middle}>
-          <div className={styles.presenceSection}>
-            <Presence
-              artwork="/images/main icons/Dehradun, India.png"
-              name="DEHRADUN, INDIA"
-              tag="Head Office"
-              cities={footer.expansionCities}
-              isInternational={false}
-            />
-            <Presence
-              artwork="/images/main icons/International.png"
-              name="INTERNATIONAL PRESENCE"
-              cities={footer.targetMarkets}
-              isInternational={false}
-            />
-          </div>
-
-          <div className={styles.certSection}>
-            <h3 className={styles.certTitle}>Certifications &amp; Registrations</h3>
-            <div className={styles.certCarouselWrapper}>
-              <ul className={styles.certGrid}>
-                {footer.certifications.map((src, idx) => (
-                  <li key={`${src}-${idx}`} className={styles.cert}>
-                    <Image src={src} alt="" width={90} height={50} />
-                  </li>
-                ))}
-              </ul>
-              {/* Duplicate for seamless loop */}
-              <ul className={styles.certGrid} aria-hidden="true">
-                {footer.certifications.map((src, idx) => (
-                  <li key={`${src}-duplicate-${idx}`} className={styles.cert}>
-                    <Image src={src} alt="" width={90} height={50} />
-                  </li>
-                ))}
-              </ul>
+        {/* ---- payments (left) + trust badges (right) ---- */}
+        <div className={styles.bottomRow}>
+          <div className={styles.payments}>
+            <div className={styles.payHeading}>
+              <span className={styles.rule} aria-hidden="true" />
+              <h3>{footer.payments.title}</h3>
             </div>
-          </div>
-        </div>
-
-        {/* payments + trust badges */}
-        <div className={styles.payRow}>
-          <div className={styles.payLeft}>
-            <h3 className={styles.payTitle}>Accepted Payment Methods</h3>
             <ul className={styles.payGrid}>
-              {footer.payments.map((src, i) => (
-                <li key={`${src}-${i}`} className={styles.pay}>
-                  <Image src={src} alt="" width={64} height={42} />
+              {footer.payments.items.map((p) => (
+                <li key={p.name} className={styles.payCard}>
+                  <Image src={p.image} alt={p.name} width={65} height={50} unoptimized />
+                  {p.label ? <span className={styles.payLabel}>{p.label}</span> : null}
                 </li>
               ))}
             </ul>
           </div>
 
           <ul className={styles.badges}>
-            {footer.badges.map((src) => (
-              <li key={src}>
-                <Image src={src} alt="" width={160} height={54} />
+            {footer.badges.map((b) => (
+              <li key={b.name}>
+                <Image src={b.image} alt={b.name} width={176} height={88} />
               </li>
             ))}
           </ul>
         </div>
-
-        {/* bottom bar */}
-        {/* <div className={styles.bottom}>
-          <span className={styles.crafted}>
-            Crafted with <FaHeart className={styles.heart} /> by VD Infotech
-          </span>
-
-          <ul className={styles.bottomLinks}>
-            {footer.bottomLinks.map((link) => (
-              <li key={link}>
-                <a href="#">{link}</a>
-              </li>
-            ))}
-          </ul>
-
-          <ul className={styles.legalLinks}>
-            {footer.legalLinks.map((link) => (
-              <li key={link}>
-                <a href="#">{link}</a>
-              </li>
-            ))}
-          </ul>
-        </div> */}
       </div>
 
-      {/* Lower footer */}
-      <div className={styles.lowerFooter}>
+      {/* ---- legal bar ---- */}
+      <div className={styles.legal}>
         <div className="container">
-          <div className={styles.lowerFooterContent}>
-            <span className={styles.craftedLower}>
-              Crafted with <FaHeart className={styles.heartLower} /> by VD Infotech
-            </span>
-            
-            <ul className={styles.serviceLinks}>
-              {footer.bottomLinks.map((link, index) => (
-                <li key={link}>
-                  <a href="#">{link}</a>
-                  {index < footer.bottomLinks.length - 1 && <span className={styles.separator}>|</span>}
-                </li>
+          <div className={styles.legalInner}>
+            <p className={styles.crafted}>
+              {footer.craftedWith}
+              <span className={styles.craftedLinks}>
+                {footer.bottomLinks.map((l) => (
+                  <a key={l} href="#">
+                    {l}
+                  </a>
+                ))}
+              </span>
+            </p>
+            <p className={styles.copyright}>{footer.copyright}</p>
+            <p className={styles.legalLinks}>
+              {footer.legalLinks.map((l) => (
+                <a key={l} href="#">
+                  {l}
+                </a>
               ))}
-            </ul>
-
-            <div className={styles.copyrightLower}>
-              Copyright © 2026 VD Infotech Technologies Pvt. Ltd. All Rights Reserved.
-            </div>
-
-            <ul className={styles.policyLinks}>
-              {footer.legalLinks.map((link, index) => (
-                <li key={link}>
-                  <a href="#">{link}</a>
-                  {index < footer.legalLinks.length - 1 && <span className={styles.separator}>|</span>}
-                </li>
-              ))}
-            </ul>
+            </p>
           </div>
         </div>
       </div>
