@@ -126,12 +126,13 @@
   }
   .tool{
     aspect-ratio: 2;
+    padding: 15px;
   }
   .tool img {
         object-fit: contain;
     width: auto;
     /* max-width: 139%; */
-    /* height: auto; */
+    height: 100px;
   
     max-height: 85%;
   }
