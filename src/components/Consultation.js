@@ -90,7 +90,15 @@ export default function Consultation() {
                 {strategist.badges.map((badge) => (
                   <li key={badge.label} className={styles.badge}>
                     <span className={styles.badgeIcon} aria-hidden="true">
-                      {badge.icon}
+                      {badge.icon && (
+                        <Image
+                          src={badge.icon}
+                          alt=""
+                          width={24}
+                          height={24}
+                          sizes="24px"
+                        />
+                      )}
                     </span>
                     <span>
                       <span className={styles.badgeLabel}>{badge.label}</span>
@@ -134,7 +142,15 @@ export default function Consultation() {
               {analyze.map((item) => (
                 <li key={item.label} className={styles.analyzeItem}>
                   <span className={styles.analyzeIcon} aria-hidden="true">
-                    {item.icon}
+                    {item.icon && (
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={18}
+                        height={18}
+                        sizes="18px"
+                      />
+                    )}
                   </span>
                   {item.label}
                 </li>
