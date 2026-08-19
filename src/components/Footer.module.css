@@ -37,7 +37,7 @@
 .top {
   display: grid;
   grid-template-columns: calc(448 * var(--u)) repeat(4, minmax(0, 1fr));
-  gap: 0 calc(60 * var(--u));
+  gap: 30px;
   padding-bottom: calc(60 * var(--u));
   border-bottom: 1px solid #2a2a2a;
 }

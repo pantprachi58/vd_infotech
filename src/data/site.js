@@ -390,7 +390,7 @@ export const caseStudies = [
   },
   {
     name: "SS Interiors Hub",
-    image: "/images/rectangle-3225.webp",
+    image: "/images/case-ss-interiors.webp",
     body: "Transformed the brand's online presence with a modern, responsive website designed and developed to deliver a smooth and engaging user experience across every device.",
     stats: [
       "Responsive Design",
@@ -401,13 +401,56 @@ export const caseStudies = [
   },
   {
     name: "Mera Gaon Mera Desh",
-    image: "/images/rectangle-3232.webp",
+    image: "/images/case-mera-gaon.webp",
     body: "From a growing content platform to a destination visited by thousands every month, Mera Gaon Mera Desh continues to expand its reach and connect with a wider audience online.",
     stats: [
       "6.6K+ Monthly Visitors",
       "Growing Audience Reach",
       "Strong Digital Presence",
       "Fast Content Delivery",
+    ],
+  },
+  {
+    name: "ROSHAN MACHINE TOOLS (RMT)",
+    image: "/images/roshanMachineTools.png",
+    body: "From precision machinery to advanced manufacturing solutions, Roshan Machine Tools delivers reliable technology engineered for performance, efficiency, and long-term industrial growth.",
+    stats: [
+      "33+ Years of Expertise",
+      "Precision Engineering",
+      "Global Industry Reach",
+      "High-Performance Machines",
+    ],
+  }, {
+    name: "YOGIC COMPANY",
+    image: "/images/yoga.png",
+    body: "From mindful breathing to transformative yoga practices, Yogic Company brings ancient yogic wisdom into modern life to support greater balance, vitality, and inner well-being.",
+    stats: [
+      "Holistic Wellness",
+      "Expert Yoga Guidance",
+      "Breathwork & Meditation",
+      "Mind-Body Balance",
+    ],
+  },
+  {
+    name: "FIELD CROP",
+    image: "/images/fieldcrop.png",
+    body: "From smarter agricultural practices to better crop outcomes, Field Crop focuses on solutions that help farmers improve productivity, efficiency, and sustainable farming performance.",
+    stats: [
+      "Smart Farming Solutions",
+      "Better Crop Productivity",
+      "Agriculture-Focused Innovation",
+      "Sustainable Growth",
+    ],
+  },
+  {
+    name: "BOOMSLANG NUTRITIONS",
+    image: "/images/boomslang.png",
+    body: "From everyday wellness to active lifestyles, Boomslang Nutritions delivers nutrition-focused solutions designed to support performance, energy, recovery, and healthier daily habits.",
+    stats: [
+      "Performance Nutrition",
+      "Quality-Focused Products",
+      "Active Lifestyle Support",
+      "Everyday Wellness",
     ],
   },
 ];
