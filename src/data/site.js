@@ -9,15 +9,251 @@ export const site = {
   hours: { days: "Mon - Sat", time: "9:30 a.m - 6:30 p.m" },
 };
 
+const lines = (value) =>
+  value
+    .split("\n")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const group = (heading, items) => ({ heading, links: lines(items) });
+
+const megaImages = {
+  "Digital Marketing": "/images/mega-menu/services-digital-marketing.webp",
+  "Performance Marketing": "/images/mega-menu/services-performance-marketing.webp",
+  "Design & Development": "/images/mega-menu/services-design-development.webp",
+  "Brand Promotion & ORM": "/images/mega-menu/services-brand-promotion.webp",
+  "Graphic Design": "/images/mega-menu/services-graphic-design.webp",
+  "Video Production": "/images/mega-menu/services-video-production.webp",
+  "Virtual Assistant": "/images/mega-menu/services-virtual-assistant.webp",
+  "Web Technologies": "/images/mega-menu/tech-web.webp",
+  "Mobile Technologies": "/images/mega-menu/tech-mobile.webp",
+  "E-Commerce Technologies": "/images/mega-menu/tech-ecommerce.webp",
+  "Cloud Technologies": "/images/mega-menu/tech-cloud.webp",
+  "Testing Technologies": "/images/mega-menu/tech-testing.webp",
+  "AI Development": "/images/mega-menu/ai-development.webp",
+  "AI Automation": "/images/mega-menu/ai-automation.webp",
+  "AI Marketing": "/images/mega-menu/ai-marketing.webp",
+  "AI Integration": "/images/mega-menu/ai-integration.webp",
+  "Emerging AI Solutions": "/images/mega-menu/ai-emerging.webp",
+};
+
+const tab = (label, title, description, columns) => ({
+  label,
+  title,
+  description,
+  image: megaImages[label],
+  columns,
+});
+
 export const navItems = [
   { label: "Home", href: "#" },
-  { label: "Services", children: ["Digital Marketing", "Web Development", "SEO", "Branding"] },
-  { label: "Product", children: ["CRM", "Analytics Suite", "AI Assistant"] },
-  { label: "Packages", children: ["Starter", "Growth", "Enterprise"] },
-  { label: "Technologies", children: ["React", "Next.js", "Laravel", "Node JS"] },
-  { label: "AI Agency", children: ["AI Automation", "AI Content", "AI Analytics"] },
-  { label: "Company", children: ["About Us", "Careers", "Blog", "Contact Us"] },
-  { label: "Market area", children: ["India", "UAE", "USA", "UK"] },
+  {
+    label: "Services",
+    mega: {
+      variant: "tabbed",
+      tabs: [
+        tab("Digital Marketing", "Digital Marketing", "Expand your digital presence with smart marketing that delivers real business impact.", [
+          group("Search Engine Optimization", "AI SEO Services\nTechnical SEO\nOn-Page SEO\nOff-Page SEO\nLocal SEO\nE-commerce SEO\nSEO Audit\nSEO Consulting"),
+          group("Social Media Marketing", "Facebook Marketing\nInstagram Marketing\nLinkedIn Marketing\nYouTube Marketing\nX (Twitter) Marketing\nSocial Media Management\nSocial Media Advertising\nInfluencer Marketing"),
+          group("Social Media Optimization", "Profile Optimization\nContent Optimization\nSocial Media Strategy\nContent Calendar\nCommunity Management\nBrand Engagement\nHashtag Strategy\nPerformance Reporting"),
+          group("Search Engine Marketing", "Google Ads Management\nBing Ads Management\nPPC Campaign Management\nShopping Ads\nRemarketing Campaigns\nConversion Tracking\nSEM Consulting"),
+          group("Google Ads Management", "Google Search Ads\nGoogle Display Ads\nGoogle Shopping Ads\nPerformance Max\nYouTube Advertising\nConversion Tracking Setup\nGoogle Ads Audit\nGoogle Ads Optimization"),
+          group("Email Marketing", "Email Campaign Management\nEmail Automation\nNewsletter Marketing\nDrip Email Campaigns\nPromotional Emails\nTransactional Emails\nEmail List Management\nEmail Marketing Analytics"),
+          group("WhatsApp Marketing", "WhatsApp Business API\nClick-to-WhatsApp Ads\nBulk Messaging Campaigns\nWhatsApp Automation\nWhatsApp Chatbots\nLead Nurturing\nCustomer Support Automation\nWhatsApp Marketing Strategy"),
+          group("E-commerce Marketing", "Shopify Marketing\nWooCommerce Marketing\nMarketplace Marketing\nProduct Listing Optimization\nShopping Ads Management\nE-commerce SEO\nConversion Rate Optimization (CRO)\nE-commerce Marketing Strategy"),
+          group("Google Business Listing", "Google Business Profile Setup\nGoogle Business Verification\nGoogle Business Optimization\nGoogle Maps Ranking\nReview Management\nLocal Citation Building\nGBP Posts\nGoogle Business Audit"),
+        ]),
+        tab("Performance Marketing", "Performance Marketing", "Reach the right audience with precision targeted performance marketing campaigns.", [
+          group("Programmatic Advertising", "Display Advertising\nVideo Advertising\nNative Advertising\nAudience Targeting\nRe-targeting\nReal-Time Bidding (RTB)\nCampaign Optimization\nPerformance Reporting"),
+          group("Partnership Marketing", "Affiliate Marketing\nInfluencer Partnerships\nBrand Collaborations\nStrategic Partnerships\nCo-Marketing Campaigns\nReferral Marketing\nChannel Partner Marketing\nPartnership Strategy"),
+          group("Display Advertising", "Banner Advertising\nResponsive Display Ads\nRich Media Ads\nRe-marketing Display Ads\nGoogle Display Network (GDN)\nAudience Targeting\nDisplay Campaign Optimization\nDisplay Advertising Management"),
+          group("Video Advertising", "YouTube Video Ads\nIn-Stream Video Ads\nIn-Feed Video Ads\nShort Video Ads\nOTT & CTV Advertising\nVideo Re-marketing\nVideo Campaign Management\nVideo Ad Optimization"),
+          group("Native Advertising", "Native Display Ads\nSponsored Articles\nIn-Feed Advertising\nContent Recommendation Ads\nNative Video Ads\nPublisher Network Advertising\nNative Campaign Management\nPerformance Optimization"),
+          group("Social Advertising", "Brand Awareness Campaigns\nLead Generation Campaigns\nTraffic Campaigns\nEngagement Campaigns\nConversion Campaigns\nRe-marketing Campaigns\nAudience Targeting\nSocial Ad Optimization"),
+          group("Sponsored Content", "Sponsored Articles\nSponsored Blog Posts\nSponsored Videos\nSponsored Social Posts\nInfluencer Sponsored Content\nPublisher Collaborations\nBranded Content Campaigns\nContent Performance Reporting"),
+          group("Full Funnel Marketing", "TOFU, MOFU & BOFU Strategy\nCRM Integration\nGA4 Integration\nConversion Tracking\nMarketing Attribution\nCross-Channel Analytics\nCustomer Journey Mapping\nPerformance Reporting"),
+        ]),
+        tab("Design & Development", "Design & Development", "Transform your vision into a digital experience that stands out. Our design and development solutions are built for growth, speed, and success.", [
+          group("UI/UX Design", "Website UI/UX Design\nMobile App UI/UX Design\nSaaS UI/UX Design\nDashboard Design\nWireframing & Prototyping\nUser Research\nUX Audit\nDesign System"),
+          group("Website Design", "Custom Website Design\nResponsive Website Design\nLanding Page Design\nE-Commerce Website Design\nDynamic Design\nStatic Design\nWebsite Re-design"),
+          group("Website Development", "Custom Website Development\nCorporate Website Development\nWordpress Development\nShopify Development\nCMS Development\nLanding Page Development\nWebsite Maintenance\nWebsite Migration"),
+          group("E-Commerce Development", "Shopify Development\nWooCommerce Development\nCustom E-Commerce Development\nPayment Gateway Integration\nMulti-Vendor Marketplace\nE-Commerce Migration\nE-Commerce Maintenance\nPerformance Optimization"),
+          group("Mobile App Development", "Android App Development\niOS App Development\nBlockchain App Development\nE-Commerce App Development\nCryptocurrency app Development\nAI-Powered App Development\nCustom Mobile App Development\nApp Maintenance & Support"),
+          group("Software Development", "Custom Software Development\nCRM Software Development\nERP Software Development\nSaaS Application Development\nOperations management\nBusiness Automation Software\nSoftware Maintenance\nSoftware Consulting"),
+          group("Custom Web Applications", "Business Web Applications\nCRM Development\nERP Development\nCustomer Portal Development\nAdmin Dashboard Development\nWorkflow Automation\nAPI Integration\nWeb Application Support"),
+          group("Website Maintenance & Support", "Website Maintenance\nSecurity Monitoring\nWebsite Backup & Recovery\nWebsite Speed Optimization\nBug Fixes & Troubleshooting\nCMS Updates\nPerformance Monitoring\nTechnical Support"),
+        ]),
+        tab("Brand Promotion & ORM", "Brand Promotion & ORM", "Grow brand awareness with strategic promotions and proactive reputation management.", [
+          group("Press Release", "Media Coverage\nDigital PR\nNews Distribution\nBrand Announcements\nMedia Outreach"),
+          group("Influencer Marketing", "Creator Partnerships\nSocial Media Promotions\nCampaign Management\nInfluencer Outreach\nPerformance Tracking"),
+          group("Brand Image Building", "Brand Strategy\nBrand Positioning\nReputation Building\nBrand Awareness Campaigns\nDigital Presence Management\nBrand Growth Strategy"),
+          group("Celebrity Management", "Celebrity Partnerships\nBrand Endorsements\nCelebrity Campaigns\nTalent Management\nEvent Appearances\nCollaboration Management"),
+          group("Media Account Recovery", "Account Recovery\nSecurity Restoration\nSocial Media Recovery\nAccess Management\nData Protection\nAccount Support"),
+          group("Online Reputation Management", "Reputation Monitoring\nReview Management\nNegative Content Removal\nBrand Sentiment Analysis\nOnline Presence Management\nReputation Recovery"),
+        ]),
+        tab("Graphic Design", "Graphic Design", "From creative concepts to impactful visuals, we design experiences that connect with your audience.", [
+          group("Logo Designing", "Brand Identity Design\nCustom Logo Concepts\nLogo Redesign\nCreative Direction\nBrand Guidelines"),
+          group("Visual Identity Design", "Brand Color Palette\nTypography Design\nBrand Style Guide\nGraphic Elements\nCreative Assets"),
+          group("Social Media Design", "Social Media Graphics\nPost Design\nAd Creative Design\nStory & Reel Design\nCampaign Creatives\nContent Templates"),
+          group("Packaging Design", "Product Packaging\nLabel Design\nBox Design\nBrand Packaging\nPackaging Mockups\nPrint Ready Files"),
+          group("Brochure Designing", "Company Brochures\nProduct Brochures\nService Brochures\nDigital Brochures\nMarketing Brochures\nPrint Ready Design"),
+          group("Special Services", "360° Panoramas\nVirtual Staging\n3D Furniture Modeling\nReal Estate 360° Virtual Tours\n2D/3D Floor Plan Conversion"),
+        ]),
+        tab("Video Production", "Video Production", "Creating engaging visual stories through professional filming, editing, and creative storytelling that elevate your brand presence.", [
+          group("Training Video Production", "Employee Training Videos\nEducational Videos\nTutorial Videos\nProduct Training Videos\nInstructional Videos"),
+          group("Digital Ad Films", "Brand Films\nProduct Ads\nCommercial Videos\nSocial Media Ads\nPromotional Films"),
+          group("Business Introduction Videos", "Company Profile Videos\nBrand Story Videos\nService Overview Videos\nAbout Us Videos\nBusiness Presentation Videos"),
+          group("Corporate/Product Videos", "Corporate Films\nProduct Showcase Videos\nProduct Demo Videos\nMarketing Videos\nExplainer Videos"),
+          group("Documentary & CSR Videos", "Corporate Documentaries\nSocial Impact Videos\nCSR Campaign Videos\nAwareness Videos\nCommunity Stories"),
+        ]),
+        tab("Virtual Assistant", "Virtual Assistant", "Streamline your business operations with reliable remote support, managing tasks efficiently and helping you focus on growth.", [
+          group("Finance & Accounting Assistant", "Bookkeeping Support\nInvoice Management\nExpense Tracking\nFinancial Data Entry\nAccounting Assistant"),
+          group("Administrative Support", "Data Entry\nDocument Management\nFile Organization\nOnline Research\nAdministrative Tasks"),
+          group("Customer Support & Email Management", "Customer Query Handling\nEmail Management\nInbox Organization\nClient Communication\nSupport Coordination"),
+          group("Social Media Management", "Social Media Scheduling\nContent Publishing\nCommunity Management\nEngagement Tracking\nSocial Media Reporting"),
+          group("Scheduling & Appointment Management", "Calendar Management\nAppointment Booking\nMeeting Coordination\nReminder Management\nSchedule Optimization"),
+          group("Market Research & Lead Generation", "Market Research\nCompetitor Research\nLead Generation\nData Collection\nProspect List Building"),
+          group("E-commerce Management", "Product Listing\nOrder Processing\nInventory Management\nCustomer Support\nOnline Store Assistance"),
+          group("Content Writing & Research", "Blog Writing\nWebsite Content\nContent Research\nEditing & Proofreading\nReport Creation"),
+          group("Technical Support & IT Assistant", "Software Support\nWebsite Assistance\nTechnical Troubleshooting\nTool Management\nIT Support"),
+          group("Project Management & Coordination", "Task Management\nTeam Coordination\nProject Tracking\nWorkflow Management\nProgress Reporting"),
+        ]),
+      ],
+    },
+  },
+  {
+    label: "Product",
+    mega: {
+      title: "Products",
+      image: "/images/mega-menu/products.webp",
+      description:
+        "Powerful, ready-to-deploy digital products and custom software solutions designed to accelerate business growth and drive innovation.",
+      columns: [
+        group("On-Demand & Ready Apps", "Grocero – Grocery Delivery App\nInstara – Instant Delivery App\nMedQuick – Medicine Delivery App\nHomeEase – Home Services App\nLaundryGo – Laundry Service App\nAlcoGo – Alcohol Delivery App\nCarSpark – Car Wash App\nDocOnCall – Doctor On-Demand App"),
+        group("Enterprise Software Solutions", "EduCore – School, College & University ERP\nTestify – Online Examination Platform\nAstroNova – Astrology Software\nNetWise – MLM Software\nMediSys – Hospital Management System\nInventix – Inventory Management System\nFinora – Nidhi Finance Management Software"),
+        group("Trending Digital Products", "Healthify – Healthcare Solution\nDietify – Nutrition & Diet App\nActivo – Fitness App\nEduNova – E-Learning Platform\nARVanta – AR/VR Solution\nEstatex – Real Estate Platform\nLovira – Dating App\nHappenix – Event Booking Platform\nPawNest – Pet Care App"),
+        group("E-commerce Solutions", "Fashionix – Fashion E-Commerce Platform\nJewelora – Jewellery E-Commerce Platform\nBeautify – Beauty & Cosmetics E-Commerce\nPresentix – Gifting E-Commerce Platform\nHomeora – Furniture E-Commerce Platform\nB2Bora – B2B E-Commerce Platform\nBuyly – B2C E-Commerce Platform\nD2Cora – D2C E-Commerce Platform\nMarketify – Multi-Vendor Marketplace"),
+        group("Ready-Made Software", "Billing Software\nLearning Management System\nField Service Management System\nJob Portal Solution\nShopping Cart Software\nCRM Software\nERP Software\nFood Delivery Solution\nMatrimony Portal"),
+      ],
+    },
+  },
+  {
+    label: "Packages",
+    mega: {
+      title: "Packages",
+      image: "/images/mega-menu/packages.webp",
+      description:
+        "From digital presence to business growth, our packages bring every essential solution together.",
+      columns: [
+        group("Popular Packages", "Website Packages\nSoftware Packages\nGraphics Packages\nApplication Packages\nSEO Packages\nSMO Packages\nPPC Packages\nInfluencer Packages\nAI SEO Packages\nAI Advertising Packages\nAI Content Marketing Packages\nAI Creative Marketing Packages\nEmail Marketing Packages\nVirtual Assistant Packages\nDigital Marketing Packages\nPerformance Marketing Packages"),
+      ],
+    },
+  },
+  {
+    label: "Technologies",
+    mega: {
+      variant: "tabbed",
+      tabs: [
+        tab("Web Technologies", "Web Technologies", "Build fast, secure, and scalable websites using modern web technologies tailored to your business.", [
+          group("Frontend Development", "HTML5\nCSS3\nJavaScript\nReact.js\nNext.js\nAngular"),
+          group("Backend Development", "PHP\nNode.js\nPython\nLaravel\nCodeIgniter\nExpress.js"),
+          group("CMS Development", "WordPress\nShopify\nWooCommerce\nWebflow\nMagento"),
+          group("API Development", "REST API\nGraphQL\nPayment Gateway APIs\nThird-Party APIs\nCRM APIs"),
+        ]),
+        tab("Mobile Technologies", "Mobile Technologies", "Develop fast, secure, and scalable mobile apps that deliver exceptional user experiences.", [
+          group("Android Development", "Java\nKotlin\nAndroid SDK"),
+          group("iOS Development", "Swift\nSwiftUI\nXcode"),
+          group("Cross-Platform Development", "Flutter\nReact Native\nIonic"),
+        ]),
+        tab("E-Commerce Technologies", "E-Commerce Technologies", "Future-ready e-commerce technologies that help businesses sell smarter, faster, and globally.", [
+          group("E-Commerce Platforms", "Shopify\nWooCommerce\nMagento\nOpenCart"),
+          group("Marketplace Solutions", "Multi-Vendor Marketplace\nONDC\nMarketplace APIs"),
+          group("Payment Solutions", "Razorpay\nStripe\nPayPal\nPayU"),
+        ]),
+        tab("Cloud Technologies", "Cloud Technologies", "Modernize your business with cloud technologies designed for scalability and reliability.", [
+          group("Cloud Platforms", "AWS\nMicrosoft Azure\nGoogle Cloud"),
+          group("DevOps", "Docker\nGitHub\nCI/CD"),
+          group("Hosting", "VPS Hosting\nCloud Hosting\nShared Hosting"),
+          group("Database Technologies", "SQL Databases\nMySQL\nPostgreSQL\nSQL Server"),
+          group("NoSQL Databases", "MongoDB\nFirebase\nRedis"),
+          group("Database Services", "Database Design\nDatabase Migration\nDatabase Optimization"),
+        ]),
+        tab("Testing Technologies", "Testing Technologies", "Deliver flawless digital experiences through advanced testing and quality assurance technologies.", [
+          group("Automation Testing", "Selenium\nCypress\nPlaywright"),
+          group("API Testing", "Postman\nSwagger\nInsomnia"),
+          group("Performance Testing", "JMeter\nLoad Testing\nStress Testing"),
+        ]),
+      ],
+    },
+  },
+  {
+    label: "AI Agency",
+    mega: {
+      variant: "tabbed",
+      tabs: [
+        tab("AI Development", "AI Development", "Build intelligent AI solutions tailored to automate processes, enhance efficiency, and drive business growth.", [
+          group("Conversational AI", "AI Chatbot Development\nAI Voice Bot Development\nAI Virtual Assistant\nMultilingual AI Chatbots"),
+          group("AI Agents", "AI Agent Development\nMulti-Agent Systems\nCustom AI Agents\nAutonomous AI Agents"),
+          group("AI Applications", "AI SaaS Development\nCustom AI Applications\nAI Model Integration\nGenerative AI Solutions"),
+        ]),
+        tab("AI Automation", "AI Automation", "Build intelligent AI solutions tailored to automate processes, enhance efficiency, and drive business growth.", [
+          group("Business Automation", "AI Chatbot Development\nAI Voice Bot Development\nAI Virtual Assistant\nMultilingual AI Chatbots"),
+          group("Sales & Marketing Automation", "CRM Automation\nSales Automation\nMarketing Automation\nLead Automation"),
+          group("Customer Automation", "Email Automation\nWhatsApp Automation\nHelpdesk Automation\nCustomer Support Automation"),
+        ]),
+        tab("AI Marketing", "AI Marketing", "Optimize every campaign with AI-powered strategies that maximize reach, conversions, and growth.", [
+          group("AI SEO", "AI SEO Services\nAI Content Optimization\nAI Search Optimization (AEO & GEO)\nAI Keyword Research"),
+          group("AI Advertising", "AI PPC Optimization\nAI Ad Copy Generation\nAI Audience Targeting\nAI Campaign Optimization"),
+          group("AI Content Marketing", "AI Content Marketing\nAI Social Media Marketing\nAI Email Marketing\nAI Marketing Automation"),
+          group("AI Creative Marketing", "AI Graphic Design\nAI Social Media & Ad Creatives\nAI Branding & Visual Identity\nAI Video Creatives"),
+        ]),
+        tab("AI Integration", "AI Integration", "Connect AI with your business applications for smarter, faster, and more efficient operations.", [
+          group("LLM Integration", "Gemini AI Integration\nClaude AI Integration\nOpenAI Integration\nDeepSeek Integration"),
+          group("API Integration", "OpenAI API\nGemini API\nAI API Development\nThird-Party AI APIs"),
+          group("Business Integration", "CRM Integration\nERP Integration\nWhatsApp API Integration\nBusiness System Integration"),
+          group("AI Data & Analytics", "Predictive Analytics\nSales Forecasting\nCustomer Analytics\nDemand Forecasting\nRisk Analysis"),
+          group("Business Intelligence", "AI Dashboards\nData Visualization\nAI Reporting\nKPI Monitoring"),
+          group("Data Automation", "Data Processing\nData Cleaning\nData Integration\nData Automation"),
+        ]),
+        tab("Emerging AI Solutions", "Emerging AI Solutions", "Future-ready AI solutions that help businesses innovate, automate, and scale with confidence.", [
+          group("Computer Vision", "Image Recognition\nObject Detection\nOCR Solutions\nFace Recognition"),
+          group("Natural Language Processing", "NLP Solutions\nSentiment Analysis\nText Classification\nLanguage Translation"),
+          group("Intelligent AI Systems", "Voice AI Solutions\nAI Assistants\nAI Consulting\nRecommendation Systems"),
+          group("Business Intelligence", "AI Dashboards\nData Visualization\nAI Reporting\nKPI Monitoring"),
+          group("Data Automation", "Data Processing\nData Cleaning\nData Integration\nData Automation"),
+        ]),
+      ],
+    },
+  },
+  {
+    label: "Company",
+    mega: {
+      title: "Company",
+      image: "/images/mega-menu/company.webp",
+      description:
+        "Building innovative digital solutions with a focus on technology, creativity, and measurable growth to help businesses succeed in a competitive world.",
+      columns: [
+        group("About Us", "Company Overview\nOur Story\nWhy VD Infotech\nVision & Mission\nTestimonials\nCertifications\nCase Studies"),
+        group("Portfolio", "UI/UX\nGraphic Design\nVideo Marketing\nDigital Marketing\nWebsite Development\nApp Development\nSoftware Development"),
+        group("Careers", "Open Positions\nInternships\nLife at VD Infotech\nApply Now\nFree Courses\nTeam"),
+        group("Blog", "Digital Marketing\nBranding\nGoogle and Meta Ads\nDevelopment\nAI & Automation\nBusiness Growth\nTechnology"),
+        group("Legal", "Privacy Policy\nTerms & Conditions\nRefund Policy\nDisclaimer\nScam alert\nRule Book\nCookie Policy"),
+      ],
+    },
+  },
+  {
+    label: "Market Area",
+    mega: {
+      title: "Market Area",
+      image: "/images/mega-menu/market-area.webp",
+      description:
+        "Serving diverse industries across India with tailored digital solutions that empower businesses to grow, innovate, and succeed in every market.",
+      columns: [
+        group("Industries", "Healthcare & Wellness\nEducation\nE-Commerce\nReal Estate\nFMCG\nBeauty & Fashion\nManufacturing\nHospitality\nFinance & Legal\nTravel & Tourism\nLogistics & Transportation\nAutomotive\nBuilder & Construction\nIT & SaaS\nStartups\nGovernment"),
+        group("Locations (India)", "Goa\nGujarat\nHaryana\nHimachal Pradesh\nKarnataka\nMadhya Pradesh\nMaharashtra\nPunjab\nRajasthan\nUttarakhand\nUttar Pradesh\nDelhi"),
+      ],
+    },
+  },
 ];
 
 // Each hero slide is a separate Figma frame with its own artwork. Titles are

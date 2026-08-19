@@ -1,27 +1,196 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
-import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight, FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "@/data/site";
 import styles from "./Header.module.css";
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-  const [expanded, setExpanded] = useState(null);
+function getActivePanel(item, activeTabs) {
+  if (!item?.mega) return null;
+  if (!item.mega.tabs) return item.mega;
 
-  // lock scroll while the mobile drawer is open
+  const activeLabel = activeTabs[item.label] ?? item.mega.tabs[0].label;
+  return item.mega.tabs.find((tab) => tab.label === activeLabel) ?? item.mega.tabs[0];
+}
+
+function getColumnCount(item, panel) {
+  const count = panel.columns.length;
+
+  if (item.label === "Services") return panel.label === "Graphic Design" ? 6 : 5;
+  if (item.label === "Product") return 4;
+  if (item.label === "Packages") return 1;
+  if (item.label === "Technologies") return panel.label === "Cloud Technologies" ? 6 : count;
+  if (item.label === "AI Agency") return Math.min(count, 4);
+  if (item.label === "Company") return 5;
+  if (item.label === "Market Area") return 2;
+
+  return Math.min(count, 5);
+}
+
+function MenuGroups({ item, panel, onNavigate }) {
+  const columnCount = getColumnCount(item, panel);
+
+  return (
+    <div
+      className={styles.megaGrid}
+      style={{ "--mega-columns": columnCount }}
+    >
+      {panel.columns.map((column, index) => (
+        <section
+          key={column.heading}
+          className={`${styles.megaGroup} ${index >= columnCount ? styles.megaGroupNextRow : ""}`}
+        >
+          <h4>
+            <FiChevronRight aria-hidden="true" />
+            {column.heading}
+          </h4>
+          <ul>
+            {column.links.map((link) => (
+              <li key={link}>
+                <a href="#" onClick={onNavigate}>
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function MegaIntro({ panel }) {
+  return (
+    <aside className={styles.megaIntro}>
+      {panel.image && (
+        <Image
+          src={panel.image}
+          alt=""
+          fill
+          sizes="(max-width: 1299px) 420px, 366px"
+          className={styles.megaIntroImage}
+        />
+      )}
+      <div className={styles.megaIntroShade} aria-hidden="true" />
+      <div className={styles.megaIntroCopy}>
+        <h3>{panel.title}</h3>
+        <p>{panel.description}</p>
+      </div>
+    </aside>
+  );
+}
+
+function MenuTabs({ item, panel, setActiveTabs, mobile = false }) {
+  if (!item.mega.tabs) return null;
+
+  return (
+    <div
+      className={mobile ? styles.drawerTabs : styles.megaTabs}
+      style={mobile ? undefined : { "--tab-count": item.mega.tabs.length }}
+      role="tablist"
+      aria-label={`${item.label} menu categories`}
+    >
+      {item.mega.tabs.map((tabItem) => {
+        const active = tabItem.label === panel.label;
+        return (
+          <button
+            key={tabItem.label}
+            type="button"
+            className={`${mobile ? styles.drawerTab : styles.megaTab} ${
+              active ? (mobile ? styles.drawerTabActive : styles.megaTabActive) : ""
+            }`}
+            onClick={() =>
+              setActiveTabs((current) => ({ ...current, [item.label]: tabItem.label }))
+            }
+            role="tab"
+            aria-selected={active}
+          >
+            {tabItem.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function DesktopMegaMenu({ item, activeTabs, setActiveTabs, onClose }) {
+  const panel = getActivePanel(item, activeTabs);
+  if (!panel) return null;
+
+  return (
+    <div className={styles.mega} role="dialog" aria-label={`${item.label} menu`}>
+      <div className={styles.megaViewport}>
+        <MenuTabs item={item} panel={panel} setActiveTabs={setActiveTabs} />
+        <div key={panel.label ?? panel.title} className={styles.megaPanel}>
+          <MegaIntro panel={panel} />
+          <div className={styles.megaBody}>
+            <MenuGroups item={item} panel={panel} onNavigate={onClose} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DrawerMegaMenu({ item, activeTabs, setActiveTabs, onNavigate }) {
+  const panel = getActivePanel(item, activeTabs);
+  if (!panel) return null;
+
+  return (
+    <div className={styles.drawerMega}>
+      <MenuTabs item={item} panel={panel} setActiveTabs={setActiveTabs} mobile />
+      <div key={panel.label ?? panel.title} className={styles.drawerPanel}>
+        <MegaIntro panel={panel} />
+        <MenuGroups item={item} panel={panel} onNavigate={onNavigate} />
+      </div>
+    </div>
+  );
+}
+
+export default function Header() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [expanded, setExpanded] = useState(null);
+  const [desktopMenu, setDesktopMenu] = useState(null);
+  const [activeTabs, setActiveTabs] = useState({});
+
+  const closeMenus = useCallback(() => {
+    setDrawerOpen(false);
+    setExpanded(null);
+    setDesktopMenu(null);
+  }, []);
+
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    document.body.style.overflow = drawerOpen || desktopMenu ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [drawerOpen, desktopMenu]);
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") closeMenus();
+    };
+    const media = window.matchMedia("(max-width: 1299.98px)");
+    const onViewportChange = () => {
+      if (media.matches) setDesktopMenu(null);
+      else setDrawerOpen(false);
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    media.addEventListener("change", onViewportChange);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      media.removeEventListener("change", onViewportChange);
+    };
+  }, [closeMenus]);
+
+  const activeDesktopItem = navItems.find((item) => item.label === desktopMenu);
 
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo} aria-label="VD Infotech home">
+        <a href="#" className={styles.logo} aria-label="VD Infotech home" onClick={closeMenus}>
           <Image
             src="/images/vd-infotech-final-logo-red-and-black-01-1.webp"
             alt="VD Infotech"
@@ -34,51 +203,66 @@ export default function Header() {
         <div className={`${styles.rightGroup} ${styles.desktopOnly}`}>
           <nav aria-label="Primary">
             <ul className={styles.nav}>
-              {navItems.map((item) => (
-                <li key={item.label} className={styles.navItem}>
-                  <a className={styles.navLink} href={item.href ?? "#"}>
-                    {item.label}
-                    {item.children && (
-                      <FiChevronDown className={styles.chevron} size={14} />
+              {navItems.map((item) => {
+                const isOpen = desktopMenu === item.label;
+                return (
+                  <li key={item.label} className={styles.navItem}>
+                    {item.mega ? (
+                      <button
+                        className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
+                        type="button"
+                        aria-haspopup="dialog"
+                        aria-expanded={isOpen}
+                        onClick={() => setDesktopMenu(isOpen ? null : item.label)}
+                      >
+                        {item.label}
+                        <FiChevronDown
+                          className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
+                          size={14}
+                        />
+                      </button>
+                    ) : (
+                      <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
+                        {item.label}
+                      </a>
                     )}
-                  </a>
-                  {item.children && (
-                    <ul className={styles.dropdown}>
-                      {item.children.map((child) => (
-                        <li key={child}>
-                          <a href="#">{child}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
-          <a href="#contact" className={styles.cta}>
+          <a href="#contact" className={styles.cta} onClick={closeMenus}>
             Book an Appointment
           </a>
         </div>
 
         <button
           className={styles.burger}
-          onClick={() => setOpen(true)}
+          onClick={() => setDrawerOpen(true)}
           aria-label="Open menu"
-          aria-expanded={open}
+          aria-expanded={drawerOpen}
         >
           <FiMenu />
         </button>
       </div>
 
-      {open && (
+      {activeDesktopItem && (
         <>
-          <button
-            className={styles.backdrop}
-            onClick={() => setOpen(false)}
-            aria-label="Close menu"
+          <button className={styles.desktopBackdrop} onClick={closeMenus} aria-label="Close menu" />
+          <DesktopMegaMenu
+            item={activeDesktopItem}
+            activeTabs={activeTabs}
+            setActiveTabs={setActiveTabs}
+            onClose={closeMenus}
           />
-          <div className={styles.drawer} role="dialog" aria-label="Menu">
+        </>
+      )}
+
+      {drawerOpen && (
+        <>
+          <button className={styles.backdrop} onClick={closeMenus} aria-label="Close menu" />
+          <div className={styles.drawer} role="dialog" aria-modal="true" aria-label="Menu">
             <div className={styles.drawerHead}>
               <Image
                 src="/images/vd-infotech-final-logo-red-and-black-01-1.webp"
@@ -86,53 +270,49 @@ export default function Header() {
                 width={160}
                 height={36}
               />
-              <button
-                className={styles.burger}
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-              >
+              <button className={styles.burger} onClick={closeMenus} aria-label="Close menu">
                 <FiX />
               </button>
             </div>
 
             <ul className={styles.drawerNav}>
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <button
-                    className={styles.navLink}
-                    onClick={() =>
-                      item.children
-                        ? setExpanded(expanded === item.label ? null : item.label)
-                        : setOpen(false)
-                    }
-                  >
-                    {item.label}
-                    {item.children && (
-                      <FiChevronDown
-                        className={styles.chevron}
-                        size={16}
-                        style={{
-                          transform: expanded === item.label ? "rotate(180deg)" : "none",
-                        }}
+              {navItems.map((item) => {
+                const expandable = Boolean(item.mega);
+                const isExpanded = expanded === item.label;
+
+                return (
+                  <li key={item.label}>
+                    {expandable ? (
+                      <button
+                        className={styles.navLink}
+                        onClick={() => setExpanded(isExpanded ? null : item.label)}
+                        aria-expanded={isExpanded}
+                      >
+                        {item.label}
+                        <FiChevronDown
+                          className={`${styles.chevron} ${isExpanded ? styles.chevronOpen : ""}`}
+                          size={16}
+                        />
+                      </button>
+                    ) : (
+                      <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
+                        {item.label}
+                      </a>
+                    )}
+                    {item.mega && isExpanded && (
+                      <DrawerMegaMenu
+                        item={item}
+                        activeTabs={activeTabs}
+                        setActiveTabs={setActiveTabs}
+                        onNavigate={closeMenus}
                       />
                     )}
-                  </button>
-                  {item.children && expanded === item.label && (
-                    <ul className={styles.drawerSub}>
-                      {item.children.map((child) => (
-                        <li key={child}>
-                          <a href="#" onClick={() => setOpen(false)}>
-                            {child}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
 
-            <a href="#contact" className={`${styles.cta} ${styles.drawerCta}`}>
+            <a href="#contact" className={`${styles.cta} ${styles.drawerCta}`} onClick={closeMenus}>
               Book an Appointment
             </a>
           </div>
