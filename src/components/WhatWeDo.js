@@ -31,7 +31,12 @@ export default function WhatWeDo() {
                   onClick={() => setActive(i)}
                 >
                   <span className={styles.tabIcon} aria-hidden="true">
-                    {service.icon}
+                    <Image
+                      src={service.icon}
+                      alt=""
+                      width={24}
+                      height={24}
+                    />
                   </span>
                   {service.label}
                 </button>

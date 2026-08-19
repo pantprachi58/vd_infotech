@@ -154,8 +154,8 @@
   place-items: center;
   width: 64px;
   height: 64px;
-  border-radius: var(--radius);
-  background: var(--red);
+  /* border-radius: var(--radius);
+  background: var(--red); */
   color: var(--white);
   font-size: 30px;
 }

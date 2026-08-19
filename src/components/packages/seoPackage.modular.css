@@ -1,0 +1,361 @@
+/* ===== Design tokens ===== */
+.page {
+  --red: #a91e22;
+  --red-dark: #7a1418;
+  --red-light: #c62828;
+  --black: #111111;
+  --dark: #1a1a1a;
+  --gray-bg: #f4f4f4;
+  --gray-bg-alt: #ffffff;
+  --border: #e2e2e2;
+  --text: #222222;
+  --muted: #6b6b6b;
+  --green: #1e8e3e;
+  --red-x: #c62828;
+
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+/* ===== Top info bar ===== */
+.topBar {
+  background: var(--black);
+  color: #ccc;
+  font-size: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topBarLeft {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== Nav ===== */
+.nav {
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  border-top: 1px solid #262626;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--red);
+}
+
+.navLinks {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navLinks li {
+  color: #ddd;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.navLinks li:hover {
+  color: var(--red-light);
+}
+
+.bookBtn {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  font-size: 0.82rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.bookBtn:hover {
+  background: var(--red-dark);
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(120deg, #0a0a0a 0%, #1a0505 45%, #4a0d0f 100%);
+  overflow: hidden;
+  padding: 64px 24px;
+}
+
+.heroPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(169, 30, 34, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 30, 34, 0.25) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to right, black, transparent 75%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ===== Intro ===== */
+.intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+.introBox {
+  border-left: 4px solid var(--red);
+  background: #fafafa;
+  padding: 16px 20px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== Controls ===== */
+.controls {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.billingToggle {
+  display: inline-flex;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.billingToggle button {
+  border: none;
+  background: #eee;
+  color: #333;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.billingToggle button.active {
+  background: var(--red);
+  color: #fff;
+}
+
+.currencyToggle {
+  display: inline-flex;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.currencyToggle button {
+  border: none;
+  background: #eee;
+  color: #333;
+  width: 34px;
+  height: 34px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.currencyToggle button.active {
+  background: var(--red);
+  color: #fff;
+}
+
+.businessTabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.businessTabs button {
+  border: none;
+  background: var(--black);
+  color: #ddd;
+  padding: 10px 30px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-right: 1px solid #333;
+}
+
+.businessTabs button:last-child {
+  border-right: none;
+}
+
+.businessTabs button.active {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ===== Table wrapper ===== */
+.tableWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+  font-size: 0.85rem;
+}
+
+.table thead th {
+  background: var(--black);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  padding: 12px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table thead th:first-child {
+  text-align: left;
+}
+
+.table tbody tr:nth-child(odd) td {
+  background: var(--gray-bg);
+}
+
+.table tbody tr:nth-child(even) td {
+  background: #ffffff;
+}
+
+.table td {
+  padding: 10px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table td.label {
+  text-align: left;
+  font-weight: 600;
+  white-space: normal;
+  min-width: 220px;
+}
+
+.sectionHeaderRow td {
+  background: linear-gradient(90deg, var(--red-dark), var(--red), var(--red-dark)) !important;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 10px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.startNow {
+  color: var(--red);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.check {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cross {
+  color: var(--red-x);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.customCell {
+  vertical-align: middle;
+  background: #fff !important;
+}
+
+.asPerNeed {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .topBarLeft {
+    font-size: 0.72rem;
+  }
+  .navLinks {
+    display: none;
+  }
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  .introBox {
+    font-size: 0.85rem;
+  }
+  .businessTabs button {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+  .table {
+    font-size: 0.78rem;
+  }
+}

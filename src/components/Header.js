@@ -208,19 +208,40 @@ export default function Header() {
                 return (
                   <li key={item.label} className={styles.navItem}>
                     {item.mega ? (
-                      <button
-                        className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
-                        type="button"
-                        aria-haspopup="dialog"
-                        aria-expanded={isOpen}
-                        onClick={() => setDesktopMenu(isOpen ? null : item.label)}
-                      >
-                        {item.label}
-                        <FiChevronDown
-                          className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
-                          size={14}
-                        />
-                      </button>
+                      <div className={styles.navLinkWrapper}>
+                        {item.href ? (
+                          <a 
+                            className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
+                            href={item.href}
+                            onClick={closeMenus}
+                          >
+                            {item.label}
+                          </a>
+                        ) : (
+                          <button
+                            className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
+                            type="button"
+                            aria-haspopup="dialog"
+                            aria-expanded={isOpen}
+                            onClick={() => setDesktopMenu(isOpen ? null : item.label)}
+                          >
+                            {item.label}
+                          </button>
+                        )}
+                        <button
+                          className={styles.chevronButton}
+                          type="button"
+                          aria-haspopup="dialog"
+                          aria-expanded={isOpen}
+                          aria-label={`Show ${item.label} menu`}
+                          onClick={() => setDesktopMenu(isOpen ? null : item.label)}
+                        >
+                          <FiChevronDown
+                            className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
+                            size={14}
+                          />
+                        </button>
+                      </div>
                     ) : (
                       <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
                         {item.label}
@@ -283,29 +304,50 @@ export default function Header() {
                 return (
                   <li key={item.label}>
                     {expandable ? (
-                      <button
-                        className={styles.navLink}
-                        onClick={() => setExpanded(isExpanded ? null : item.label)}
-                        aria-expanded={isExpanded}
-                      >
-                        {item.label}
-                        <FiChevronDown
-                          className={`${styles.chevron} ${isExpanded ? styles.chevronOpen : ""}`}
-                          size={16}
-                        />
-                      </button>
+                      <>
+                        <div className={styles.drawerNavLinkWrapper}>
+                          {item.href ? (
+                            <a 
+                              className={styles.navLink}
+                              href={item.href}
+                              onClick={closeMenus}
+                            >
+                              {item.label}
+                            </a>
+                          ) : (
+                            <button
+                              className={styles.navLink}
+                              onClick={() => setExpanded(isExpanded ? null : item.label)}
+                              aria-expanded={isExpanded}
+                            >
+                              {item.label}
+                            </button>
+                          )}
+                          <button
+                            className={styles.drawerChevronButton}
+                            onClick={() => setExpanded(isExpanded ? null : item.label)}
+                            aria-expanded={isExpanded}
+                            aria-label={`Show ${item.label} menu`}
+                          >
+                            <FiChevronDown
+                              className={`${styles.chevron} ${isExpanded ? styles.chevronOpen : ""}`}
+                              size={16}
+                            />
+                          </button>
+                        </div>
+                        {isExpanded && (
+                          <DrawerMegaMenu
+                            item={item}
+                            activeTabs={activeTabs}
+                            setActiveTabs={setActiveTabs}
+                            onNavigate={closeMenus}
+                          />
+                        )}
+                      </>
                     ) : (
                       <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
                         {item.label}
                       </a>
-                    )}
-                    {item.mega && isExpanded && (
-                      <DrawerMegaMenu
-                        item={item}
-                        activeTabs={activeTabs}
-                        setActiveTabs={setActiveTabs}
-                        onNavigate={closeMenus}
-                      />
                     )}
                   </li>
                 );

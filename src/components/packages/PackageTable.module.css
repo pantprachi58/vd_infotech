@@ -1,0 +1,311 @@
+.section {
+  position: relative;
+  padding: 80px 0 100px;
+  background: var(--off-white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 20px auto 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.tabNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.tab {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: var(--grey-50);
+  color: var(--ink);
+}
+
+.tabActive {
+  background: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.serviceNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.serviceBtn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid var(--grey-200);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.serviceBtn:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.serviceBtnActive {
+  border-color: var(--red) !important;
+  background: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: var(--white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+.table thead {
+  background: var(--black);
+  color: var(--white);
+}
+
+.table th {
+  padding: 20px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.thFirst {
+  text-align: left !important;
+  padding-left: 24px !important;
+}
+
+.table th:last-child {
+  border-right: none;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--grey-200);
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: var(--grey-50);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table td {
+  padding: 18px 16px;
+  font-size: 15px;
+  text-align: center;
+  color: var(--ink-soft);
+  border-right: 1px solid var(--grey-200);
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+.serviceName {
+  text-align: left !important;
+  padding-left: 24px !important;
+  font-weight: 600;
+  color: var(--ink) !important;
+}
+
+.moreBtn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 2px solid var(--red);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--red);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.moreBtn:hover {
+  background: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(218, 10, 3, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 14px 12px;
+  }
+
+  .serviceName {
+    padding-left: 16px !important;
+  }
+
+  .thFirst {
+    padding-left: 16px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section {
+    padding: 60px 0 70px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .tabNav {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .tab {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 50px 0 60px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .tabNav {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .serviceNav {
+    gap: 8px;
+  }
+
+  .serviceBtn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .table {
+    min-width: 800px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .moreBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding: 40px 0 50px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .tableWrapper {
+    margin: 0 -16px;
+    border-radius: 0;
+  }
+
+  .table {
+    min-width: 750px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .serviceName {
+    padding-left: 12px !important;
+    font-size: 13px;
+  }
+
+  .thFirst {
+    padding-left: 12px !important;
+  }
+
+  .tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .serviceBtn {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+}

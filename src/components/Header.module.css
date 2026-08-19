@@ -103,6 +103,70 @@
   transform: rotate(180deg);
 }
 
+/* Navigation link wrapper for items with both link and dropdown */
+.navLinkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.navLinkWrapper .navLink {
+  padding-right: 2px;
+}
+
+.navLinkWrapper .navLink::after {
+  right: 2px;
+}
+
+.chevronButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 4px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.chevronButton:hover {
+  color: var(--red);
+}
+
+.chevronButton:active {
+  transform: scale(0.95);
+}
+
+/* Mobile drawer link wrapper */
+.drawerNavLinkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.drawerNavLinkWrapper .navLink {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.drawerChevronButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.drawerChevronButton:hover {
+  color: var(--red);
+}
+
 .cta {
   display: inline-flex;
   flex: none;
