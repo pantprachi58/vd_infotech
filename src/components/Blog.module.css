@@ -3,6 +3,21 @@
   background: #7a0d08 url("/images/vd-bg-1.webp") center / cover no-repeat;
   color: var(--white);
   text-align: center;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 38, 38, 0.4);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .head {

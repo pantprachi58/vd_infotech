@@ -173,27 +173,57 @@
   align-items: center;
   gap: 10px;
   padding: 10px;
-    font-size: 14px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
   border-radius: var(--radius-sm);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary {
   background: var(--red);
   color: var(--white);
+  border: 2px solid var(--red);
 }
 
 .secondary {
   background: var(--white);
-  border: 1px solid var(--grey-200);
+  border: 2px solid var(--grey-200);
   color: var(--ink);
 }
 
-.primary:hover,
+.primary:hover {
+  background: #c91d36;
+  border-color: #c91d36;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(231, 29, 54, 0.35);
+}
+
 .secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  background: var(--grey-50);
+  border-color: var(--red);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.primary:active,
+.secondary:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.primary:hover svg,
+.secondary:hover svg {
+  animation: buttonArrowBounce 0.5s ease-in-out;
+}
+
+@keyframes buttonArrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
 }
 
 /* ---- strategist card ----------------------------------------------------- */
@@ -405,7 +435,7 @@
 .analyzeGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -413,9 +443,10 @@
 
 .analyzeItem {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 8px;
-  min-height: 88px;
+  min-height:76px;
+  align-items: center;
   padding: 12px 12px;
   border: 1px solid #e1e1e1;
   border-radius: var(--radius);

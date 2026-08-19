@@ -219,3 +219,31 @@
     font-size: 48px;
   }
 }
+@media (max-width: 360px) {
+  .row{
+    gap: 12px;
+  }
+  .no{
+    font-size: 35px;
+  }
+  .stepTitle{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .stepBody{
+    font-size: 12px;
+  }
+  .rowTwo{
+    margin-top: 12px;
+  }
+  .step{
+    text-align: center;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .head{
+    margin-bottom: 20px;
+    gap:20px;
+  }
+}

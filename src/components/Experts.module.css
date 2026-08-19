@@ -143,11 +143,41 @@
   background: var(--white);
   font-size: var(--fs-body);
   font-weight: 500;
-  transition: background 0.18s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chat:hover {
   background: var(--grey-50);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.chat:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat:hover .chatIcon {
+  animation: whatsappBounce 0.6s ease-in-out;
+}
+
+.chat:hover svg:last-child {
+  animation: arrowSlideRight 0.4s ease-in-out;
+}
+
+@keyframes whatsappBounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  75% { transform: scale(1.1) rotate(5deg); }
+}
+
+@keyframes arrowSlideRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
 }
 
 .chatLeft {
@@ -220,12 +250,43 @@
   color: var(--ink);
   font-size: 26px;
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pick:hover {
   background: var(--red);
   color: var(--white);
+  border-color: var(--red);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 29, 54, 0.3);
+}
+
+.pick:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 15px rgba(231, 29, 54, 0.4);
+}
+
+/* Animate icons on hover */
+.pick:hover svg:first-child {
+  animation: clockRotate 0.6s ease-in-out;
+}
+
+.pick:hover svg:last-child {
+  animation: arrowSlide 0.4s ease-in-out;
+}
+
+@keyframes clockRotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+@keyframes arrowSlide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
 }
 
 /* ---- responsive ---------------------------------------------------------- */
@@ -309,5 +370,23 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .banner{
+    /* align-items: center; */
+    gap:10px;
+  }
+  .pick{
+    width:unset;
+    font-size: 13px;
+    gap:10px;
+    padding: 12px;
+  }
+  .bannerTitle{
+    font-size: 19px;
+  }
+  .section{
+            padding-block: 44px 56px;
   }
 }

@@ -11,14 +11,27 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hover state - fills with red background */
 .btn:hover {
-  background: #565656;
+  background: var(--red);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 29, 54, 0.4);
 }
 
+/* Active/Click state */
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Circle icon container */
 .circle {
   display: grid;
   place-items: center;
@@ -29,11 +42,21 @@
   background: var(--red);
   color: var(--white);
   font-size: 15px;
-  transition: transform 0.2s ease;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* On hover - circle becomes white with red icon */
 .btn:hover .circle {
-  transform: translateX(3px);
+  background: var(--white);
+  color: var(--red);
+  transform: translateX(5px) rotate(360deg);
+}
+
+/* Click animation for circle */
+.btn:active .circle {
+  transform: translateX(3px) scale(0.95);
 }
 
 .italic {
@@ -51,5 +74,17 @@
     width: 38px;
     height: 38px;
     font-size: 18px;
+  }
+}
+@media (max-width: 360px) {
+  .btn{
+              padding: 10px;
+    font-size: 13px;
+    gap: 8px;
+  }
+  .circle{
+        width: 30px;
+    height: 30px;
+    font-size: 13px;
   }
 }

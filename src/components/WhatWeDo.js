@@ -43,7 +43,7 @@ export default function WhatWeDo() {
             <div className={styles.panel} role="tabpanel" aria-label={current.label}>
               <Image
                 className={styles.panelBg}
-                src="/images/frame-48096206.webp"
+                src={current.image || "/images/frame-48096206.webp"}
                 alt=""
                 width={1056}
                 height={734}
