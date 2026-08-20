@@ -963,6 +963,8 @@ export const footer = {
       { name: "BHIM", image: "/images/Paymets apps/bhim.png" },
       { name: "Net Banking", image: "/images/Paymets apps/net banking.png" },
       { name: "Razorpay", image: "/images/Paymets apps/Razor pay.png" },
+      { name: "PayU", image: "/images/Paymets apps/pay.png" },
+      { name: "CashFree", image: "/images/Paymets apps/cash.png" },
     ],
   },
   badges: [

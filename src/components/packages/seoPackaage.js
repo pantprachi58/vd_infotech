@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./seoPackage.modular.css";
+import styles from "./seoPackage.module.css";
 import { PLANS, TOP_TABLE, SECTIONS } from "./data";
 
 const BILLING_OPTIONS = ["Monthly", "Quarterly", "Bi-Annually", "Annually"];

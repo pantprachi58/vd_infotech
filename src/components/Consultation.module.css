@@ -231,7 +231,7 @@
    enough that they stay inside the container instead of being clipped. */
 .strategist {
   position: relative;
-  margin-inline: 96px;
+  margin-inline: 55px;
   padding: 34px 40px 28px;
   border-radius: var(--radius-lg);
   background: #fdf4f3;

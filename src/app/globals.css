@@ -76,16 +76,14 @@ img {
   max-width: 100%;
 }
 
-/* Bootstrap's default container caps at 1320px; the design works on a 1720px
-   content width inside a 1920px frame. */
-/* .container,
-.container-fluid,
-.container-xxl {
-  max-width: var(--container);
+/* Global container class with max-width 1500px */
+.container {
+  max-width: 1630px;
   padding-left: 55px;
   padding-right: 55px;
   margin-inline: auto;
-} */
+  width: 100%;
+}
 
 @media (max-width: 575.98px) {
   .container {

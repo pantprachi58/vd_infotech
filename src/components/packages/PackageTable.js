@@ -8,225 +8,488 @@ import Reveal from "../ui/Reveal";
 import styles from "./PackageTable.module.css";
 
 export default function PackageTable() {
-  const [activeTab, setActiveTab] = useState("monthly");
-  const [selectedService, setSelectedService] = useState("all");
+  const [billingPeriod, setBillingPeriod] = useState("monthly");
+  const [businessType, setBusinessType] = useState("startup");
+  const [selectedTier, setSelectedTier] = useState("all");
 
-  const tabs = [
+  const billingPeriods = [
     { id: "monthly", label: "Monthly" },
     { id: "quarterly", label: "Quarterly" },
-    { id: "6-months", label: "6 Months" },
+    { id: "bi-annually", label: "Bi-Annually" },
     { id: "annually", label: "Annually" },
-    { id: "li", label: "LI" },
-    { id: "si", label: "SI" },
-    { id: "ot", label: "OT" },
-    { id: "ult", label: "ULT" },
   ];
 
-  const serviceCategories = [
-    { id: "all", label: "All Services" },
-    { id: "services", label: "Services" },
-    { id: "starter", label: "Starter" },
-    { id: "growth", label: "Growth" },
-    { id: "acceleration", label: "Acceleration" },
-    { id: "360", label: "360" },
-    { id: "consultancy", label: "Consultancy" },
-    { id: "other", label: "Other" },
+  const businessTypes = [
+    { id: "startup", label: "Startup Business" },
+    { id: "corporate", label: "Corporate Business" },
+    { id: "enterprise", label: "Enterprises" },
   ];
 
-  const packages = [
+  const tiers = [
+    { id: "all", label: "All", abbr: "All" },
+    { id: "starter", label: "Starter", abbr: "T" },
+    { id: "growth", label: "Growth", abbr: "S" },
+    { id: "accelerator", label: "Accelerator", abbr: "B" },
+    { id: "ace", label: "Ace", abbr: "C" },
+    { id: "dominator", label: "Dominator", abbr: "V" },
+  ];
+
+  // Service packages with pricing data based on the image
+  const servicePackages = [
     {
       name: "SEO Packages",
-      starter: "₹50,000",
-      growth: "₹1,00,000",
-      acceleration: "₹3,00,000",
-      full360: "₹ on demand",
-      consultancy: "₹ 25,000",
-      li: "₹ 3,50,000",
-      si: "₹ 8,00,000",
-      ot: "₹ 18,00,000",
-      ult: "₹ 36,00,000"
-    },
-    {
-      name: "Email Packages",
-      starter: "₹25,000",
-      growth: "₹50,000",
-      acceleration: "₹1,00,000",
-      full360: "₹ 2,50,000",
-      consultancy: "₹ 10,000",
-      li: "₹ 1,50,000",
-      si: "₹ 3,50,000",
-      ot: "₹ 7,00,000",
-      ult: "₹ 12,00,000"
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹25,000",
+          growth: "₹50,000",
+          accelerator: "₹75,000",
+          ace: "₹1,20,000",
+          dominator: "₹2,00,000",
+          conqueror: "₹3,50,000",
+        },
+        corporate: {
+          starter: "₹50,000",
+          growth: "₹1,00,000",
+          accelerator: "₹1,50,000",
+          ace: "₹2,50,000",
+          dominator: "₹4,00,000",
+          conqueror: "₹7,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
       name: "SMO Packages",
-      starter: "₹30,000",
-      growth: "₹60,000",
-      acceleration: "₹1,50,000",
-      full360: "₹ 3,50,000",
-      consultancy: "₹ 15,000",
-      li: "₹ 2,00,000",
-      si: "₹ 4,50,000",
-      ot: "₹ 9,00,000",
-      ult: "₹ 15,00,000"
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹20,000",
+          growth: "₹40,000",
+          accelerator: "₹60,000",
+          ace: "₹1,00,000",
+          dominator: "₹1,50,000",
+          conqueror: "₹2,50,000",
+        },
+        corporate: {
+          starter: "₹40,000",
+          growth: "₹80,000",
+          accelerator: "₹1,20,000",
+          ace: "₹2,00,000",
+          dominator: "₹3,00,000",
+          conqueror: "₹5,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "English Wikipedia",
-      starter: "₹1,00,000",
-      growth: "₹1,50,000",
-      acceleration: "₹2,00,000",
-      full360: "₹ 3,00,000",
-      consultancy: "₹ 50,000",
-      li: "₹ 3,50,000",
-      si: "₹ 5,00,000",
-      ot: "₹ 7,00,000",
-      ult: "₹ 10,00,000"
+      name: "PPC Packages",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹30,000",
+          growth: "₹60,000",
+          accelerator: "₹90,000",
+          ace: "₹1,50,000",
+          dominator: "₹2,50,000",
+          conqueror: "₹4,00,000",
+        },
+        corporate: {
+          starter: "₹60,000",
+          growth: "₹1,20,000",
+          accelerator: "₹1,80,000",
+          ace: "₹3,00,000",
+          dominator: "₹5,00,000",
+          conqueror: "₹8,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Google+ Packages",
-      starter: "₹50,000",
-      growth: "₹75,000",
-      acceleration: "₹1,00,000",
-      full360: "₹ 1,50,000",
-      consultancy: "₹ 25,000",
-      li: "₹ 1,50,000",
-      si: "₹ 2,25,000",
-      ot: "₹ 3,50,000",
-      ult: "₹ 5,00,000"
+      name: "SMM Packages",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹25,000",
+          growth: "₹50,000",
+          accelerator: "₹60,000",
+          ace: "₹1,25,000",
+          dominator: "₹1,75,000",
+          conqueror: "₹2,50,000",
+        },
+        corporate: {
+          starter: "₹50,000",
+          growth: "₹1,00,000",
+          accelerator: "₹1,20,000",
+          ace: "₹2,50,000",
+          dominator: "₹3,50,000",
+          conqueror: "₹5,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Google E-commerce Packages",
-      starter: "₹75,000",
-      growth: "₹1,50,000",
-      acceleration: "₹3,00,000",
-      full360: "₹ 6,00,000",
-      consultancy: "₹ 35,000",
-      li: "₹ 4,00,000",
-      si: "₹ 8,00,000",
-      ot: "₹ 15,00,000",
-      ult: "₹ 25,00,000"
+      name: "Graphics Design Packages",
+      category: "design",
+      pricing: {
+        startup: {
+          starter: "₹15,000",
+          growth: "₹30,000",
+          accelerator: "₹50,000",
+          ace: "₹80,000",
+          dominator: "₹1,20,000",
+          conqueror: "₹2,00,000",
+        },
+        corporate: {
+          starter: "₹30,000",
+          growth: "₹60,000",
+          accelerator: "₹1,00,000",
+          ace: "₹1,60,000",
+          dominator: "₹2,40,000",
+          conqueror: "₹4,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "International SEO Packages",
-      starter: "₹1,00,000",
-      growth: "₹2,00,000",
-      acceleration: "₹4,00,000",
-      full360: "₹ 8,00,000",
-      consultancy: "₹ 50,000",
-      li: "₹ 5,00,000",
-      si: "₹ 10,00,000",
-      ot: "₹ 20,00,000",
-      ult: "₹ 40,00,000"
+      name: "E-Commerce SEO Packages",
+      category: "ecommerce",
+      pricing: {
+        startup: {
+          starter: "₹35,000",
+          growth: "₹70,000",
+          accelerator: "₹1,00,000",
+          ace: "₹1,75,000",
+          dominator: "₹2,75,000",
+          conqueror: "₹4,00,000",
+        },
+        corporate: {
+          starter: "₹70,000",
+          growth: "₹1,40,000",
+          accelerator: "₹2,00,000",
+          ace: "₹3,50,000",
+          dominator: "₹5,50,000",
+          conqueror: "₹8,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "E-commerce SEO Packages",
-      starter: "₹60,000",
-      growth: "₹1,20,000",
-      acceleration: "₹2,50,000",
-      full360: "₹ 5,00,000",
-      consultancy: "₹ 30,000",
-      li: "₹ 3,00,000",
-      si: "₹ 6,00,000",
-      ot: "₹ 12,00,000",
-      ult: "₹ 20,00,000"
+      name: "E-Commerce PPC Packages",
+      category: "ecommerce",
+      pricing: {
+        startup: {
+          starter: "₹40,000",
+          growth: "₹80,000",
+          accelerator: "₹1,20,000",
+          ace: "₹2,00,000",
+          dominator: "₹3,30,000",
+          conqueror: "₹5,00,000",
+        },
+        corporate: {
+          starter: "₹80,000",
+          growth: "₹1,60,000",
+          accelerator: "₹2,40,000",
+          ace: "₹4,00,000",
+          dominator: "₹6,60,000",
+          conqueror: "₹10,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "E-commerce Management Packages",
-      starter: "₹80,000",
-      growth: "₹1,50,000",
-      acceleration: "₹3,00,000",
-      full360: "₹ 6,00,000",
-      consultancy: "₹ 40,000",
-      li: "₹ 4,00,000",
-      si: "₹ 8,00,000",
-      ot: "₹ 16,00,000",
-      ult: "₹ 30,00,000"
+      name: "Website Development Packages",
+      category: "development",
+      pricing: {
+        startup: {
+          starter: "₹50,000",
+          growth: "₹1,00,000",
+          accelerator: "₹1,50,000",
+          ace: "₹2,50,000",
+          dominator: "₹4,00,000",
+          conqueror: "₹6,00,000",
+        },
+        corporate: {
+          starter: "₹1,00,000",
+          growth: "₹2,00,000",
+          accelerator: "₹3,00,000",
+          ace: "₹5,00,000",
+          dominator: "₹8,00,000",
+          conqueror: "₹12,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Full Service Management Packages",
-      starter: "₹1,50,000",
-      growth: "₹3,00,000",
-      acceleration: "₹6,00,000",
-      full360: "₹ 12,00,000",
-      consultancy: "₹ 75,000",
-      li: "₹ 7,50,000",
-      si: "₹ 15,00,000",
-      ot: "₹ 30,00,000",
-      ult: "₹ 60,00,000"
+      name: "Application Development",
+      category: "development",
+      pricing: {
+        startup: {
+          starter: "₹75,000",
+          growth: "₹1,50,000",
+          accelerator: "₹2,50,000",
+          ace: "₹3,50,000",
+          dominator: "₹5,00,000",
+          conqueror: "₹7,00,000",
+        },
+        corporate: {
+          starter: "₹1,50,000",
+          growth: "₹3,00,000",
+          accelerator: "₹5,00,000",
+          ace: "₹7,00,000",
+          dominator: "₹10,00,000",
+          conqueror: "₹14,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "E-commerce Marketing Packages",
-      starter: "₹70,000",
-      growth: "₹1,40,000",
-      acceleration: "₹2,80,000",
-      full360: "₹ 5,50,000",
-      consultancy: "₹ 35,000",
-      li: "₹ 3,50,000",
-      si: "₹ 7,00,000",
-      ot: "₹ 14,00,000",
-      ult: "₹ 25,00,000"
+      name: "Software Development",
+      category: "development",
+      pricing: {
+        startup: {
+          starter: "₹1,00,000",
+          growth: "₹2,00,000",
+          accelerator: "₹3,00,000",
+          ace: "₹4,50,000",
+          dominator: "₹7,00,000",
+          conqueror: "₹10,00,000",
+        },
+        corporate: {
+          starter: "₹2,00,000",
+          growth: "₹4,00,000",
+          accelerator: "₹6,00,000",
+          ace: "₹9,00,000",
+          dominator: "₹14,00,000",
+          conqueror: "₹20,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Brand Promotion Packages",
-      starter: "₹1,00,000",
-      growth: "₹2,00,000",
-      acceleration: "₹4,00,000",
-      full360: "₹ 8,00,000",
-      consultancy: "₹ 50,000",
-      li: "₹ 5,00,000",
-      si: "₹ 10,00,000",
-      ot: "₹ 20,00,000",
-      ult: "₹ 40,00,000"
+      name: "Performance Marketing",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹40,000",
+          growth: "₹80,000",
+          accelerator: "₹1,25,000",
+          ace: "₹2,00,000",
+          dominator: "₹3,50,000",
+          conqueror: "₹5,00,000",
+        },
+        corporate: {
+          starter: "₹80,000",
+          growth: "₹1,60,000",
+          accelerator: "₹2,50,000",
+          ace: "₹4,00,000",
+          dominator: "₹7,00,000",
+          conqueror: "₹10,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Online Reputation Packages",
-      starter: "₹80,000",
-      growth: "₹1,50,000",
-      acceleration: "₹3,00,000",
-      full360: "₹ 6,00,000",
-      consultancy: "₹ 40,000",
-      li: "₹ 4,00,000",
-      si: "₹ 8,00,000",
-      ot: "₹ 16,00,000",
-      ult: "₹ 30,00,000"
+      name: "Influencer Marketing",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹30,000",
+          growth: "₹60,000",
+          accelerator: "₹1,00,000",
+          ace: "₹1,75,000",
+          dominator: "₹3,00,000",
+          conqueror: "₹5,00,000",
+        },
+        corporate: {
+          starter: "₹60,000",
+          growth: "₹1,20,000",
+          accelerator: "₹2,00,000",
+          ace: "₹3,50,000",
+          dominator: "₹6,00,000",
+          conqueror: "₹10,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "YouTuber Marketing Packages",
-      starter: "₹60,000",
-      growth: "₹1,20,000",
-      acceleration: "₹2,50,000",
-      full360: "₹ 5,00,000",
-      consultancy: "₹ 30,000",
-      li: "₹ 3,00,000",
-      si: "₹ 6,00,000",
-      ot: "₹ 12,00,000",
-      ult: "₹ 20,00,000"
+      name: "Email Marketing Packages",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹15,000",
+          growth: "₹30,000",
+          accelerator: "₹60,000",
+          ace: "₹1,00,000",
+          dominator: "₹1,50,000",
+          conqueror: "₹2,50,000",
+        },
+        corporate: {
+          starter: "₹30,000",
+          growth: "₹60,000",
+          accelerator: "₹1,20,000",
+          ace: "₹2,00,000",
+          dominator: "₹3,00,000",
+          conqueror: "₹5,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Lead Generation Packages",
-      starter: "₹40,000",
-      growth: "₹80,000",
-      acceleration: "₹1,60,000",
-      full360: "₹ 3,20,000",
-      consultancy: "₹ 20,000",
-      li: "₹ 2,00,000",
-      si: "₹ 4,00,000",
-      ot: "₹ 8,00,000",
-      ult: "₹ 15,00,000"
+      name: "Digital Marketing Packages",
+      category: "marketing",
+      pricing: {
+        startup: {
+          starter: "₹40,000",
+          growth: "₹80,000",
+          accelerator: "₹1,20,000",
+          ace: "₹2,00,000",
+          dominator: "₹3,50,000",
+          conqueror: "₹5,00,000",
+        },
+        corporate: {
+          starter: "₹80,000",
+          growth: "₹1,60,000",
+          accelerator: "₹2,40,000",
+          ace: "₹4,00,000",
+          dominator: "₹7,00,000",
+          conqueror: "₹10,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
     {
-      name: "Link Building Packages",
-      starter: "₹35,000",
-      growth: "₹70,000",
-      acceleration: "₹1,40,000",
-      full360: "₹ 2,80,000",
-      consultancy: "₹ 18,000",
-      li: "₹ 1,75,000",
-      si: "₹ 3,50,000",
-      ot: "₹ 7,00,000",
-      ult: "₹ 12,00,000"
+      name: "Virtual Assistant Packages",
+      category: "services",
+      pricing: {
+        startup: {
+          starter: "₹15,000",
+          growth: "₹30,000",
+          accelerator: "₹50,000",
+          ace: "₹75,000",
+          dominator: "₹1,00,000",
+          conqueror: "₹2,00,000",
+        },
+        corporate: {
+          starter: "₹30,000",
+          growth: "₹60,000",
+          accelerator: "₹1,00,000",
+          ace: "₹1,50,000",
+          dominator: "₹2,00,000",
+          conqueror: "₹4,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
+    },
+    {
+      name: "UI/UX Design Packages",
+      category: "design",
+      pricing: {
+        startup: {
+          starter: "₹20,000",
+          growth: "₹40,000",
+          accelerator: "₹70,000",
+          ace: "₹1,20,000",
+          dominator: "₹2,00,000",
+          conqueror: "₹3,00,000",
+        },
+        corporate: {
+          starter: "₹40,000",
+          growth: "₹80,000",
+          accelerator: "₹1,40,000",
+          ace: "₹2,40,000",
+          dominator: "₹4,00,000",
+          conqueror: "₹6,00,000",
+        },
+        enterprise: {
+          custom: "As per need",
+        },
+      },
     },
   ];
+
+  // Filter packages based on selected tier
+  const getFilteredPackages = () => {
+    return servicePackages;
+  };
+
+  // Get columns to display
+  const getDisplayColumns = () => {
+    if (businessType === "enterprise") {
+      return ["custom"];
+    }
+
+    if (selectedTier === "all") {
+      return ["starter", "growth", "accelerator", "ace", "dominator", "conqueror"];
+    }
+
+    return [selectedTier];
+  };
+
+  // Get column header labels
+  const getColumnHeaders = () => {
+    if (businessType === "enterprise") {
+      return [{ key: "custom", label: "Custom" }];
+    }
+
+    const allHeaders = [
+      { key: "starter", label: "Starter" },
+      { key: "growth", label: "Growth" },
+      { key: "accelerator", label: "Accelerator" },
+      { key: "ace", label: "Ace" },
+      { key: "dominator", label: "Dominator" },
+      { key: "conqueror", label: "Conqueror" },
+    ];
+
+    if (selectedTier === "all") {
+      return allHeaders;
+    }
+
+    return allHeaders.filter(h => h.key === selectedTier);
+  };
+
+  // Get pricing for a service
+  const getPricing = (service, column) => {
+    const pricing = service.pricing[businessType];
+    if (!pricing) return "N/A";
+    return pricing[column] || "N/A";
+  };
+
+  const handleStartNow = (serviceName, tier) => {
+    // Implement your "Start Now" action here
+    console.log(`Starting ${serviceName} with ${tier} plan`);
+    // You can add navigation or modal opening logic here
+  };
 
   return (
     <section className={styles.section}>
@@ -239,66 +502,127 @@ export default function PackageTable() {
           </p>
         </Reveal>
 
+        {/* Billing Period Tabs */}
         <Reveal delay={0.1}>
           <div className={styles.tabNav}>
-            {tabs.map((tab) => (
+            {billingPeriods.map((period) => (
               <button
-                key={tab.id}
-                className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ""}`}
-                onClick={() => setActiveTab(tab.id)}
+                key={period.id}
+                className={`${styles.tab} ${billingPeriod === period.id ? styles.tabActive : ""}`}
+                onClick={() => setBillingPeriod(period.id)}
               >
-                {tab.label}
+                {period.label}
               </button>
             ))}
           </div>
         </Reveal>
 
+        {/* Business Type Selection */}
         <Reveal delay={0.15}>
-          <div className={styles.serviceNav}>
-            {serviceCategories.map((cat) => (
+          <div className={styles.businessTypeNav}>
+            {businessTypes.map((type) => (
               <button
-                key={cat.id}
-                className={`${styles.serviceBtn} ${
-                  selectedService === cat.id ? styles.serviceBtnActive : ""
+                key={type.id}
+                className={`${styles.businessTypeBtn} ${
+                  businessType === type.id ? styles.businessTypeBtnActive : ""
                 }`}
-                onClick={() => setSelectedService(cat.id)}
+                onClick={() => setBusinessType(type.id)}
               >
-                {cat.label}
+                {type.label}
               </button>
             ))}
           </div>
         </Reveal>
 
-        <Reveal delay={0.2}>
+        {/* Tier Filter Buttons */}
+        {businessType !== "enterprise" && (
+          <Reveal delay={0.2}>
+            <div className={styles.tierNav}>
+              {tiers.map((tier) => (
+                <button
+                  key={tier.id}
+                  className={`${styles.tierBtn} ${
+                    selectedTier === tier.id ? styles.tierBtnActive : ""
+                  }`}
+                  onClick={() => setSelectedTier(tier.id)}
+                  title={tier.label}
+                >
+                  {tier.abbr}
+                </button>
+              ))}
+            </div>
+          </Reveal>
+        )}
+
+        {/* Pricing Table */}
+        <Reveal delay={0.25}>
           <div className={styles.tableWrapper}>
             <table className={styles.table}>
               <thead>
                 <tr>
                   <th className={styles.thFirst}>Services</th>
-                  <th>Starter</th>
-                  <th>Growth</th>
-                  <th>Acceleration</th>
-                  <th>360</th>
-                  <th>Consultancy</th>
-                  <th>Others</th>
+                  {businessType === "enterprise" ? (
+                    <>
+                      <th colSpan="6" className={styles.thStartNow}>
+                        Start Your Journey With Us
+                      </th>
+                    </>
+                  ) : (
+                    getColumnHeaders().map((header) => (
+                      <th key={header.key}>
+                        <div className={styles.thContent}>
+                          <span className={styles.thLabel}>{header.label}</span>
+                          <button
+                            className={styles.startNowBtn}
+                            onClick={() => handleStartNow("", header.key)}
+                          >
+                            Start Now
+                          </button>
+                        </div>
+                      </th>
+                    ))
+                  )}
                 </tr>
               </thead>
               <tbody>
-                {packages.map((pkg, idx) => (
+                {getFilteredPackages().map((service, idx) => (
                   <tr key={idx} className={styles.row}>
-                    <td className={styles.serviceName}>{pkg.name}</td>
-                    <td>{pkg.starter}</td>
-                    <td>{pkg.growth}</td>
-                    <td>{pkg.acceleration}</td>
-                    <td>{pkg.full360}</td>
-                    <td>{pkg.consultancy}</td>
-                    <td>
-                      <button className={styles.moreBtn}>More details</button>
-                    </td>
+                    <td className={styles.serviceName}>{service.name}</td>
+                    {businessType === "enterprise" ? (
+                      <td colSpan="6" className={styles.customCell}>
+                        <span className={styles.customText}>As per need</span>
+                        <button
+                          className={styles.contactBtn}
+                          onClick={() => handleStartNow(service.name, "custom")}
+                        >
+                          Contact Us
+                        </button>
+                      </td>
+                    ) : (
+                      getDisplayColumns().map((column) => (
+                        <td key={column} className={styles.priceCell}>
+                          {getPricing(service, column)}
+                        </td>
+                      ))
+                    )}
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+        </Reveal>
+
+        {/* Additional Info */}
+        <Reveal delay={0.3}>
+          <div className={styles.footerNote}>
+            <p>
+              * Prices may vary based on requirements and project scope. All packages include
+              dedicated support and regular reporting.
+            </p>
+            <p>
+              ** Enterprise packages are customized based on specific business needs. Contact us for
+              a detailed quote.
+            </p>
           </div>
         </Reveal>
       </div>

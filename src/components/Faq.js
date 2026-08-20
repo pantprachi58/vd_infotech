@@ -30,7 +30,7 @@ export default function Faq() {
             </p>
             <div className={styles.art}>
               <Image
-                src="/images/quesmark-image.png"
+                src="/images/faq.png"
                 alt=""
                 width={620}
                 height={670}

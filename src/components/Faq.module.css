@@ -37,8 +37,8 @@
 
 .art {
   position: relative;
-  margin-top: 26px;
-  aspect-ratio: 620 / 500;
+  /* margin-top: 26px; */
+  aspect-ratio: 620 / 632;
 }
 
 .art img {

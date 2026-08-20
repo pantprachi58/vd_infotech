@@ -34,7 +34,7 @@
   overflow: hidden;
   text-align: left;
   background: #2b2b2b;
-  min-height: 470px;
+  min-height: 390px;
 }
 
 .media {
@@ -50,7 +50,7 @@
 }
 
 .body {
-  padding: 100px 60px;
+  padding: 60px 60px;
   color: var(--white);
 }
 
@@ -99,7 +99,7 @@
   height: 46px;
   border: 0;
   background: none;
-  color: var(--grey-300);
+  color: #c0c0c052;
   font-size: 40px;
   cursor: pointer;
   transition: color 0.18s ease;

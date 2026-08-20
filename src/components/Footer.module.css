@@ -399,13 +399,13 @@ gap: calc(50 * var(--u));
 
 /* the red rule sits beside the heading's last line, per the design */
 .payHeading {
-  display: grid;
-  grid-template-columns: auto 1fr;
   align-items: end;
-  gap: 0 calc(12 * var(--u));
-  padding-right: calc(30 * var(--u));
-  border-right: 1px solid #333;
-  min-height: calc(60 * var(--u));
+    gap: 0 calc(10 * var(--u));
+    padding-right: calc(88 * var(--u));
+    min-height: calc(55 * var(--u));
+    border-right: 1px solid #333;
+    grid-template-columns: auto 1fr;
+    display: grid;
 }
 
 .payHeading h3 {
@@ -429,13 +429,13 @@ gap: calc(50 * var(--u));
 }
 
 .payGrid {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-  gap: calc(12 * var(--u));
-  margin: 0;
-  padding: 0 0 0 calc(20 * var(--u));
-  max-width: 100%;
-  list-style: none;
+  gap: calc(9 * var(--u));
+    padding: 0 0 0 calc(20 * var(--u));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    max-width: 100%;
+    margin: 0;
+    list-style: none;
+    display: grid;
 }
 
 .payCard {
