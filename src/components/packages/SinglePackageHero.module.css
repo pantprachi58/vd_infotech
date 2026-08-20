@@ -1,0 +1,54 @@
+/* Figma 1022:4071 — 1920x304 banner, then the intro against a 9px red rule. */
+
+.section {
+  padding-bottom: clamp(20px, calc(48 * var(--pkg-u)), 48px);
+}
+
+.band {
+  display: grid;
+  place-items: center;
+  min-height: clamp(140px, calc(304 * var(--pkg-u)), 304px);
+  padding: 24px 16px;
+  background-color: var(--red-dark);
+  background-image: linear-gradient(
+      180deg,
+      rgba(35, 0, 0, 0.45),
+      rgba(35, 0, 0, 0.45)
+    ),
+    url("/images/package-hero-band.webp");
+  background-position: center 58%;
+  background-size: cover;
+}
+
+.title {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(26px, calc(56 * var(--pkg-u)), 56px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.lead {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(10px, calc(18 * var(--pkg-u)), 18px);
+  margin-top: clamp(24px, calc(61 * var(--pkg-u)), 61px);
+}
+
+/* Figma: 9px wide, 2px radius, #9a0214 -> #220004 top to bottom. */
+.rule {
+  flex: 0 0 auto;
+  width: clamp(5px, calc(9 * var(--pkg-u)), 9px);
+  border-radius: 2px;
+  background: linear-gradient(180deg, #9a0214, #220004);
+}
+
+.copy {
+  margin: 0;
+  color: #0c0c0c;
+  font-size: var(--pkg-fs-lead);
+  font-weight: 400;
+  line-height: 1.42;
+}

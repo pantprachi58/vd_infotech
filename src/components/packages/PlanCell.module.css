@@ -1,0 +1,38 @@
+.check {
+  /* Figma 1022:4071 uses #3aa34f for the tick. */
+  color: #3aa34f;
+  font-size: var(--pkg-fs-cell);
+}
+
+.cross {
+  color: var(--pkg-cross);
+  font-size: var(--pkg-fs-cell);
+}
+
+.text {
+  display: inline-block;
+  font-weight: 400;
+}
+
+/* Figma fills this text with a black-to-red gradient, bold italic. */
+.cta {
+  display: inline-block;
+  background: linear-gradient(90deg, #000000, #da0a03);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #da0a03;
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .cta {
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.cta:hover {
+  -webkit-text-fill-color: currentColor;
+  color: var(--red-dark);
+}

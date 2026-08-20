@@ -1,0 +1,270 @@
+/* Figma 1022:4071. The sheet carries no grid lines at all — rows alternate
+   #f0f0f2 / #ffffff, sections are introduced by a full-width red band, and the
+   Custom column holds one badge per section. Column widths follow the frame's
+   405 / 6 plan columns / 242 split of the 1720 content width. */
+
+.colActivity {
+  width: 23.5%;
+}
+
+.colPlan {
+  width: 10.4%;
+}
+
+.colCustom {
+  width: 14.1%;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.table {
+  width: 100%;
+  min-width: 940px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background: var(--white);
+  font-size: var(--pkg-fs-cell);
+}
+
+/* Bootstrap's `.table > :not(caption) > * > *` sets cell padding at the same
+   specificity as our cell classes; doubling the class wins without !important. */
+.table.table > :not(caption) > * > * {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+/* ---- segment group row -------------------------------------------------- */
+
+.table.table .groupSpacer {
+  background: transparent;
+}
+
+.table.table .groupHead {
+  padding: 0 clamp(1px, calc(2 * var(--pkg-u)), 2px)
+    clamp(6px, calc(13 * var(--pkg-u)), 13px);
+  background: transparent;
+  font-weight: 400;
+}
+
+/* Figma fills these solid #0c0c0c on the single-package sheet. */
+.groupSlab {
+  display: block;
+  border-radius: var(--radius-sm);
+  padding: clamp(9px, calc(22 * var(--pkg-u)), 22px) clamp(6px, calc(14 * var(--pkg-u)), 14px);
+  background: #0c0c0c;
+  color: var(--white);
+  font-size: var(--pkg-fs-cell);
+  font-weight: 400;
+  line-height: 1.21;
+  text-align: center;
+}
+
+/* ---- header row --------------------------------------------------------- */
+
+.table.table .head {
+  padding: clamp(10px, calc(21 * var(--pkg-u)), 21px) clamp(4px, calc(8 * var(--pkg-u)), 8px);
+  background: linear-gradient(180deg, #d0021b, #210004);
+  color: var(--white);
+  font-size: var(--pkg-fs-head);
+  font-weight: 700;
+  line-height: 1.21;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.table.table .headActivity {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  padding-left: clamp(12px, calc(18 * var(--pkg-u)), 18px);
+  text-align: left;
+}
+
+/* ---- section band ------------------------------------------------------- */
+
+.table.table .band {
+  padding: clamp(11px, calc(23 * var(--pkg-u)), 23px) clamp(12px, calc(20 * var(--pkg-u)), 20px);
+  background: linear-gradient(180deg, #ce0202, #220100);
+  color: var(--white);
+  font-size: var(--pkg-fs-cell);
+  font-weight: 700;
+  line-height: 1.21;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ---- body rows ---------------------------------------------------------- */
+
+.odd .rowLabel,
+.odd .cell {
+  background: #f0f0f2;
+}
+
+.even .rowLabel,
+.even .cell {
+  background: var(--white);
+}
+
+.table.table .rowLabel {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  padding: clamp(12px, calc(26 * var(--pkg-u)), 26px) clamp(12px, calc(18 * var(--pkg-u)), 18px);
+  color: #0c0c0c;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Figma sets this one row in bold italic. */
+.journeyLabel {
+  font-style: italic;
+}
+
+.table.table .cell {
+  padding: clamp(12px, calc(26 * var(--pkg-u)), 26px) clamp(4px, calc(8 * var(--pkg-u)), 8px);
+  color: #26262e;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ---- custom column ------------------------------------------------------ */
+
+.table.table .customCell {
+  padding: clamp(8px, calc(16 * var(--pkg-u)), 16px);
+  background: var(--white);
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Figma: 132x33 pill, 4px radius, #ca0000 -> #222222. */
+.badge {
+  display: inline-block;
+  border-radius: 4px;
+  padding: clamp(3px, calc(5 * var(--pkg-u)), 5px) clamp(6px, calc(10 * var(--pkg-u)), 10px);
+  background: linear-gradient(180deg, #ca0000, #222222);
+  color: var(--white);
+  font-size: var(--pkg-fs-head);
+  font-weight: 500;
+  line-height: 1.21;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Phones: one plan at a time behind a picker. An 8-column sheet cannot be made
+   readable at 390px by scrolling alone.
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.groupCaption {
+  margin: 0 0 6px;
+  color: var(--grey-600);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.planPicker {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  overflow-x: auto;
+  background: var(--white);
+  scrollbar-width: none;
+}
+
+.planPicker::-webkit-scrollbar {
+  display: none;
+}
+
+.planPick {
+  flex: 0 0 auto;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.planPickActive {
+  border-color: transparent;
+  background: linear-gradient(180deg, var(--pkg-tab-from), var(--pkg-tab-to));
+  color: var(--white);
+}
+
+.mobileSection {
+  margin-bottom: 22px;
+}
+
+.mobileBand {
+  margin: 0 0 2px;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, #ce0202, #220100);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mobileList {
+  margin: 0;
+}
+
+.mobileRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+}
+
+.mobileRow.odd {
+  background: #f0f0f2;
+}
+
+.mobileRow.even {
+  background: var(--white);
+}
+
+.mobileRow dt {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mobileRow dd {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #26262e;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}

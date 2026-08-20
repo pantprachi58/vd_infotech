@@ -1,0 +1,7594 @@
+{
+  "meta": {
+    "version": 1,
+    "source": "Figma VD Infotech UI — nodes 1294:4944 (packages) and 1022:4071 (single package)",
+    "baseCurrency": "INR",
+    "note": "Local stand-in for the packages API. Replace the fetch in src/lib/packages.js and keep this shape."
+  },
+  "plans": [
+    {
+      "id": "starter",
+      "label": "Starter"
+    },
+    {
+      "id": "growth",
+      "label": "Growth"
+    },
+    {
+      "id": "accelerator",
+      "label": "Accelerator"
+    },
+    {
+      "id": "ace",
+      "label": "Ace"
+    },
+    {
+      "id": "dominator",
+      "label": "Dominator"
+    },
+    {
+      "id": "conqueror",
+      "label": "Conqueror"
+    }
+  ],
+  "planGroups": [
+    {
+      "id": "startup",
+      "label": "Startup Business",
+      "plans": [
+        "starter",
+        "growth",
+        "accelerator"
+      ]
+    },
+    {
+      "id": "corporate",
+      "label": "Corporate Business",
+      "plans": [
+        "ace",
+        "dominator",
+        "conqueror"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprises",
+      "plans": [
+        "custom"
+      ]
+    }
+  ],
+  "customPlan": {
+    "id": "custom",
+    "label": "Custom",
+    "note": "As per need"
+  },
+  "billingPeriods": [
+    {
+      "id": "monthly",
+      "label": "Monthly",
+      "months": 1,
+      "discount": 0
+    },
+    {
+      "id": "quarterly",
+      "label": "Quarterly",
+      "months": 3,
+      "discount": 0.05
+    },
+    {
+      "id": "bi-annually",
+      "label": "Bi-Annually",
+      "months": 6,
+      "discount": 0.1
+    },
+    {
+      "id": "annually",
+      "label": "Annually",
+      "months": 12,
+      "discount": 0.18
+    }
+  ],
+  "currencies": [
+    {
+      "code": "INR",
+      "symbol": "₹",
+      "rate": 1,
+      "locale": "en-IN",
+      "fractionDigits": 0
+    },
+    {
+      "code": "USD",
+      "symbol": "$",
+      "rate": 0.012,
+      "locale": "en-US",
+      "fractionDigits": 0
+    },
+    {
+      "code": "GBP",
+      "symbol": "£",
+      "rate": 0.0094,
+      "locale": "en-GB",
+      "fractionDigits": 0
+    },
+    {
+      "code": "EUR",
+      "symbol": "€",
+      "rate": 0.011,
+      "locale": "de-DE",
+      "fractionDigits": 0
+    },
+    {
+      "code": "JPY",
+      "symbol": "¥",
+      "rate": 1.79,
+      "locale": "ja-JP",
+      "fractionDigits": 0
+    }
+  ],
+  "overview": {
+    "eyebrow": "Main Packages",
+    "title": "All-in-One 360° Business Growth Package",
+    "description": "One powerful package designed to build, market, and grow your business from every angle. From strategy to execution, we help you achieve measurable and sustainable growth.",
+    "card": {
+      "name": "Package Name: VD360 Total Business Suite",
+      "facts": [
+        {
+          "icon": "audience",
+          "label": "Target Audience",
+          "value": "Startups, MSMEs, Enterprises, Influencers, Service Providers, eCommerce Stores"
+        },
+        {
+          "icon": "availability",
+          "label": "Availability",
+          "value": "India Only (custom global package on vdinfotechpvtltd.com)"
+        },
+        {
+          "icon": "validity",
+          "label": "Validity",
+          "value": "12 Months (Renewable)"
+        },
+        {
+          "icon": "type",
+          "label": "Package Type",
+          "value": "Annual / Quarterly / Monthly"
+        }
+      ]
+    },
+    "tableLabel": "Services",
+    "ctaLabel": "Start Now"
+  },
+  "packages": [
+    {
+      "slug": "seo",
+      "name": "SEO Packages",
+      "shortName": "SEO",
+      "category": "marketing",
+      "tagline": "Rank higher, earn more organic traffic and turn search visibility into measurable revenue.",
+      "description": "Are you having trouble getting your website noticed online? VD Infotech can help you! With our SEO services, we can help you make your website stand out in search results, increase organic traffic and improve your overall visibility. Our SEO specific packages include everything you need, from keyword research to on-page optimization. We also handle monthly content creation, link building, and reporting. Our experts will design an action plan tailored to your company's goals.",
+      "seo": {
+        "title": "SEO Packages | VD Infotech",
+        "description": "Rank higher, earn more organic traffic and turn search visibility into measurable revenue."
+      },
+      "basePrices": {
+        "starter": 25000,
+        "growth": 50000,
+        "accelerator": 75000,
+        "ace": 120000,
+        "dominator": 200000,
+        "conqueror": 350000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Total Keywords Targeted",
+              "values": [
+                "Upto 15",
+                "Upto 30",
+                "Upto 50",
+                "Upto 80",
+                "Upto 100",
+                "Upto 120"
+              ]
+            },
+            {
+              "label": "Primary Focused Keywords",
+              "values": [
+                "10",
+                "15",
+                "20",
+                "30",
+                "40",
+                "60"
+              ]
+            },
+            {
+              "label": "Supporting Keywords",
+              "values": [
+                "20",
+                "25",
+                "30",
+                "45",
+                "60",
+                "90"
+              ]
+            },
+            {
+              "label": "Total Contextual Backlinks",
+              "values": [
+                "10",
+                "20",
+                "30",
+                "45",
+                "60",
+                "100"
+              ]
+            },
+            {
+              "label": "Total Traditional Backlinks",
+              "values": [
+                "50",
+                "75",
+                "100",
+                "150",
+                "200",
+                "300"
+              ]
+            },
+            {
+              "label": "Service/Blog Pages Targeted",
+              "values": [
+                "Upto 10",
+                "Upto 15",
+                "Upto 25",
+                "Upto 35",
+                "Upto 50",
+                "Upto 75"
+              ]
+            },
+            {
+              "label": "Organic Ranking Growth (Top 10)",
+              "values": [
+                "20-25%",
+                "22-30%",
+                "25-40%",
+                "30-55%",
+                "40-80%",
+                "50-90%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Initial Review & Analysis Tasks",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Full Website Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Backlink Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Duplicate Content Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Google Penalty Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "SEMRUSH Audit Report",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Keywords Research & Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Baseline Ranking Report",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Keywords URL Mapping",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Analysis Report (No. of Competitors)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Screaming Frog Report (Customized)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Broken Links Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Website Usability Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "On Page Tasks",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "SEO Friendly URLs (URL Rewriting)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Meta Tag, Header Tag, Alt, Title Tag Optimization",
+              "values": [
+                "Upto 20",
+                "Upto 30",
+                "Upto 50",
+                "Upto 75",
+                "Upto 100",
+                "Upto 150"
+              ]
+            },
+            {
+              "label": "Existing Website Content Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "New Page Creation",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Schema Markup Suggestions",
+              "values": [
+                "2",
+                "3",
+                "3",
+                "4",
+                "5",
+                "8"
+              ]
+            },
+            {
+              "label": "Webmaster Tools + Crawl Error Resolution",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Website Page Load Optimization",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom 404 Error Page Setup",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Internal Linking & Anchor Text Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Robots.txt Creation & Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "XML Sitemap Creation & Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Google Webmaster Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Google Analytics Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Image Alt Tag Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Core Web Vital Analysis & Recommendation",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "URL Canonicalization Check",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Navigation Analysis & Recommendations",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "H1-H2-H3 Suggestions",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Breadcrumbs Implementation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Content Marketing",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Guest Blog Writing",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "Article Writing & Submission",
+              "values": [
+                "3",
+                "6",
+                "10",
+                "12",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "label": "Q&A Submissions (Quora)",
+              "values": [
+                "5",
+                "8",
+                "10",
+                "12",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "label": "Press Release Writing & Submission",
+              "values": [
+                "0",
+                "0",
+                "1",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "label": "Blog Posting",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "6",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Premium Guest Posting*",
+              "values": [
+                "Additional Charges",
+                "Additional Charges",
+                "Additional Charges",
+                "Additional Charges",
+                "Additional Charges",
+                "Additional Charges"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Off Page Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Content Curation/Syndication",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Social Bookmarking",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Social Sharing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "PPT/PDF Submission",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Web 2.0 Profile Creation",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Google My Business Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Bing Local Listing Setup",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Local Business Listings",
+              "values": [
+                "0",
+                "5",
+                "10",
+                "12",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "Local Company Profile Creation",
+              "values": [
+                "0",
+                "5",
+                "10",
+                "12",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "Review Postings",
+              "values": [
+                "0",
+                "5",
+                "10",
+                "15",
+                "20",
+                "30"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SEO Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Google Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Keyword Ranking Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "SEO Activity Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly SEO Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "smo",
+      "name": "SMO Packages",
+      "shortName": "SMO",
+      "category": "marketing",
+      "tagline": "Turn every social profile into a consistent, on-brand growth channel.",
+      "description": "Your social profiles are often the first thing a customer checks before they buy. Our social media optimization packages turn those profiles into a consistent, on-brand storefront — optimized bios, a planned content calendar, scroll-stopping creatives and active community management, all reported back to you every month.",
+      "seo": {
+        "title": "SMO Packages | VD Infotech",
+        "description": "Turn every social profile into a consistent, on-brand growth channel."
+      },
+      "basePrices": {
+        "starter": 20000,
+        "growth": 40000,
+        "accelerator": 60000,
+        "ace": 100000,
+        "dominator": 150000,
+        "conqueror": 250000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Social Platforms Managed",
+              "values": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "8"
+              ]
+            },
+            {
+              "label": "Posts Per Month",
+              "values": [
+                "8",
+                "12",
+                "20",
+                "30",
+                "45",
+                "60"
+              ]
+            },
+            {
+              "label": "Creatives / Static Designs",
+              "values": [
+                "6",
+                "10",
+                "16",
+                "24",
+                "36",
+                "50"
+              ]
+            },
+            {
+              "label": "Reels / Short Videos",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "Follower Growth Target",
+              "values": [
+                "5-8%",
+                "8-12%",
+                "12-18%",
+                "18-25%",
+                "25-40%",
+                "40-60%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Profile Setup & Audit",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Social Profile Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Benchmarking",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Bio & About Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Profile / Cover Design",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Hashtag Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Brand Voice Guidelines",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Content & Creative",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Monthly Content Calendar",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Caption Copywriting",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Carousel Posts",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "6",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "Story Posts",
+              "values": [
+                "0",
+                "4",
+                "8",
+                "12",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "label": "Motion Graphics",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Festive / Trend Posts",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "8",
+                "12"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Community Management",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Comment & DM Response",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Review & Reputation Monitoring",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Community Engagement Hours",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "Influencer Outreach",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Crisis Response Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Social Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ppc",
+      "name": "PPC Packages",
+      "shortName": "PPC",
+      "category": "marketing",
+      "tagline": "Search campaigns engineered around cost per acquisition, not impressions.",
+      "description": "Paid search should pay for itself. Our PPC packages cover the full account lifecycle — audit, tracking, campaign build, ad copy testing and relentless bid optimization — so every rupee of ad spend is traceable to a conversion and your cost per acquisition keeps falling.",
+      "seo": {
+        "title": "PPC Packages | VD Infotech",
+        "description": "Search campaigns engineered around cost per acquisition, not impressions."
+      },
+      "basePrices": {
+        "starter": 30000,
+        "growth": 60000,
+        "accelerator": 90000,
+        "ace": 150000,
+        "dominator": 250000,
+        "conqueror": 400000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Ad Platforms Covered",
+              "values": [
+                "1",
+                "2",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            },
+            {
+              "label": "Campaigns Managed",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "Ad Groups",
+              "values": [
+                "6",
+                "12",
+                "20",
+                "35",
+                "50",
+                "80"
+              ]
+            },
+            {
+              "label": "Keywords Targeted",
+              "values": [
+                "Upto 50",
+                "Upto 100",
+                "Upto 200",
+                "Upto 350",
+                "Upto 500",
+                "Upto 800"
+              ]
+            },
+            {
+              "label": "Ad Spend Managed (Upto)",
+              "values": [
+                "₹1L",
+                "₹3L",
+                "₹6L",
+                "₹12L",
+                "₹25L",
+                "₹50L+"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Account Setup & Audit",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Existing Account Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Conversion Tracking Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Google Tag Manager Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Ad Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Negative Keyword Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Landing Page Recommendations",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Management",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Search Campaigns",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Display Campaigns",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Shopping Campaigns",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Video / YouTube Campaigns",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Performance Max",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Remarketing Campaigns",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Ad Copy Variations",
+              "values": [
+                "4",
+                "8",
+                "12",
+                "20",
+                "30",
+                "50"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Bid Management",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "A/B Ad Testing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Quality Score Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Audience & Placement Refinement",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Budget Pacing Review",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "smm",
+      "name": "SMM Packages",
+      "shortName": "SMM",
+      "category": "marketing",
+      "tagline": "Full-funnel paid social built on fast creative testing and clean attribution.",
+      "description": "Paid social rewards brands that test fast and creatively. Our social media marketing packages combine funnel strategy, pixel-accurate tracking, high-volume creative production and continuous audience testing across Meta, LinkedIn, YouTube and more.",
+      "seo": {
+        "title": "SMM Packages | VD Infotech",
+        "description": "Full-funnel paid social built on fast creative testing and clean attribution."
+      },
+      "basePrices": {
+        "starter": 25000,
+        "growth": 50000,
+        "accelerator": 80000,
+        "ace": 125000,
+        "dominator": 175000,
+        "conqueror": 250000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Paid Social Platforms",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ]
+            },
+            {
+              "label": "Campaigns Per Month",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "label": "Ad Creatives",
+              "values": [
+                "4",
+                "8",
+                "14",
+                "22",
+                "35",
+                "50"
+              ]
+            },
+            {
+              "label": "Video Ads",
+              "values": [
+                "0",
+                "1",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Ad Spend Managed (Upto)",
+              "values": [
+                "₹75K",
+                "₹2L",
+                "₹5L",
+                "₹10L",
+                "₹20L",
+                "₹40L+"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Strategy & Setup",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Business Manager Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Pixel / Conversion API Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Audience Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Funnel Strategy",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Ad Library Review",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Creative Direction Brief",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Execution",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Awareness Campaigns",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Lead Generation Campaigns",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Catalogue / Dynamic Ads",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Retargeting Campaigns",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Lookalike Audience Builds",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Ad Copy Variations",
+              "values": [
+                "3",
+                "6",
+                "10",
+                "16",
+                "25",
+                "40"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Creative A/B Testing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Audience Split Testing",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Bid & Budget Optimization",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Landing Page CRO Inputs",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Frequency & Fatigue Monitoring",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Paid Social Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "graphics-design",
+      "name": "Graphics Design Packages",
+      "shortName": "Graphics",
+      "category": "design",
+      "tagline": "A dedicated design pipeline with predictable credits and turnaround.",
+      "description": "Design shouldn't be a bottleneck. Our graphics design packages give you a predictable pool of monthly design credits, a defined turnaround and — from the higher tiers — a dedicated designer who already knows your brand, covering everything from identity to campaign collateral and motion.",
+      "seo": {
+        "title": "Graphics Design Packages | VD Infotech",
+        "description": "A dedicated design pipeline with predictable credits and turnaround."
+      },
+      "basePrices": {
+        "starter": 15000,
+        "growth": 30000,
+        "accelerator": 50000,
+        "ace": 80000,
+        "dominator": 120000,
+        "conqueror": 200000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Design Credits Per Month",
+              "values": [
+                "10",
+                "20",
+                "35",
+                "60",
+                "90",
+                "150"
+              ]
+            },
+            {
+              "label": "Turnaround Time",
+              "values": [
+                "72 Hrs",
+                "48 Hrs",
+                "36 Hrs",
+                "24 Hrs",
+                "18 Hrs",
+                "12 Hrs"
+              ]
+            },
+            {
+              "label": "Revisions Per Design",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "Unlimited",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Source Files Provided",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dedicated Designer",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Brand Identity",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Logo Design Concepts",
+              "values": [
+                "0",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Brand Colour & Type System",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Brand Guidelines Document",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Stationery Design",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Brand Pattern / Iconography",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Marketing Collateral",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Social Media Creatives",
+              "values": [
+                "6",
+                "12",
+                "20",
+                "35",
+                "50",
+                "80"
+              ]
+            },
+            {
+              "label": "Ad Banner Sets",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "14",
+                "22",
+                "35"
+              ]
+            },
+            {
+              "label": "Brochure / Flyer Design",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "6",
+                "10"
+              ]
+            },
+            {
+              "label": "Presentation Decks",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Packaging Design",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Print-Ready Artwork",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Motion & Rich Media",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Animated Posts / GIFs",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "Motion Graphics (Sec)",
+              "values": [
+                "0",
+                "0",
+                "15",
+                "30",
+                "60",
+                "120"
+              ]
+            },
+            {
+              "label": "Video Thumbnails",
+              "values": [
+                "0",
+                "4",
+                "8",
+                "12",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "label": "Infographic Design",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "6",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Delivery Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ecommerce-seo",
+      "name": "E-Commerce SEO Packages",
+      "shortName": "E-Com SEO",
+      "category": "commerce",
+      "tagline": "Catalogue-scale SEO that moves product pages, not just the homepage.",
+      "description": "Catalogue SEO is a different discipline. Our e-commerce SEO packages handle crawl budget, faceted navigation, product schema, feed hygiene and category-level content at scale, so your product pages compete on the terms that actually convert.",
+      "seo": {
+        "title": "E-Commerce SEO Packages | VD Infotech",
+        "description": "Catalogue-scale SEO that moves product pages, not just the homepage."
+      },
+      "basePrices": {
+        "starter": 35000,
+        "growth": 70000,
+        "accelerator": 100000,
+        "ace": 175000,
+        "dominator": 275000,
+        "conqueror": 400000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Product Pages Optimized",
+              "values": [
+                "Upto 50",
+                "Upto 100",
+                "Upto 250",
+                "Upto 500",
+                "Upto 1000",
+                "Upto 2500"
+              ]
+            },
+            {
+              "label": "Category Pages Targeted",
+              "values": [
+                "Upto 10",
+                "Upto 20",
+                "Upto 35",
+                "Upto 60",
+                "Upto 100",
+                "Upto 150"
+              ]
+            },
+            {
+              "label": "Keywords Targeted",
+              "values": [
+                "Upto 40",
+                "Upto 80",
+                "Upto 150",
+                "Upto 250",
+                "Upto 400",
+                "Upto 700"
+              ]
+            },
+            {
+              "label": "Total Backlinks",
+              "values": [
+                "40",
+                "80",
+                "150",
+                "250",
+                "400",
+                "700"
+              ]
+            },
+            {
+              "label": "Organic Revenue Growth",
+              "values": [
+                "15-20%",
+                "20-30%",
+                "30-45%",
+                "40-60%",
+                "55-80%",
+                "70-110%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Store Audit & Analysis",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Full Store Technical Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Product Feed Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Duplicate Product Content Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Faceted Navigation Review",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Catalogue Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Crawl Budget Analysis",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "On Page & Catalogue",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Product Title & Meta Optimization",
+              "values": [
+                "Upto 50",
+                "Upto 100",
+                "Upto 250",
+                "Upto 500",
+                "Upto 1000",
+                "Upto 2500"
+              ]
+            },
+            {
+              "label": "Product Description Rewrites",
+              "values": [
+                "10",
+                "25",
+                "50",
+                "100",
+                "200",
+                "400"
+              ]
+            },
+            {
+              "label": "Category Copy Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Product Schema Markup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Review & Rating Schema",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Internal Linking Architecture",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Image Alt & Compression",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Technical Commerce SEO",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Canonical & Pagination Fixes",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Out-of-Stock URL Strategy",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Site Speed & Core Web Vitals",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Mobile Commerce Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Merchant Centre Feed Fixes",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Hreflang / Multi-Store Setup",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Off Page & Content",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Buying Guides / Blogs",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "Product Roundup Outreach",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "Contextual Backlinks",
+              "values": [
+                "10",
+                "20",
+                "40",
+                "70",
+                "110",
+                "180"
+              ]
+            },
+            {
+              "label": "Marketplace Listing Optimization",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Commerce Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ecommerce-ppc",
+      "name": "E-Commerce PPC Packages",
+      "shortName": "E-Com PPC",
+      "category": "commerce",
+      "tagline": "Feed-first shopping campaigns tuned relentlessly for return on ad spend.",
+      "description": "Shopping and Performance Max campaigns live or die on feed quality. Our e-commerce PPC packages start with the merchant feed, then layer product-level bidding, dynamic remarketing and marketplace ads to push return on ad spend in the right direction.",
+      "seo": {
+        "title": "E-Commerce PPC Packages | VD Infotech",
+        "description": "Feed-first shopping campaigns tuned relentlessly for return on ad spend."
+      },
+      "basePrices": {
+        "starter": 40000,
+        "growth": 80000,
+        "accelerator": 120000,
+        "ace": 200000,
+        "dominator": 350000,
+        "conqueror": 500000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Products In Feed",
+              "values": [
+                "Upto 100",
+                "Upto 500",
+                "Upto 1500",
+                "Upto 5000",
+                "Upto 15000",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Shopping Campaigns",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "Ad Spend Managed (Upto)",
+              "values": [
+                "₹2L",
+                "₹5L",
+                "₹10L",
+                "₹20L",
+                "₹40L",
+                "₹80L+"
+              ]
+            },
+            {
+              "label": "Marketplaces Covered",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "6"
+              ]
+            },
+            {
+              "label": "Target ROAS Improvement",
+              "values": [
+                "10-15%",
+                "15-25%",
+                "25-35%",
+                "35-50%",
+                "50-70%",
+                "70-100%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Feed & Account Setup",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Merchant Centre Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Product Feed Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Feed Error Resolution",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Enhanced Conversions Setup",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Supplemental Feeds",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom Labels Strategy",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Management",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Standard Shopping",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Performance Max",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dynamic Remarketing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Marketplace Ads (Amazon/Flipkart)",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Search & Brand Defence",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Catalogue Social Ads",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Ad Creative Variations",
+              "values": [
+                "4",
+                "8",
+                "14",
+                "24",
+                "36",
+                "60"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Bid & ROAS Management",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Product Level Bid Splits",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Negative Keyword Sculpting",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Promotion & Sale Event Setup",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Cart Abandonment Retargeting",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Landing Page CRO Inputs",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Revenue Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "website-development",
+      "name": "Website Development Packages",
+      "shortName": "Web Dev",
+      "category": "development",
+      "tagline": "Custom, fast, accessible websites built to be found and to convert.",
+      "description": "A website is infrastructure, not a brochure. Our website development packages run from discovery and wireframes through custom design, responsive build, CMS integration and launch — with Core Web Vitals, accessibility and SEO foundations handled before you go live, not after.",
+      "seo": {
+        "title": "Website Development Packages | VD Infotech",
+        "description": "Custom, fast, accessible websites built to be found and to convert."
+      },
+      "basePrices": {
+        "starter": 50000,
+        "growth": 100000,
+        "accelerator": 150000,
+        "ace": 250000,
+        "dominator": 400000,
+        "conqueror": 600000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Pages Included",
+              "values": [
+                "Upto 5",
+                "Upto 10",
+                "Upto 20",
+                "Upto 40",
+                "Upto 75",
+                "Upto 150"
+              ]
+            },
+            {
+              "label": "Design Concepts",
+              "values": [
+                "1",
+                "2",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            },
+            {
+              "label": "Revisions",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "Unlimited",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Delivery Timeline",
+              "values": [
+                "3 Weeks",
+                "4 Weeks",
+                "6 Weeks",
+                "8 Weeks",
+                "12 Weeks",
+                "16 Weeks"
+              ]
+            },
+            {
+              "label": "Free Support After Launch",
+              "values": [
+                "1 Month",
+                "2 Months",
+                "3 Months",
+                "6 Months",
+                "9 Months",
+                "12 Months"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Discovery & Design",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Requirement Workshop",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Sitemap & Wireframes",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom UI Design",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Mobile-First Responsive Design",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Interactive Prototype",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Design System / Component Library",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Development",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Responsive Front-End Build",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "CMS Integration",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Blog Module",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Contact & Enquiry Forms",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Payment Gateway Integration",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Multi-Language Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Third-Party API Integrations",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "8",
+                "15"
+              ]
+            },
+            {
+              "label": "Custom Admin Panel",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Quality & Launch",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Cross-Browser Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Accessibility (WCAG AA) Pass",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Core Web Vitals Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Security Hardening & SSL",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Staging Environment",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Deployment & DNS Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Post Launch",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Analytics & Tag Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "On-Page SEO Foundation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Automated Backups",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Uptime Monitoring",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Content Update Hours / Month",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "8",
+                "15",
+                "30"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "application-development",
+      "name": "Application Development",
+      "shortName": "App Dev",
+      "category": "development",
+      "tagline": "Mobile products taken from discovery through store launch and beyond.",
+      "description": "From prototype to store listing. Our application development packages cover product discovery, UX, native or cross-platform engineering, QA across a real device lab, and the release process on both Play Store and App Store — plus the analytics you need to iterate after launch.",
+      "seo": {
+        "title": "Application Development | VD Infotech",
+        "description": "Mobile products taken from discovery through store launch and beyond."
+      },
+      "basePrices": {
+        "starter": 75000,
+        "growth": 150000,
+        "accelerator": 250000,
+        "ace": 350000,
+        "dominator": 500000,
+        "conqueror": 700000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Platforms Covered",
+              "values": [
+                "Android",
+                "Android + iOS",
+                "Android + iOS",
+                "Cross-Platform",
+                "Cross-Platform + Web",
+                "Full Suite"
+              ]
+            },
+            {
+              "label": "App Screens",
+              "values": [
+                "Upto 8",
+                "Upto 15",
+                "Upto 30",
+                "Upto 50",
+                "Upto 90",
+                "Upto 150"
+              ]
+            },
+            {
+              "label": "Delivery Timeline",
+              "values": [
+                "6 Weeks",
+                "10 Weeks",
+                "14 Weeks",
+                "20 Weeks",
+                "28 Weeks",
+                "36 Weeks"
+              ]
+            },
+            {
+              "label": "Revisions",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "Unlimited",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Post-Launch Support",
+              "values": [
+                "1 Month",
+                "3 Months",
+                "6 Months",
+                "9 Months",
+                "12 Months",
+                "18 Months"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Discovery & UX",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Product Discovery Workshop",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "User Flow Mapping",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Wireframes",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "High-Fidelity UI Design",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Clickable Prototype",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Usability Testing Round",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Engineering",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Native / Cross-Platform Build",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "REST API Development",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Push Notifications",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "In-App Payments",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Offline Mode",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Real-Time Features (Chat/Live)",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Admin Dashboard",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Third-Party SDK Integrations",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "7",
+                "12",
+                "20"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Quality Assurance",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Manual QA Cycles",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Automated Test Coverage",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Device Lab Testing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Performance & Crash Profiling",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Security Penetration Test",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Release & Growth",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Play Store Submission",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "App Store Submission",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "ASO Setup",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Analytics & Event Tracking",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Crash Monitoring",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Release Cycles / Year",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "12",
+                "24"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "16",
+                "30"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "software-development",
+      "name": "Software Development",
+      "shortName": "Software",
+      "category": "development",
+      "tagline": "Custom platforms delivered by a sized team on a predictable sprint cadence.",
+      "description": "Custom software that survives contact with your business. Our software development packages assign a sized team on a fixed sprint cadence, with solution architecture, CI/CD, automated testing and a documented handover — so what we build stays maintainable long after go-live.",
+      "seo": {
+        "title": "Software Development | VD Infotech",
+        "description": "Custom platforms delivered by a sized team on a predictable sprint cadence."
+      },
+      "basePrices": {
+        "starter": 100000,
+        "growth": 200000,
+        "accelerator": 300000,
+        "ace": 450000,
+        "dominator": 700000,
+        "conqueror": 1000000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Team Size Allocated",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "Sprint Length",
+              "values": [
+                "3 Weeks",
+                "2 Weeks",
+                "2 Weeks",
+                "2 Weeks",
+                "1 Week",
+                "1 Week"
+              ]
+            },
+            {
+              "label": "Modules Covered",
+              "values": [
+                "Upto 3",
+                "Upto 6",
+                "Upto 12",
+                "Upto 20",
+                "Upto 35",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Delivery Timeline",
+              "values": [
+                "8 Weeks",
+                "12 Weeks",
+                "20 Weeks",
+                "28 Weeks",
+                "40 Weeks",
+                "52 Weeks"
+              ]
+            },
+            {
+              "label": "Warranty Period",
+              "values": [
+                "1 Month",
+                "3 Months",
+                "6 Months",
+                "9 Months",
+                "12 Months",
+                "24 Months"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Architecture & Planning",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Technical Discovery",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Solution Architecture Document",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Database Design",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Scalability Plan",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Infrastructure as Code",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Compliance Review (GDPR/ISO)",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Custom Backend Development",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Web Application Front-End",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Role-Based Access Control",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Workflow Automation Engine",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Reporting & BI Module",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Multi-Tenant Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Integrations Included",
+              "values": [
+                "1",
+                "3",
+                "6",
+                "10",
+                "18",
+                "30"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "DevOps & Quality",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "CI/CD Pipeline",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Automated Unit Tests",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Integration Test Suite",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Load & Stress Testing",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Staging + UAT Environments",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Zero-Downtime Deployment",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Operations",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Monitoring & Alerting",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Automated Backups",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Disaster Recovery Plan",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "SLA Response Time",
+              "values": [
+                "72 Hrs",
+                "48 Hrs",
+                "24 Hrs",
+                "12 Hrs",
+                "4 Hrs",
+                "1 Hr"
+              ]
+            },
+            {
+              "label": "Documentation & Handover",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "4",
+                "8",
+                "12",
+                "20",
+                "35",
+                "60"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "performance-marketing",
+      "name": "Performance Marketing",
+      "shortName": "Performance",
+      "category": "marketing",
+      "tagline": "Multi-channel acquisition built on measurement you can actually trust.",
+      "description": "Performance marketing starts with measurement. We rebuild your tracking and attribution first, then run full-funnel campaigns across search, social, programmatic and affiliate — with a creative testing framework and landing page CRO attached to every channel.",
+      "seo": {
+        "title": "Performance Marketing | VD Infotech",
+        "description": "Multi-channel acquisition built on measurement you can actually trust."
+      },
+      "basePrices": {
+        "starter": 40000,
+        "growth": 80000,
+        "accelerator": 125000,
+        "ace": 200000,
+        "dominator": 350000,
+        "conqueror": 500000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Channels Managed",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "7",
+                "10"
+              ]
+            },
+            {
+              "label": "Ad Spend Managed (Upto)",
+              "values": [
+                "₹2L",
+                "₹5L",
+                "₹12L",
+                "₹25L",
+                "₹50L",
+                "₹1Cr+"
+              ]
+            },
+            {
+              "label": "Campaigns Per Month",
+              "values": [
+                "3",
+                "6",
+                "12",
+                "20",
+                "35",
+                "60"
+              ]
+            },
+            {
+              "label": "Creative Variations",
+              "values": [
+                "6",
+                "12",
+                "24",
+                "40",
+                "70",
+                "120"
+              ]
+            },
+            {
+              "label": "Target CAC Reduction",
+              "values": [
+                "5-10%",
+                "10-18%",
+                "18-25%",
+                "25-35%",
+                "35-50%",
+                "50-70%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Measurement Foundation",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Conversion Tracking Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Server-Side Tracking Setup",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Attribution Model Setup",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "CRM / Offline Conversion Import",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom Dashboard Build",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Incrementality Test Design",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Full Funnel Campaigns",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Search & Intent Capture",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Paid Social Prospecting",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Programmatic Display",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Native & Discovery Ads",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Affiliate Channel Management",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Retargeting & Win-Back",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Marketplace / App Ads",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Creative & CRO",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Creative Testing Framework",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Landing Page Build",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "8",
+                "15"
+              ]
+            },
+            {
+              "label": "A/B Test Cycles",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "20"
+              ]
+            },
+            {
+              "label": "Heatmap & Session Review",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Copy Testing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Growth Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "3",
+                "5",
+                "8",
+                "12",
+                "20",
+                "35"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "influencer-marketing",
+      "name": "Influencer Marketing",
+      "shortName": "Influencer",
+      "category": "marketing",
+      "tagline": "Vetted creators, managed end to end, then amplified as paid media.",
+      "description": "Reach means nothing without authenticity. Our influencer marketing packages vet audience quality before outreach, handle contracts and compliance, manage content approvals end to end, and then amplify the best-performing creator content as paid media.",
+      "seo": {
+        "title": "Influencer Marketing | VD Infotech",
+        "description": "Vetted creators, managed end to end, then amplified as paid media."
+      },
+      "basePrices": {
+        "starter": 30000,
+        "growth": 60000,
+        "accelerator": 100000,
+        "ace": 175000,
+        "dominator": 300000,
+        "conqueror": 500000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Influencers Onboarded",
+              "values": [
+                "2",
+                "5",
+                "10",
+                "20",
+                "35",
+                "60"
+              ]
+            },
+            {
+              "label": "Content Deliverables",
+              "values": [
+                "4",
+                "10",
+                "20",
+                "40",
+                "70",
+                "120"
+              ]
+            },
+            {
+              "label": "Estimated Reach",
+              "values": [
+                "50K+",
+                "2L+",
+                "6L+",
+                "15L+",
+                "40L+",
+                "1Cr+"
+              ]
+            },
+            {
+              "label": "Platforms Covered",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ]
+            },
+            {
+              "label": "Campaign Duration",
+              "values": [
+                "1 Month",
+                "1 Month",
+                "2 Months",
+                "3 Months",
+                "6 Months",
+                "12 Months"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Strategy & Discovery",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Brand & Audience Brief",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Influencer Shortlisting",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Audience Authenticity Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Campaign Analysis",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Budget & Tier Planning",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Category Exclusivity Terms",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Execution",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Outreach & Negotiation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Contract & Compliance Handling",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Content Brief & Approval",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Product Seeding Coordination",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Live Sessions / Collabs",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "8",
+                "15"
+              ]
+            },
+            {
+              "label": "Event & Launch Coverage",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Whitelisting / Spark Ads",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Amplification",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Paid Boost Management",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "UGC Repurposing Rights",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Cross-Platform Repost",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Landing Page / Coupon Setup",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Affiliate Link Tracking",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaign Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "12",
+                "20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "email-marketing",
+      "name": "Email Marketing Packages",
+      "shortName": "Email",
+      "category": "marketing",
+      "tagline": "Deliverability-first email programmes and automated flows that compound.",
+      "description": "Email is still the highest-margin channel you own. Our email marketing packages fix deliverability first — authentication, list hygiene, IP warm-up — then build the campaign calendar and the automated flows that quietly generate revenue in the background.",
+      "seo": {
+        "title": "Email Marketing Packages | VD Infotech",
+        "description": "Deliverability-first email programmes and automated flows that compound."
+      },
+      "basePrices": {
+        "starter": 15000,
+        "growth": 30000,
+        "accelerator": 60000,
+        "ace": 100000,
+        "dominator": 150000,
+        "conqueror": 250000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Emails Per Month",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "Subscriber List Size",
+              "values": [
+                "Upto 5K",
+                "Upto 15K",
+                "Upto 50K",
+                "Upto 1.5L",
+                "Upto 5L",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Automation Flows",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "8",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "Template Designs",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "Target Open Rate Lift",
+              "values": [
+                "5-8%",
+                "8-12%",
+                "12-18%",
+                "18-25%",
+                "25-35%",
+                "35-50%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Setup & Deliverability",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "ESP Account Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "SPF / DKIM / DMARC Configuration",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "List Hygiene & Validation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dedicated IP Warm-Up",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Inbox Placement Testing",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Suppression & Compliance Rules",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Campaigns & Automation",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Newsletter Campaigns",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Welcome Series",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Cart Abandonment Flow",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Re-Engagement Flow",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Post-Purchase / Upsell Flow",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Behavioural Trigger Flows",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "SMS / WhatsApp Add-On",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Content & Testing",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Copywriting Included",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom HTML Template Design",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dynamic Personalization",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "A/B Subject Line Testing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Segment Builds",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "15",
+                "25",
+                "40"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Email Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "18"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "digital-marketing",
+      "name": "Digital Marketing Packages",
+      "shortName": "Digital",
+      "category": "marketing",
+      "tagline": "Every growth channel under one roadmap and one accountable strategist.",
+      "description": "One strategy, every channel. Our digital marketing packages combine SEO, content, social, paid media, email automation and conversion optimization under a single roadmap and a single dedicated strategist — so your channels reinforce each other instead of competing for budget.",
+      "seo": {
+        "title": "Digital Marketing Packages | VD Infotech",
+        "description": "Every growth channel under one roadmap and one accountable strategist."
+      },
+      "basePrices": {
+        "starter": 40000,
+        "growth": 80000,
+        "accelerator": 120000,
+        "ace": 200000,
+        "dominator": 350000,
+        "conqueror": 500000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Channels Covered",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "9",
+                "12"
+              ]
+            },
+            {
+              "label": "Keywords Targeted",
+              "values": [
+                "Upto 25",
+                "Upto 60",
+                "Upto 120",
+                "Upto 250",
+                "Upto 450",
+                "Upto 800"
+              ]
+            },
+            {
+              "label": "Content Pieces Per Month",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "Ad Spend Managed (Upto)",
+              "values": [
+                "₹1L",
+                "₹3L",
+                "₹8L",
+                "₹18L",
+                "₹35L",
+                "₹75L+"
+              ]
+            },
+            {
+              "label": "Dedicated Strategist",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Strategy & Audit",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Full Digital Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor Landscape Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Buyer Persona Development",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Channel Mix Strategy",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Annual Roadmap",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Quarterly Strategy Workshop",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Organic Growth",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "SEO (On + Off Page)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Content Marketing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Social Media Management",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Local SEO / GMB",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Video & Reels Strategy",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Online Reputation Management",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Paid Growth",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Google Ads Management",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Meta Ads Management",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "LinkedIn Ads",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "YouTube Ads",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Remarketing Suite",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Marketplace Ads",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Conversion & Retention",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Landing Page Builds",
+              "values": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "8",
+                "15"
+              ]
+            },
+            {
+              "label": "CRO A/B Testing",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Email / WhatsApp Automation",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "CRM Integration",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Lead Nurture Workflows",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Unified Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Performance Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Campaign Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Progress Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Action Plan",
+              "values": [
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly",
+                "Quarterly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "3",
+                "5",
+                "8",
+                "12",
+                "20",
+                "35"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "virtual-assistant",
+      "name": "Virtual Assistant Packages",
+      "shortName": "VA",
+      "category": "operations",
+      "tagline": "Trained, NDA-bound assistants on a defined monthly hour bank.",
+      "description": "Buy back your calendar. Our virtual assistant packages give you trained, NDA-bound assistants on a defined monthly hour bank — handling inbox and calendar, CRM hygiene, lead research, order processing and reporting, with time logs and a quality audit every cycle.",
+      "seo": {
+        "title": "Virtual Assistant Packages | VD Infotech",
+        "description": "Trained, NDA-bound assistants on a defined monthly hour bank."
+      },
+      "basePrices": {
+        "starter": 15000,
+        "growth": 30000,
+        "accelerator": 50000,
+        "ace": 75000,
+        "dominator": 100000,
+        "conqueror": 200000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Hours Per Month",
+              "values": [
+                "20",
+                "40",
+                "80",
+                "120",
+                "160",
+                "240"
+              ]
+            },
+            {
+              "label": "Assistants Assigned",
+              "values": [
+                "1",
+                "1",
+                "1",
+                "2",
+                "3",
+                "5"
+              ]
+            },
+            {
+              "label": "Coverage Window",
+              "values": [
+                "4 Hrs/Day",
+                "6 Hrs/Day",
+                "8 Hrs/Day",
+                "8 Hrs/Day",
+                "12 Hrs/Day",
+                "24x7"
+              ]
+            },
+            {
+              "label": "Response Time",
+              "values": [
+                "24 Hrs",
+                "12 Hrs",
+                "8 Hrs",
+                "4 Hrs",
+                "2 Hrs",
+                "1 Hr"
+              ]
+            },
+            {
+              "label": "Backup Assistant",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Administrative Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Inbox & Calendar Management",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Data Entry & Documentation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Travel & Meeting Coordination",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Vendor Follow-Ups",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Presentation & Report Prep",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Expense Tracking",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Business Operations",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "CRM Data Management",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Lead Research & List Building",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Order & Invoice Processing",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Customer Query Handling",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Social Media Scheduling",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Basic Bookkeeping Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Specialist Add-Ons",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Content Writing Support",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Graphic Design Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Recruitment Screening Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Multilingual Support",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "x",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Process Documentation (SOP)",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Governance",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "NDA & Confidentiality",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Time Tracking Logs",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Weekly Task Review",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dedicated Team Lead",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Quality Audit",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ui-ux-design",
+      "name": "UI/UX Design Packages",
+      "shortName": "UI/UX",
+      "category": "design",
+      "tagline": "Researched, systemized product design with handoff developers can build from.",
+      "description": "Good UX is researched, not guessed. Our UI/UX design packages run discovery and journey mapping before a single screen is drawn, then deliver a systemized component library, a clickable prototype and the handoff documentation your developers need to build it exactly as designed.",
+      "seo": {
+        "title": "UI/UX Design Packages | VD Infotech",
+        "description": "Researched, systemized product design with handoff developers can build from."
+      },
+      "basePrices": {
+        "starter": 20000,
+        "growth": 40000,
+        "accelerator": 70000,
+        "ace": 120000,
+        "dominator": 200000,
+        "conqueror": 300000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Screens Designed",
+              "values": [
+                "Upto 8",
+                "Upto 15",
+                "Upto 30",
+                "Upto 55",
+                "Upto 90",
+                "Upto 160"
+              ]
+            },
+            {
+              "label": "Design Concepts",
+              "values": [
+                "1",
+                "2",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            },
+            {
+              "label": "Revisions Per Screen",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "Unlimited",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "Turnaround Time",
+              "values": [
+                "3 Weeks",
+                "2 Weeks",
+                "2 Weeks",
+                "10 Days",
+                "1 Week",
+                "5 Days"
+              ]
+            },
+            {
+              "label": "Source Files & Handoff",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Research & Discovery",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Stakeholder Interviews",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Competitor UX Teardown",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "User Persona Development",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "User Journey Mapping",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Card Sorting / IA Study",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Analytics-Led UX Audit",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Design",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Low-Fidelity Wireframes",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "High-Fidelity UI Design",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Responsive Breakpoint Design",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Dark Mode Variant",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Micro-Interaction Specs",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Illustration / Icon Set",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Accessibility (WCAG AA) Pass",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Systemization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Component Library",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Design Tokens & Style Guide",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Figma Prototype",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Developer Handoff Documentation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Design QA On Build",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Validation",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Usability Test Sessions",
+              "values": [
+                "0",
+                "2",
+                "4",
+                "6",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "A/B Design Variants",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Heatmap Review",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Post-Launch UX Report",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Email/Chat (WhatsApp/Teams/Slack)",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Voice Support",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Dedicated Account Manager",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Project Dashboard",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "Monthly Consulting (Hrs)",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "16"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

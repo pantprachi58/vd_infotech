@@ -9,11 +9,17 @@ export const site = {
   hours: { days: "Mon - Sat", time: "9:30 a.m - 6:30 p.m" },
 };
 
+// A menu line is "Label" or "Label|/href"; entries without an href stay the
+// `#` placeholders the rest of the site still uses.
 const lines = (value) =>
   value
     .split("\n")
     .map((item) => item.trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((item) => {
+      const [label, href] = item.split("|");
+      return { label: label.trim(), href: href?.trim() || "#" };
+    });
 
 const group = (heading, items) => ({ heading, links: lines(items) });
 
@@ -46,7 +52,7 @@ const tab = (label, title, description, columns) => ({
 });
 
 export const navItems = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   {
     label: "Services",
     mega: {
@@ -146,7 +152,7 @@ export const navItems = [
       description:
         "From digital presence to business growth, our packages bring every essential solution together.",
       columns: [
-        group("Popular Packages", "Website Packages\nSoftware Packages\nGraphics Packages\nApplication Packages\nSEO Packages\nSMO Packages\nPPC Packages\nInfluencer Packages\nAI SEO Packages\nAI Advertising Packages\nAI Content Marketing Packages\nAI Creative Marketing Packages\nEmail Marketing Packages\nVirtual Assistant Packages\nDigital Marketing Packages\nPerformance Marketing Packages"),
+        group("Popular Packages", "Website Packages|/packages/website-development\nSoftware Packages|/packages/software-development\nGraphics Packages|/packages/graphics-design\nApplication Packages|/packages/application-development\nSEO Packages|/packages/seo\nSMO Packages|/packages/smo\nPPC Packages|/packages/ppc\nSMM Packages|/packages/smm\nE-Commerce SEO Packages|/packages/ecommerce-seo\nE-Commerce PPC Packages|/packages/ecommerce-ppc\nUI/UX Design Packages|/packages/ui-ux-design\nInfluencer Packages|/packages/influencer-marketing\nAI SEO Packages\nAI Advertising Packages\nAI Content Marketing Packages\nAI Creative Marketing Packages\nEmail Marketing Packages|/packages/email-marketing\nVirtual Assistant Packages|/packages/virtual-assistant\nDigital Marketing Packages|/packages/digital-marketing\nPerformance Marketing Packages|/packages/performance-marketing"),
       ],
     },
   },
