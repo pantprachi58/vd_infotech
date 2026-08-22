@@ -87,7 +87,7 @@ export const navItems = [
           group("Mobile App Development", "Android App Development\niOS App Development\nBlockchain App Development\nE-Commerce App Development\nCryptocurrency app Development\nAI-Powered App Development\nCustom Mobile App Development\nApp Maintenance & Support"),
           group("Software Development", "Custom Software Development\nCRM Software Development\nERP Software Development\nSaaS Application Development\nOperations management\nBusiness Automation Software\nSoftware Maintenance\nSoftware Consulting"),
           group("Custom Web Applications", "Business Web Applications\nCRM Development\nERP Development\nCustomer Portal Development\nAdmin Dashboard Development\nWorkflow Automation\nAPI Integration\nWeb Application Support"),
-          group("Website Maintenance & Support", "Website Maintenance\nSecurity Monitoring\nWebsite Backup & Recovery\nWebsite Speed Optimization\nBug Fixes & Troubleshooting\nCMS Updates\nPerformance Monitoring\nTechnical Support"),
+          group("Web Maintenance & Support", "Website Maintenance\nSecurity Monitoring\nWebsite Backup & Recovery\nWebsite Speed Optimization\nBug Fixes & Troubleshooting\nCMS Updates\nPerformance Monitoring\nTechnical Support"),
         ]),
         tab("Brand Promotion & ORM", "Brand Promotion & ORM", "Grow brand awareness with strategic promotions and proactive reputation management.", [
           group("Press Release", "Media Coverage\nDigital PR\nNews Distribution\nBrand Announcements\nMedia Outreach"),

@@ -18,8 +18,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: clamp(10px, calc(23 * var(--pkg-u)), 23px);
-  margin-bottom: clamp(20px, calc(37 * var(--pkg-u)), 37px);
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .labelBox {
@@ -37,7 +37,7 @@
 
 /* Figma: 28x5 rounded bar under the badge, not a left border. */
 .labelRule {
-  width: clamp(20px, calc(28 * var(--pkg-u)), 28px);
+  width: 6%;
   height: clamp(4px, calc(5 * var(--pkg-u)), 5px);
   border-radius: var(--radius-pill);
   background: #e00000;

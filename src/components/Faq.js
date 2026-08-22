@@ -20,22 +20,26 @@ export default function Faq() {
 
         <div className={styles.layout}>
           <Reveal>
-            <h2 id="faq" className={styles.heading}>
-              FAQ
-            </h2>
-            <p className={styles.sub}>
-              Let&apos;s Clear Your
-              <br />
-              <span className={styles.accent}>Doubts</span>
-            </p>
-            <div className={styles.art}>
-              <Image
-                src="/images/faq.png"
-                alt=""
-                width={620}
-                height={670}
-                sizes="(max-width: 991px) 320px, 30vw"
-              />
+            <div className={styles.leftContent}>
+              <div className={styles.art}>
+                <Image
+                  src="/images/faq.png"
+                  alt=""
+                  width={620}
+                  height={670}
+                  sizes="(max-width: 991px) 320px, 30vw"
+                />
+              </div>
+              <div className={styles.headingWrapper}>
+                <h2 id="faq" className={styles.heading}>
+                  FAQ
+                </h2>
+                <p className={styles.sub}>
+                  Let&apos;s Clear Your
+                  <br />
+                  <span className={styles.accent}>Doubts</span>
+                </p>
+              </div>
             </div>
           </Reveal>
 

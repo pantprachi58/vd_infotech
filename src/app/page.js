@@ -43,7 +43,7 @@ export default function Home() {
          <Blog />
         <Faq />
         <FinalCta />
-              </main> 
+       </main> 
         <Footer />
     </>
   );
