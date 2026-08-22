@@ -7589,6 +7589,2320 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "ai-seo",
+      "name": "AI SEO Packages",
+      "shortName": "AI SEO",
+      "category": "ai-marketing",
+      "tagline": "AI-powered SEO strategies that drive organic growth faster and smarter.",
+      "description": "Transform your SEO strategy with artificial intelligence. Our AI SEO packages combine advanced machine learning algorithms with proven optimization techniques to deliver exceptional organic growth. From AI-driven keyword research and content optimization to predictive analytics and automated reporting, we help you stay ahead of search algorithm changes and outrank competitors.",
+      "seo": {
+        "title": "AI SEO Packages | VD Infotech",
+        "description": "AI-powered SEO strategies that drive organic growth faster and smarter."
+      },
+      "basePrices": {
+        "starter": 30000,
+        "growth": 60000,
+        "accelerator": 90000,
+        "ace": 150000,
+        "dominator": 250000,
+        "conqueror": 400000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "AI-Powered Keywords Targeted",
+              "values": [
+                "Upto 20",
+                "Upto 40",
+                "Upto 60",
+                "Upto 100",
+                "Upto 150",
+                "Upto 200"
+              ]
+            },
+            {
+              "label": "AI Content Generation (Words)",
+              "values": [
+                "5000",
+                "10000",
+                "20000",
+                "30000",
+                "50000",
+                "80000"
+              ]
+            },
+            {
+              "label": "AI Search Optimization (AEO & GEO)",
+              "values": [
+                "Basic",
+                "Standard",
+                "Advanced",
+                "Premium",
+                "Enterprise",
+                "Ultimate"
+              ]
+            },
+            {
+              "label": "AI Competitor Analysis",
+              "values": [
+                "3",
+                "5",
+                "8",
+                "10",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "label": "Predictive Ranking Insights",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily"
+              ]
+            },
+            {
+              "label": "Organic Traffic Growth Target",
+              "values": [
+                "30-40%",
+                "40-60%",
+                "60-80%",
+                "80-120%",
+                "120-180%",
+                "180-250%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Research & Analysis",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI-Powered Website Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Keyword Research & Intent Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Gap Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Competitor Intelligence",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Search Trend Prediction",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI SERP Feature Analysis",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "ChatGPT & Gemini Optimization (AEO)",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Google SGE Optimization (GEO)",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Content Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Content Generation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI-Powered Meta Tag Creation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Schema Markup Generation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Semantic Keyword Integration",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Readability Enhancement",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Internal Linking Strategy",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "NLP Content Scoring",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Technical SEO",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Site Speed Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Core Web Vitals Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Crawl Error Detection & Fix",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI-Powered Structured Data",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Automated Technical Audit",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Real-time"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Link Building",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Link Opportunity Discovery",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Outreach",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Quality Backlinks",
+              "values": [
+                "15",
+                "30",
+                "50",
+                "80",
+                "120",
+                "180"
+              ]
+            },
+            {
+              "label": "AI Toxic Link Detection",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Disavow File Management",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Reporting & Analytics",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Performance Dashboard",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Predictive Analytics Report",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Real-time"
+              ]
+            },
+            {
+              "label": "AI Ranking Forecast",
+              "values": [
+                "Quarterly",
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly"
+              ]
+            },
+            {
+              "label": "AI Traffic Attribution",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom AI Insights",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Chatbot Support 24/7",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Human Expert Support",
+              "values": [
+                "Email",
+                "Email/Chat",
+                "Email/Chat/Voice",
+                "Email/Chat/Voice",
+                "Priority All Channels",
+                "VIP Support"
+              ]
+            },
+            {
+              "label": "Dedicated AI Specialist",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Monthly AI Strategy Session (Hrs)",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-advertising",
+      "name": "AI Advertising Packages",
+      "shortName": "AI Advertising",
+      "category": "ai-marketing",
+      "tagline": "Maximize ROAS with AI-driven ad campaigns that learn and optimize in real-time.",
+      "description": "Revolutionize your advertising strategy with AI-powered campaign management. Our AI advertising packages use machine learning algorithms to optimize your ad spend, target the right audience, and maximize conversions across Google Ads, Meta Ads, LinkedIn, and more. From predictive bidding to automated creative testing, we ensure every rupee spent delivers maximum return.",
+      "seo": {
+        "title": "AI Advertising Packages | VD Infotech",
+        "description": "Maximize ROAS with AI-driven ad campaigns that learn and optimize in real-time."
+      },
+      "basePrices": {
+        "starter": 35000,
+        "growth": 70000,
+        "accelerator": 110000,
+        "ace": 180000,
+        "dominator": 300000,
+        "conqueror": 500000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "Monthly Ad Spend Management",
+              "values": [
+                "Upto ₹50K",
+                "Upto ₹1.5L",
+                "Upto ₹3L",
+                "Upto ₹5L",
+                "Upto ₹10L",
+                "Upto ₹25L"
+              ]
+            },
+            {
+              "label": "AI Platforms Managed",
+              "values": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "8"
+              ]
+            },
+            {
+              "label": "AI Campaign Types",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "7",
+                "10",
+                "15"
+              ]
+            },
+            {
+              "label": "AI Audience Segments",
+              "values": [
+                "5",
+                "10",
+                "15",
+                "25",
+                "40",
+                "60"
+              ]
+            },
+            {
+              "label": "AI Ad Variations Testing",
+              "values": [
+                "10",
+                "20",
+                "40",
+                "60",
+                "100",
+                "150"
+              ]
+            },
+            {
+              "label": "Target ROAS Improvement",
+              "values": [
+                "50-80%",
+                "80-120%",
+                "120-180%",
+                "180-250%",
+                "250-350%",
+                "350-500%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Strategy & Setup",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Advertising Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Competitor Ad Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Audience Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Conversion Path Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Budget Allocation Strategy",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom AI Bidding Strategy",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Pixel & Tracking Setup",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Campaign Management",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Google Ads AI Automation",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Meta Ads AI Automation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "LinkedIn Ads AI Optimization",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Performance Max Campaigns",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Smart Bidding",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Dynamic Ad Creation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Real-Time Optimization",
+              "values": [
+                "Daily",
+                "Daily",
+                "Hourly",
+                "Hourly",
+                "Real-time",
+                "Real-time"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Audience Targeting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Lookalike Audience Creation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Behavioral Targeting",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Intent-Based Targeting",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Custom Audience Segmentation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Predictive Audience Modeling",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Retargeting Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Creative Optimization",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Ad Copy Generation",
+              "values": [
+                "20",
+                "40",
+                "60",
+                "100",
+                "150",
+                "250"
+              ]
+            },
+            {
+              "label": "AI Headline Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Image Selection & Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Video Ad Optimization",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Landing Page Optimization",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI A/B Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Analytics & Reporting",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Performance Dashboard",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Real-Time AI Insights",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Predictive ROAS Forecasting",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily"
+              ]
+            },
+            {
+              "label": "AI Attribution Modeling",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Conversion Path Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom AI Reports",
+              "values": [
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily",
+                "Real-time"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Chatbot Support 24/7",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Campaign Manager Support",
+              "values": [
+                "Email",
+                "Email/Chat",
+                "Email/Chat/Voice",
+                "Priority Support",
+                "Priority Support",
+                "VIP Support"
+              ]
+            },
+            {
+              "label": "Dedicated AI Ad Specialist",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Monthly Strategy Session (Hrs)",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-content-marketing",
+      "name": "AI Content Marketing Packages",
+      "shortName": "AI Content Marketing",
+      "category": "ai-marketing",
+      "tagline": "Scale your content production with AI while maintaining quality and brand voice.",
+      "description": "Create high-quality, engaging content at scale with our AI content marketing packages. We combine advanced AI content generation tools with human expertise to produce blog posts, social media content, email campaigns, and more that resonate with your audience. From content strategy to distribution, our AI-powered approach ensures consistent, on-brand messaging across all channels.",
+      "seo": {
+        "title": "AI Content Marketing Packages | VD Infotech",
+        "description": "Scale your content production with AI while maintaining quality and brand voice."
+      },
+      "basePrices": {
+        "starter": 25000,
+        "growth": 50000,
+        "accelerator": 80000,
+        "ace": 130000,
+        "dominator": 220000,
+        "conqueror": 380000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "AI Content Pieces Per Month",
+              "values": [
+                "15",
+                "30",
+                "50",
+                "80",
+                "120",
+                "200"
+              ]
+            },
+            {
+              "label": "Total Words Generated",
+              "values": [
+                "10000",
+                "25000",
+                "45000",
+                "75000",
+                "120000",
+                "200000"
+              ]
+            },
+            {
+              "label": "AI Content Channels",
+              "values": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "8",
+                "10"
+              ]
+            },
+            {
+              "label": "AI Content Types",
+              "values": [
+                "4",
+                "6",
+                "8",
+                "10",
+                "12",
+                "15"
+              ]
+            },
+            {
+              "label": "AI Content Optimization Score",
+              "values": [
+                "75+",
+                "80+",
+                "85+",
+                "90+",
+                "95+",
+                "98+"
+              ]
+            },
+            {
+              "label": "Engagement Growth Target",
+              "values": [
+                "30-50%",
+                "50-80%",
+                "80-120%",
+                "120-180%",
+                "180-250%",
+                "250-350%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Content Strategy",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Content Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Gap Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Topic Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Calendar Planning",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Trend Analysis",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily"
+              ]
+            },
+            {
+              "label": "AI Competitor Content Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Brand Voice AI Training",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Blog & Article Content",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Blog Posts",
+              "values": [
+                "4",
+                "8",
+                "12",
+                "20",
+                "30",
+                "50"
+              ]
+            },
+            {
+              "label": "AI Long-Form Articles",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "AI Case Studies",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "6",
+                "10"
+              ]
+            },
+            {
+              "label": "AI White Papers",
+              "values": [
+                "x",
+                "1",
+                "2",
+                "3",
+                "4",
+                "6"
+              ]
+            },
+            {
+              "label": "AI SEO Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Internal Linking",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Human Expert Review & Editing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Social Media Content",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Social Media Posts",
+              "values": [
+                "20",
+                "40",
+                "60",
+                "100",
+                "150",
+                "250"
+              ]
+            },
+            {
+              "label": "AI Caption Generation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Hashtag Strategy",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Video Script Writing",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "12",
+                "20",
+                "35"
+              ]
+            },
+            {
+              "label": "AI Reel/Short Video Scripts",
+              "values": [
+                "4",
+                "8",
+                "15",
+                "25",
+                "40",
+                "60"
+              ]
+            },
+            {
+              "label": "AI Story Content",
+              "values": [
+                "10",
+                "20",
+                "30",
+                "50",
+                "80",
+                "120"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Email & Marketing Content",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Email Campaigns",
+              "values": [
+                "4",
+                "8",
+                "12",
+                "16",
+                "24",
+                "40"
+              ]
+            },
+            {
+              "label": "AI Email Subject Line Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Newsletter Content",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "AI Landing Page Copy",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "AI Ad Copy",
+              "values": [
+                "10",
+                "20",
+                "40",
+                "60",
+                "100",
+                "150"
+              ]
+            },
+            {
+              "label": "AI Product Descriptions",
+              "values": [
+                "10",
+                "25",
+                "50",
+                "100",
+                "150",
+                "250"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Content Distribution",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Publishing Schedule",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Multi-Channel Distribution",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Repurposing",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Syndication Strategy",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Social Media Automation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Performance & Analytics",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Content Performance Tracking",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Engagement Analytics",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Content Scoring",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Predictive Content Insights",
+              "values": [
+                "Monthly",
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily"
+              ]
+            },
+            {
+              "label": "Custom AI Reports",
+              "values": [
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily",
+                "Real-time"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Chatbot Support 24/7",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Content Manager Support",
+              "values": [
+                "Email",
+                "Email/Chat",
+                "Email/Chat/Voice",
+                "Priority Support",
+                "Priority Support",
+                "VIP Support"
+              ]
+            },
+            {
+              "label": "Dedicated Content Strategist",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Monthly Strategy Session (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "12",
+                "20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-creative-marketing",
+      "name": "AI Creative Marketing Packages",
+      "shortName": "AI Creative Marketing",
+      "category": "ai-marketing",
+      "tagline": "Generate stunning visuals and creative assets powered by AI technology.",
+      "description": "Transform your creative workflow with AI-powered design and visual content creation. Our AI creative marketing packages leverage cutting-edge AI tools to generate high-quality graphics, social media designs, ad creatives, brand visuals, and video content. From concept to execution, we blend AI efficiency with human creativity to deliver visuals that captivate and convert.",
+      "seo": {
+        "title": "AI Creative Marketing Packages | VD Infotech",
+        "description": "Generate stunning visuals and creative assets powered by AI technology."
+      },
+      "basePrices": {
+        "starter": 28000,
+        "growth": 55000,
+        "accelerator": 85000,
+        "ace": 140000,
+        "dominator": 230000,
+        "conqueror": 400000
+      },
+      "sections": [
+        {
+          "title": null,
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "Start Your Journey With Us",
+              "values": [
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow",
+                "startNow"
+              ]
+            },
+            {
+              "label": "AI Creatives Per Month",
+              "values": [
+                "20",
+                "40",
+                "70",
+                "120",
+                "180",
+                "300"
+              ]
+            },
+            {
+              "label": "AI Design Revisions",
+              "values": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "Unlimited",
+                "Unlimited"
+              ]
+            },
+            {
+              "label": "AI Video Creatives",
+              "values": [
+                "2",
+                "5",
+                "10",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "AI Animation Designs",
+              "values": [
+                "2",
+                "5",
+                "8",
+                "12",
+                "20",
+                "35"
+              ]
+            },
+            {
+              "label": "AI Creative Platforms",
+              "values": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "8",
+                "10"
+              ]
+            },
+            {
+              "label": "Engagement Rate Target",
+              "values": [
+                "30-50%",
+                "50-80%",
+                "80-120%",
+                "120-180%",
+                "180-250%",
+                "250-400%"
+              ]
+            },
+            {
+              "label": "Minimum Time Period",
+              "values": [
+                "3 Months",
+                "3 Months",
+                "4 Months",
+                "4 Months",
+                "6 Months",
+                "6 Months"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Design Strategy",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Creative Audit",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Brand Style Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Design Trend Research",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Creative Calendar",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Competitor Design Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Brand Consistency Check",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Custom AI Design Training",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Graphic Design",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Social Media Graphics",
+              "values": [
+                "15",
+                "30",
+                "50",
+                "80",
+                "120",
+                "200"
+              ]
+            },
+            {
+              "label": "AI Ad Creatives",
+              "values": [
+                "10",
+                "20",
+                "35",
+                "60",
+                "100",
+                "150"
+              ]
+            },
+            {
+              "label": "AI Infographics",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "AI Banner Designs",
+              "values": [
+                "5",
+                "10",
+                "15",
+                "25",
+                "40",
+                "60"
+              ]
+            },
+            {
+              "label": "AI Logo Variations",
+              "values": [
+                "x",
+                "3",
+                "5",
+                "8",
+                "12",
+                "20"
+              ]
+            },
+            {
+              "label": "AI Brand Assets",
+              "values": [
+                "5",
+                "10",
+                "15",
+                "25",
+                "40",
+                "60"
+              ]
+            },
+            {
+              "label": "AI Presentation Designs",
+              "values": [
+                "1",
+                "2",
+                "4",
+                "6",
+                "10",
+                "15"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Social Media Creatives",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Instagram Post Designs",
+              "values": [
+                "10",
+                "20",
+                "35",
+                "60",
+                "90",
+                "150"
+              ]
+            },
+            {
+              "label": "AI Story & Reel Templates",
+              "values": [
+                "8",
+                "15",
+                "25",
+                "40",
+                "60",
+                "100"
+              ]
+            },
+            {
+              "label": "AI Carousel Designs",
+              "values": [
+                "3",
+                "6",
+                "10",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "AI Facebook/LinkedIn Graphics",
+              "values": [
+                "8",
+                "15",
+                "25",
+                "40",
+                "60",
+                "100"
+              ]
+            },
+            {
+              "label": "AI Cover & Banner Designs",
+              "values": [
+                "2",
+                "4",
+                "6",
+                "10",
+                "15",
+                "25"
+              ]
+            },
+            {
+              "label": "AI Profile Picture Variations",
+              "values": [
+                "3",
+                "5",
+                "8",
+                "12",
+                "20",
+                "30"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Video & Animation",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Video Generation",
+              "values": [
+                "2",
+                "5",
+                "10",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "AI Video Editing",
+              "values": [
+                "3",
+                "6",
+                "12",
+                "20",
+                "35",
+                "60"
+              ]
+            },
+            {
+              "label": "AI Motion Graphics",
+              "values": [
+                "2",
+                "4",
+                "8",
+                "12",
+                "20",
+                "35"
+              ]
+            },
+            {
+              "label": "AI Animated Logos",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "12"
+              ]
+            },
+            {
+              "label": "AI Short Video Ads",
+              "values": [
+                "2",
+                "5",
+                "8",
+                "15",
+                "25",
+                "40"
+              ]
+            },
+            {
+              "label": "AI Subtitle Generation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Video Templates",
+              "values": [
+                "3",
+                "6",
+                "10",
+                "15",
+                "25",
+                "40"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Brand Identity",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Logo Design & Variations",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Color Palette Generation",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Typography Selection",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Brand Guidelines",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Brand Asset Library",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Packaging Design",
+              "values": [
+                "x",
+                "x",
+                "x",
+                "c",
+                "c",
+                "c"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI Performance & Testing",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Creative Performance Analysis",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI A/B Testing",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Engagement Prediction",
+              "values": [
+                "x",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "AI Creative Optimization",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Heatmap Analysis",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Performance Reports",
+              "values": [
+                "Monthly",
+                "Bi-Weekly",
+                "Weekly",
+                "Weekly",
+                "Daily",
+                "Real-time"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "custom": "As Per Need",
+          "rows": [
+            {
+              "label": "AI Chatbot Support 24/7",
+              "values": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Creative Team Support",
+              "values": [
+                "Email",
+                "Email/Chat",
+                "Email/Chat/Voice",
+                "Priority Support",
+                "Priority Support",
+                "VIP Support"
+              ]
+            },
+            {
+              "label": "Dedicated Creative Director",
+              "values": [
+                "x",
+                "x",
+                "c",
+                "c",
+                "c",
+                "c"
+              ]
+            },
+            {
+              "label": "Monthly Design Review (Hrs)",
+              "values": [
+                "2",
+                "3",
+                "5",
+                "8",
+                "12",
+                "20"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
