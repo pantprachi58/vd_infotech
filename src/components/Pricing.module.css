@@ -268,3 +268,20 @@ max-width: 67%;
   font-size: 12px;
 }
 }
+@media (max-width: 360px) {
+  .head{
+    gap:15px;
+  }
+  .intro{
+    font-size: 12px;
+  }
+  .card{
+    padding: 10px;
+  }
+  .title{
+    font-size: 15px;
+  }
+  .from{
+    font-size: 12px;
+  }
+}

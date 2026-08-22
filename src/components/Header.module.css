@@ -305,7 +305,8 @@
 .megaIntroShade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.38) 100%);
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.38) 100%); */
+      background: linear-gradient(#000000ab 0%, #00000094 45%, #000000c9 100%);
 }
 
 .megaIntroCopy {
@@ -350,11 +351,15 @@
   min-height: 190px;
   padding: 8px clamp(11px, 1.15vw, 20px) 25px;
   border-left: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
 }
 
 .megaGroupNextRow {
   border-top: 1px solid #dedede;
-  padding-top: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #cec7c7;
+    border-right: 1px solid #d3cfcf;
 }
 
 .megaGroup h4 {

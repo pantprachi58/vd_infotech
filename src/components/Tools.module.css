@@ -98,8 +98,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  aspect-ratio: 1;
-  padding: 22px;
+  /* aspect-ratio: 1; */
+  padding: 10px;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.14);
   transition: background 0.2s ease, transform 0.2s ease;

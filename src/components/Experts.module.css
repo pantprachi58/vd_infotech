@@ -231,7 +231,7 @@
 
 .bannerBody {
   margin: 0;
-  max-width: 620px;
+  max-width: 640px;
   font-size: var(--fs-lead);
   font-style: italic;
   line-height: 1.4;
@@ -248,7 +248,7 @@
   border-radius: var(--radius-pill);
   background: transparent;
   color:#da0a03;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   text-decoration: none;
   position: relative;

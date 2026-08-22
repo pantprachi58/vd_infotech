@@ -6,10 +6,26 @@
 
 /* one artwork per slide */
 .canvas {
+  position: relative;
   background-color: var(--white);
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+}
+
+.canvas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(255, 255, 255, 0.6) 70%,
+    rgba(255, 255, 255, 0.3) 100%
+  ); */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .line {
@@ -17,10 +33,12 @@
 }
 
 .slide {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 640px;
   padding-block: 64px 24px;
+  z-index: 1;
 }
 
 .copy {
@@ -179,7 +197,7 @@
 /* Swiper dots sit centred below the slide */
 .hero :global(.swiper-pagination) {
   position: static;
-  margin-bottom: 34px;
+  /* margin-bottom: 34px; */
 }
 
 /* ---- responsive ---------------------------------------------------------- */
@@ -236,15 +254,18 @@
   }
 
   .slide {
-    padding-top: 350px;
+    padding-top: 15px;
   }
 
   .title {
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 10px;
   }
 
   .body {
-    font-size: 16px;
+    font-size: 13px;
+    margin: 0px 0px 15px;
+    max-width: 550px;
   }
 
   .pills {
@@ -252,18 +273,24 @@
   }
 
   .pill {
-    padding: 10px 16px;
-    font-size: 15px;
-    gap: 8px;
+           gap: 6px;
+        padding: 6px 10px;
+        font-size: 12px;
   }
 
   .quote,
   .whatsapp {
-    font-size: 15px;
-    padding: 11px 18px;
+    font-size: 12px;
+    padding: 8px 10px;
     flex: 1 1 auto;
     justify-content: center;
   }
+   .body,
+  .eyebrow {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
 }
 
 @media (max-width: 575.98px) {
@@ -272,7 +299,7 @@
   }
 
   .slide {
-    padding-top: 280px;
+    padding-top: 10px;
   }
 
   .eyebrow {
@@ -285,7 +312,40 @@
 }
 
 @media (max-width: 360px) {
+  .pills{
+    gap:5px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    flex-wrap:unset;
+  }
+  .pill{
+    font-size: 10px;
+  }
 .body{
-  font-size: 14px;
+  font-size: 10px;
+  max-width: 360px;
+  color: #000;
+}
+.eyebrow {
+    font-size: 10px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .canvas::before{
+     background: linear-gradient(
+135deg, #f1ececd6 0% 40%, #f1ecec7a 70% 100%);
+  }
+  .actions{
+    flex-wrap: unset;
+  }
+  .quote,
+.whatsapp {
+          padding: 5px 0px;
+        font-size: 11px;
+}
+.hero :global(.swiper-pagination) {
+  position:unset;
+  margin-bottom: 0px;
 }
 }

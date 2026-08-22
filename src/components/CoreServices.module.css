@@ -70,7 +70,7 @@
   border-radius: 50%;
   border: 1.5px solid var(--white);
   background: rgba(255, 255, 255, 0.06);
-  color: var(--white);
+  color: #da0a03;
   font-size: 24px;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -380,5 +380,32 @@
   .tag {
     font-size: 11px;
     padding: 4px 8px;
+  }
+}
+@media (max-width: 360px) {
+  .grid{
+   grid-template-columns: 1fr 1fr;
+   margin-bottom: 20px;
+  }
+  .body{
+            margin-bottom: 10px;
+        font-size: 9px;
+        width: 100%;
+  }
+  .cardBody{
+    padding: 15px 10px;
+    height: 250px;
+  }
+  .cardTitle{
+    white-space: unset;
+    font-size: 13px;
+  }
+  .tags{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tag{
+            padding: 3px 5px;
+        font-size: 6px;
   }
 }

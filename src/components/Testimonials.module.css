@@ -123,9 +123,21 @@
 }
 @media (max-width: 360px) {
   .title{
-    font-size: 20px;
+    font-size: 15px;
+    display: grid;
+    gap:5px;
+  }
+  .top{
+    gap:15px;
+    margin-bottom: 15px;
+  }
+  .body{
+    font-size: 12px;
   }
   .head{
     margin-bottom: 12px;
+  }
+  .section{
+    padding-block: 48px 5px;
   }
 }

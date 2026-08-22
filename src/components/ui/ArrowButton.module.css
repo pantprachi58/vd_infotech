@@ -79,12 +79,12 @@
 @media (max-width: 360px) {
   .btn{
               padding: 10px;
-    font-size: 13px;
+    font-size: 10px;
     gap: 8px;
   }
   .circle{
         width: 30px;
     height: 30px;
-    font-size: 13px;
+    font-size: 10px;
   }
 }
