@@ -390,16 +390,25 @@
   list-style: none;
 }
 
-.megaGroup a {
+.megaGroup a,
+.megaGroup button {
   display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: #171717;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.28;
+  text-align: left;
+  cursor: pointer;
   transition: color 150ms ease, transform 150ms ease;
 }
 
-.megaGroup a:hover {
+.megaGroup a:hover,
+.megaGroup button:hover {
   transform: translateX(2px);
   color: var(--red);
 }
@@ -492,7 +501,8 @@
     font-size: 12px;
   }
 
-  .megaGroup a {
+  .megaGroup a,
+  .megaGroup button {
     font-size: 11px;
   }
 }
@@ -633,7 +643,8 @@
     font-size: 13px;
   }
 
-  .drawerMega .megaGroup a {
+  .drawerMega .megaGroup a,
+  .drawerMega .megaGroup button {
     font-size: 12px;
     line-height: 1.35;
   }

@@ -1,0 +1,99 @@
+/* Figma 1294:4944. The control block starts at the plan columns (x 62126),
+   not at the table's left edge, so it is inset by the Services column width
+   (436 of the 1706 table = 25.55%). */
+
+.wrap {
+  margin-left: 25.55%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, calc(14 * var(--pkg-u)), 14px);
+  margin-bottom: clamp(10px, calc(14 * var(--pkg-u)), 14px);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, calc(24 * var(--pkg-u)), 24px);
+}
+
+.billing,
+.currency {
+  display: flex;
+  gap: clamp(3px, calc(5 * var(--pkg-u)), 5px);
+}
+
+/* Figma: 183x50, 8px radius; active is the red-to-black vertical gradient,
+   idle a flat grey. */
+.tab {
+  flex: 1 1 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: clamp(7px, calc(15 * var(--pkg-u)), 15px) clamp(10px, calc(22 * var(--pkg-u)), 22px);
+  background: var(--pkg-tab-idle);
+  color: var(--white);
+  font-size: var(--pkg-fs-cell);
+  font-weight: 600;
+  line-height: 1.21;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background: #6d6d6d;
+}
+
+.tabActive,
+.tabActive:hover {
+  background: linear-gradient(180deg, var(--pkg-tab-from), var(--pkg-tab-to));
+}
+
+.currencyTab {
+  min-width: clamp(40px, calc(88 * var(--pkg-u)), 88px);
+  padding-inline: 0;
+  text-align: center;
+}
+
+/* Below the desktop table the inset no longer means anything. */
+@media (max-width: 991.98px) {
+  .wrap {
+    margin-left: 0;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .topRow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .billing,
+  .currency {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 0 1 auto;
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+
+  .currencyTab {
+    min-width: 46px;
+  }
+
+}
+
+/* Figma 1022:4071 fills idle tabs solid #0c0c0c on the single-package sheet. */
+.dark .tab {
+  background: #0c0c0c;
+}
+
+.dark .tab:hover {
+  background: #2a2a2a;
+}
+
+.dark .tabActive,
+.dark .tabActive:hover {
+  background: linear-gradient(180deg, var(--pkg-tab-from), var(--pkg-tab-to));
+}

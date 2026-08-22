@@ -127,8 +127,33 @@ overlays in the relevant `.module.css`, each marked with a comment.
 The growth-ecosystem venn diagram is built in CSS rather than exported as an
 image, so it stays sharp and reflows into stacked cards under 992px.
 
+## Packages
+
+Both package screens are their Figma frames and nothing more — hero, table,
+footer. `/packages` prices every package across every plan; clicking a service
+name opens `/packages/[slug]`, that package's full feature sheet. All 16 slugs
+are prerendered. Both read
+[`src/data/packages.json`](src/data/packages.json) through
+[`src/lib/packages.js`](src/lib/packages.js) — the JSON is shaped like the API
+response that will eventually replace it, so swapping in a real backend is a
+change to that one module.
+
+Billing period and currency are live on `/packages`: prices are stored once as
+a base monthly INR figure per plan and everything on screen is derived from it.
+The single-package frame carries no prices, so those tabs are inert there.
+Startup / Corporate / Enterprises are not controls on either screen — they are
+headers spanning the plan columns they name, and the Custom column under
+Enterprises is quoted rather than priced.
+
+Only the SEO sheet carries real content lifted from the Figma frame; the other
+fifteen matrices are plausible placeholder data in the same shape, ready to be
+replaced row by row.
+
 ## Not wired up
 
 The contact form in `FinalCta` prevents its default submit — point it at your
-endpoint or form service. Nav links, blog posts and pricing CTAs are `#`
-placeholders pending the rest of the site.
+endpoint or form service. Blog posts, pricing CTAs and every nav link outside
+the Packages menu are `#` placeholders pending the rest of the site.
+
+The `scripts/*.mjs` Figma toolchain described above is not currently in the
+repo; only `FIGMA_TOKEN` in `.env.local` remains.

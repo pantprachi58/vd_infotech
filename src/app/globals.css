@@ -181,3 +181,47 @@ button:focus-visible {
 a, button, input, textarea, select {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* ---------------------------------------------------------------------------
+   Package pages — tokens lifted from Figma nodes 1294:4944 and 1022:4071.
+
+   The design is drawn at 1920px but the site is worked at ~1324px, so every
+   size below is fluid: the vw term equals the design px at 1920 (e.g. a 24px
+   cell is 24/1920 = 1.25vw) and the clamp floor keeps it legible on phones.
+   --------------------------------------------------------------------------- */
+:root {
+  /* One Figma pixel, expressed in our container. The package designs are drawn
+     on a 1717px content width; `.container` yields min(100vw, 1630px) - 110px.
+     Sizing against the container (not the 1920 viewport) is what keeps the
+     design's proportions — a 60px heading really is 60/777 of its column. */
+  --pkg-u: calc((min(100vw, 1630px) - 110px) / 1717);
+
+  --pkg-fs-hero: clamp(30px, 3.333vw, 64px);
+  /* Figma sets table copy at 24px; that reads oversized once the sheet is in
+     the page, so the scale below runs ~12% under the artboard on purpose. */
+  --pkg-fs-lead: clamp(13px, calc(21 * var(--pkg-u)), 21px);
+  --pkg-fs-cell: clamp(11px, calc(21 * var(--pkg-u)), 21px);
+  --pkg-fs-head: clamp(10px, calc(17 * var(--pkg-u)), 17px);
+  --pkg-fs-tab: clamp(11px, calc(19 * var(--pkg-u)), 19px);
+  --pkg-fs-note: clamp(10px, calc(14 * var(--pkg-u)), 14px);
+
+  --pkg-cell-px: clamp(9px, calc(19 * var(--pkg-u)), 19px);
+  --pkg-cell-py: clamp(9px, calc(21 * var(--pkg-u)), 21px);
+
+  --pkg-head-from: #dc0303;
+  --pkg-head-to: #230000;
+  --pkg-band: #f0f0f2;
+  --pkg-tab-from: #d91e18;
+  --pkg-tab-to: #230000;
+  --pkg-tab-idle: #808080;
+  --pkg-seg-from: #121212;
+  --pkg-seg-to: #787878;
+  --pkg-seg-border: #979797;
+  --pkg-hero-from: #f9f9f9;
+  --pkg-hero-to: #fff0f0;
+  --pkg-card-from: #0c0c0c;
+  --pkg-card-to: #727272;
+  --pkg-line: #c0c0c0;
+  --pkg-check: #03b131;
+  --pkg-cross: #da0a03;
+}

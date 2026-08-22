@@ -1,0 +1,7 @@
+/* Figma: controls start 86px below the hero band, table ends 196px above the
+   frame bottom. */
+.section {
+  padding: clamp(28px, calc(86 * var(--pkg-u)), 86px) 0
+    clamp(44px, calc(100 * var(--pkg-u)), 100px);
+  background: var(--white);
+}

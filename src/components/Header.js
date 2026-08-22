@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FiChevronDown, FiChevronRight, FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "@/data/site";
 import styles from "./Header.module.css";
@@ -47,10 +48,16 @@ function MenuGroups({ item, panel, onNavigate }) {
           </h4>
           <ul>
             {column.links.map((link) => (
-              <li key={link}>
-                <a href="#" onClick={onNavigate}>
-                  {link}
-                </a>
+              <li key={link.label}>
+                {link.href && link.href !== "#" ? (
+                  <Link href={link.href} onClick={onNavigate}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button type="button" onClick={onNavigate}>
+                    {link.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -190,7 +197,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo} aria-label="VD Infotech home" onClick={closeMenus}>
+        <Link href="/" className={styles.logo} aria-label="VD Infotech home" onClick={closeMenus}>
           <Image
             src="/images/vd-infotech-final-logo-red-and-black-01-1.webp"
             alt="VD Infotech"
@@ -198,7 +205,7 @@ export default function Header() {
             height={50}
             priority
           />
-        </a>
+        </Link>
 
         <div className={`${styles.rightGroup} ${styles.desktopOnly}`}>
           <nav aria-label="Primary">
@@ -210,13 +217,13 @@ export default function Header() {
                     {item.mega ? (
                       <div className={styles.navLinkWrapper}>
                         {item.href ? (
-                          <a 
+                          <Link
                             className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
                             href={item.href}
                             onClick={closeMenus}
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         ) : (
                           <button
                             className={`${styles.navLink} ${isOpen ? styles.navLinkActive : ""}`}
@@ -243,9 +250,9 @@ export default function Header() {
                         </button>
                       </div>
                     ) : (
-                      <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
+                      <Link className={styles.navLink} href={item.href} onClick={closeMenus}>
                         {item.label}
-                      </a>
+                      </Link>
                     )}
                   </li>
                 );
@@ -253,9 +260,9 @@ export default function Header() {
             </ul>
           </nav>
 
-          <a href="#contact" className={styles.cta} onClick={closeMenus}>
+          <Link href="/#contact" className={styles.cta} onClick={closeMenus}>
             Book an Appointment
-          </a>
+          </Link>
         </div>
 
         <button
@@ -285,12 +292,14 @@ export default function Header() {
           <button className={styles.backdrop} onClick={closeMenus} aria-label="Close menu" />
           <div className={styles.drawer} role="dialog" aria-modal="true" aria-label="Menu">
             <div className={styles.drawerHead}>
-              <Image
-                src="/images/vd-infotech-final-logo-red-and-black-01-1.webp"
-                alt="VD Infotech"
-                width={160}
-                height={36}
-              />
+              <Link href="/" aria-label="VD Infotech home" onClick={closeMenus}>
+                <Image
+                  src="/images/vd-infotech-final-logo-red-and-black-01-1.webp"
+                  alt="VD Infotech"
+                  width={160}
+                  height={36}
+                />
+              </Link>
               <button className={styles.burger} onClick={closeMenus} aria-label="Close menu">
                 <FiX />
               </button>
@@ -307,13 +316,13 @@ export default function Header() {
                       <>
                         <div className={styles.drawerNavLinkWrapper}>
                           {item.href ? (
-                            <a 
+                            <Link
                               className={styles.navLink}
                               href={item.href}
                               onClick={closeMenus}
                             >
                               {item.label}
-                            </a>
+                            </Link>
                           ) : (
                             <button
                               className={styles.navLink}
@@ -345,18 +354,18 @@ export default function Header() {
                         )}
                       </>
                     ) : (
-                      <a className={styles.navLink} href={item.href ?? "#"} onClick={closeMenus}>
+                      <Link className={styles.navLink} href={item.href} onClick={closeMenus}>
                         {item.label}
-                      </a>
+                      </Link>
                     )}
                   </li>
                 );
               })}
             </ul>
 
-            <a href="#contact" className={`${styles.cta} ${styles.drawerCta}`} onClick={closeMenus}>
+            <Link href="/#contact" className={`${styles.cta} ${styles.drawerCta}`} onClick={closeMenus}>
               Book an Appointment
-            </a>
+            </Link>
           </div>
         </>
       )}

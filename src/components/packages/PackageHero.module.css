@@ -1,331 +1,225 @@
+/* Figma node 1294:4944, hero band 1920x942.
+
+   Sizes are fluid against the 1920 artboard (a 60px heading is 60/1920 =
+   3.125vw) so the section scales to the ~1324px working width, with clamp
+   floors keeping it readable on phones. */
+
 .section {
   position: relative;
-  padding: 100px 0;
-  background: #fafafa;
+  padding: clamp(48px, calc(89 * var(--pkg-u)), 89px) 0 clamp(44px, calc(82 * var(--pkg-u)), 82px);
+  /* Figma: linear-gradient(180deg, #F9F9F9 0%, #FFF0F0 100%) */
+  background: linear-gradient(180deg, var(--pkg-hero-from) 0%, var(--pkg-hero-to) 100%);
   overflow: hidden;
 }
 
+/* ---- eyebrow ------------------------------------------------------------ */
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(10px, calc(23 * var(--pkg-u)), 23px);
+  margin-bottom: clamp(20px, calc(37 * var(--pkg-u)), 37px);
+}
+
+.labelBox {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  padding: clamp(6px, calc(12 * var(--pkg-u)), 12px) clamp(12px, calc(22 * var(--pkg-u)), 22px);
+  background: var(--red-tint);
+  color: var(--pkg-tab-from);
+  font-size: clamp(12px, calc(20 * var(--pkg-u)), 20px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.21;
+  text-transform: uppercase;
+}
+
+/* Figma: 28x5 rounded bar under the badge, not a left border. */
+.labelRule {
+  width: clamp(20px, calc(28 * var(--pkg-u)), 28px);
+  height: clamp(4px, calc(5 * var(--pkg-u)), 5px);
+  border-radius: var(--radius-pill);
+  background: #e00000;
+}
+
+/* ---- two-column split --------------------------------------------------- */
+
 .inner {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  /* Figma: 777 / 153 gap / 787 of the 1717 content width */
+  grid-template-columns: 45.3% 45.8%;
+  justify-content: space-between;
+  align-items: start;
+  gap: clamp(28px, 8.9%, 153px);
 }
 
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-}
-
-.labelBox {
-  display: inline-block;
-  padding: 6px 14px;
-  background: #ffebee;
-  color: #da0a03;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-left: 3px solid #da0a03;
-  width: fit-content;
+  gap: clamp(24px, calc(69 * var(--pkg-u)), 69px);
+  min-width: 0;
 }
 
 .title {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #000;
+  margin: 0 0 clamp(12px, calc(22 * var(--pkg-u)), 22px);
+  color: #0c0c0c;
+  font-size: clamp(28px, calc(60 * var(--pkg-u)), 60px);
+  font-weight: 600;
+  line-height: 1.21;
 }
 
 .redText {
-  color: #da0a03;
+  color: var(--red);
 }
 
 .description {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444;
-  max-width: 520px;
+  color: #0c0c0c;
+  font-size: clamp(14px, calc(21 * var(--pkg-u)), 21px);
+  font-weight: 400;
+  line-height: 1.21;
 }
 
+/* Figma crops this to 761x350; the source file is 3:2, so cover rather than
+   squash it. */
 .imageContainer {
   position: relative;
   width: 100%;
-  max-width: 574px;
-  border-radius: 20px;
+  aspect-ratio: 761 / 350;
+  border-radius: clamp(12px, calc(25 * var(--pkg-u)), 25px);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
+/* ---- fact card ---------------------------------------------------------- */
+
 .rightColumn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
 }
 
 .packageCard {
-  background: #f5f5f5;
-  border-radius: 16px;
-  padding: 0;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: clamp(12px, calc(17 * var(--pkg-u)), 17px);
+  padding: clamp(20px, calc(61 * var(--pkg-u)), 61px) clamp(18px, calc(60 * var(--pkg-u)), 60px)
+    clamp(24px, calc(78 * var(--pkg-u)), 78px);
+  background: var(--white);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.07);
 }
 
+/* An inset bar inside the card, not a full-bleed header strip. */
 .packageHeader {
-  background: #3a3a3a;
-  color: #fff;
-  padding: 18px 28px;
-  font-size: 16px;
-  font-weight: 500;
+  border-radius: clamp(12px, calc(19 * var(--pkg-u)), 19px);
+  padding: clamp(10px, calc(14 * var(--pkg-u)), 14px) clamp(14px, calc(29 * var(--pkg-u)), 29px);
+  background: linear-gradient(180deg, var(--pkg-card-from) 0%, var(--pkg-card-to) 101.75%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  font-size: clamp(12px, calc(21 * var(--pkg-u)), 21px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.21;
   text-align: center;
-  border-radius: 16px 16px 0 0;
 }
 
+/* Figma has no rules between the four facts. */
 .detailsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
-  padding: 40px 30px;
-  background: #fff;
-  border-radius: 0 0 16px 16px;
+  column-gap: clamp(16px, calc(46 * var(--pkg-u)), 46px);
+  row-gap: clamp(20px, calc(57 * var(--pkg-u)), 57px);
+  margin-top: clamp(24px, calc(84 * var(--pkg-u)), 84px);
 }
 
 .detailBox {
-  padding: 28px 20px;
+  min-width: 0;
   text-align: left;
-  border-right: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.detailBox:nth-child(2n) {
-  border-right: none;
-}
-
-.detailBox:nth-child(3),
-.detailBox:nth-child(4) {
-  border-bottom: none;
 }
 
 .iconWrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: #ffebee;
-  border-radius: 10px;
-  margin-bottom: 14px;
+  width: clamp(44px, calc(65 * var(--pkg-u)), 65px);
+  height: clamp(38px, calc(55 * var(--pkg-u)), 55px);
+  margin-bottom: clamp(10px, calc(19 * var(--pkg-u)), 19px);
+  border-radius: 6px;
+  background: #fddede;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .icon {
-  font-size: 26px;
-  color: #da0a03;
+  width: clamp(24px, calc(42 * var(--pkg-u)), 42px);
+  height: auto;
 }
 
 .detailLabel {
-  margin: 0 0 5px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #000;
+  margin: 0 0 clamp(3px, calc(5 * var(--pkg-u)), 5px);
+  color: #0c0c0c;
+  font-size: clamp(16px, calc(31 * var(--pkg-u)), 31px);
+  font-weight: 600;
+  line-height: 1.21;
 }
 
 .detailText {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.6;
-  color: #666;
+  color: var(--black);
+  font-size: clamp(12px, calc(18 * var(--pkg-u)), 18px);
+  font-weight: 400;
+  line-height: 1.21;
 }
+
+/* ---- responsive --------------------------------------------------------- */
 
 @media (max-width: 1199.98px) {
   .inner {
     grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .rightColumn {
-    padding-top: 0;
+    gap: clamp(32px, 5vw, 60px);
   }
 
   .packageCard {
-    max-width: 600px;
+    max-width: 720px;
     margin: 0 auto;
-  }
-
-  .title {
-    font-size: 38px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .section {
-    padding: 60px 0;
-  }
-
-  .title {
-    font-size: 32px;
-  }
-
-  .description {
-    font-size: 15px;
+    padding: 32px 28px 40px;
   }
 
   .detailsGrid {
-    grid-template-columns: 1fr;
-    padding: 24px 20px;
+    margin-top: 34px;
   }
 
-  .detailBox {
-    border-right: none;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 20px 16px;
+  .title {
+    font-size: clamp(28px, 4.2vw, 46px);
   }
 
-  .detailBox:last-child {
-    border-bottom: none;
+  .description {
+    font-size: clamp(15px, 1.7vw, 19px);
   }
 
-  .imageContainer {
-    max-width: 100%;
+  .detailLabel {
+    font-size: clamp(19px, 2.4vw, 26px);
+  }
+
+  .detailText,
+  .packageHeader {
+    font-size: clamp(13px, 1.5vw, 17px);
   }
 }
 
 @media (max-width: 575.98px) {
-  .section {
-    padding: 48px 0;
-  }
-
-  .title {
-    font-size: 26px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .packageHeader {
-    font-size: 14px;
-    padding: 14px 20px;
-  }
-
-  .detailLabel {
-    font-size: 16px;
-  }
-
-  .detailText {
-    font-size: 12px;
-  }
-}
-
-
-@media (max-width: 1199.98px) {
-  .inner {
+  .detailsGrid {
     grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .rightColumn {
-    padding-top: 0;
+    row-gap: 26px;
   }
 
   .packageCard {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .title {
-    font-size: 42px;
-  }
-
-  .imageContainer {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .section {
-    padding: 70px 0;
-  }
-
-  .title {
-    font-size: 34px;
-  }
-
-  .description {
-    font-size: 15px;
-  }
-
-  .detailsGrid {
-    grid-template-columns: 1fr;
-    padding: 30px 24px;
-  }
-
-  .detailBox {
-    border-right: none;
-    border-bottom: 1px solid #e8e8e8;
-    padding: 24px 16px;
-  }
-
-  .detailBox:last-child {
-    border-bottom: none;
-  }
-
-  .imageContainer {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .section {
-    padding: 60px 0;
-  }
-
-  .leftColumn {
-    gap: 24px;
-  }
-
-  .title {
-    font-size: 28px;
-  }
-
-  .description {
-    font-size: 14px;
+    padding: 22px 18px 28px;
   }
 
   .packageHeader {
-    font-size: 14px;
-    padding: 16px 20px;
-  }
-
-  .detailsGrid {
-    padding: 24px 20px;
-  }
-
-  .detailLabel {
-    font-size: 16px;
-  }
-
-  .detailText {
-    font-size: 12px;
-  }
-
-  .iconWrapper {
-    width: 42px;
-    height: 42px;
-  }
-
-  .icon {
-    font-size: 22px;
+    letter-spacing: 0.04em;
   }
 }
